@@ -57,9 +57,11 @@ const LineUp = () => {
                           <div className="w-full max-w-md mx-auto mb-4 overflow-hidden rounded-xl border-4 border-primary shadow-lg shadow-primary/50">
                             <video 
                               src={item.video} 
-                              controls
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
                               className="w-full h-full object-cover"
-                              poster=""
                             >
                               Seu navegador não suporta o elemento de vídeo.
                             </video>
