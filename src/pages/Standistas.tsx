@@ -142,7 +142,7 @@ const Standistas = () => {
                         <FormItem>
                           <FormLabel className="text-white">Nome da Empresa/Marca *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Nome da sua empresa" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="Nome da sua empresa" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -156,7 +156,7 @@ const Standistas = () => {
                         <FormItem>
                           <FormLabel className="text-white">Nome do Responsável *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Seu nome completo" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="Seu nome completo" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -170,7 +170,7 @@ const Standistas = () => {
                         <FormItem>
                           <FormLabel className="text-white">Email *</FormLabel>
                           <FormControl>
-                            <Input type="email" placeholder="seu@email.com" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input type="email" placeholder="seu@email.com" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -184,7 +184,7 @@ const Standistas = () => {
                         <FormItem>
                           <FormLabel className="text-white">Telefone/WhatsApp *</FormLabel>
                           <FormControl>
-                            <Input placeholder="(00) 00000-0000" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="(00) 00000-0000" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -198,7 +198,7 @@ const Standistas = () => {
                         <FormItem>
                           <FormLabel className="text-white">CNPJ (opcional)</FormLabel>
                           <FormControl>
-                            <Input placeholder="00.000.000/0000-00" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="00.000.000/0000-00" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -212,7 +212,7 @@ const Standistas = () => {
                         <FormItem>
                           <FormLabel className="text-white">Tipo de Produto *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Ex: Camisetas, Action Figures, Artesanato..." {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="Ex: Camisetas, Action Figures, Artesanato..." {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -226,7 +226,7 @@ const Standistas = () => {
                         <FormItem>
                           <FormLabel className="text-white">Tamanho do Estande Desejado *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Ex: 2x2m, 3x3m, etc." {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="Ex: 2x2m, 3x3m, etc." {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -243,7 +243,7 @@ const Standistas = () => {
                         <FormControl>
                           <Textarea 
                             placeholder="Alguma informação adicional, necessidades especiais, etc."
-                            className="bg-white/20 text-white border-white/30 min-h-[100px]"
+                            className="bg-white/20 text-white border-white/30 placeholder:text-white/70 min-h-[100px]"
                             {...field}
                           />
                         </FormControl>

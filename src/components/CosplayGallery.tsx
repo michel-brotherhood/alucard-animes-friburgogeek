@@ -6,6 +6,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import cosplay1 from "@/assets/cosplay-1.jpg";
 import cosplay2 from "@/assets/cosplay-2.jpg";
 import cosplay3 from "@/assets/cosplay-3.jpg";
@@ -52,6 +53,12 @@ const CosplayGallery = () => {
             align: "start",
             loop: true,
           }}
+          plugins={[
+            Autoplay({
+              delay: 3000,
+              stopOnInteraction: false,
+            }),
+          ]}
           className="w-full max-w-7xl mx-auto"
         >
           <CarouselContent>
