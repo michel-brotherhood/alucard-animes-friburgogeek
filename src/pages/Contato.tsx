@@ -26,6 +26,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, User, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
 
 // Phone validation regex - Brazilian format
 const phoneRegex = /^(?:\+?55\s?)?(?:\(?[1-9]{2}\)?\s?)?(?:9\s?)?[0-9]{4}[-\s]?[0-9]{4}$/;
@@ -82,15 +83,33 @@ const Contato = () => {
     return numbers.replace(/(\d{2})(\d{5})(\d{0,4})/, "($1) $2-$3");
   };
 
-  const onSubmit = (data: FormData) => {
-    console.log("Form submitted:", data);
-    
-    toast({
-      title: "Mensagem enviada com sucesso!",
-      description: "Entraremos em contato em breve.",
-    });
-    
-    form.reset();
+  const onSubmit = async (data: FormData) => {
+    try {
+      const { data: result, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          to: 'contato@alucardanimes.com.br',
+          subject: 'Novo Contato - Friburgo Geek',
+          formData: data,
+          formType: 'Formulário de Contato'
+        }
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Mensagem enviada com sucesso!",
+        description: "Entraremos em contato em breve.",
+      });
+      
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Por favor, tente novamente ou entre em contato via WhatsApp.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (

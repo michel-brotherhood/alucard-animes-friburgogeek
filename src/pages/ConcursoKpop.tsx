@@ -13,6 +13,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
   nomeGrupo: z.string().min(3, "Nome do grupo deve ter no mínimo 3 caracteres").max(100),
@@ -45,13 +46,32 @@ const ConcursoKpop = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
-    toast({
-      title: "Inscrição enviada!",
-      description: "Você receberá um email de confirmação com instruções para pagamento.",
-    });
-    form.reset();
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          to: 'contato@alucardanimes.com.br',
+          subject: 'Nova Inscrição - Campeonato K-Pop',
+          formData: values,
+          formType: 'Campeonato K-Pop'
+        }
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Inscrição enviada!",
+        description: "Você receberá um email de confirmação com instruções para pagamento.",
+      });
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Erro ao enviar inscrição",
+        description: "Por favor, tente novamente ou entre em contato conosco.",
+        variant: "destructive",
+      });
+    }
   };
 
   const chaves = [
@@ -95,7 +115,7 @@ const ConcursoKpop = () => {
               <CardContent className="pt-6 text-center">
                 <Calendar className="w-12 h-12 text-accent mx-auto mb-3" />
                 <h3 className="text-white font-bold text-lg mb-2">Inscrições</h3>
-                <p className="text-white/80 text-sm">15/Jun a 15/Ago 2026</p>
+                <p className="text-white/80 text-sm">15/Jun a 16/Ago 2026</p>
               </CardContent>
             </Card>
 

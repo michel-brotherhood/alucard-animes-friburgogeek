@@ -11,6 +11,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
   nome: z.string().min(3, "Nome deve ter no mínimo 3 caracteres").max(100),
@@ -39,13 +40,32 @@ const ConcursoAnimeke = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
-    toast({
-      title: "Inscrição enviada!",
-      description: "Você receberá um email de confirmação em breve.",
-    });
-    form.reset();
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          to: 'contato@alucardanimes.com.br',
+          subject: 'Nova Inscrição - Campeonato Animekê',
+          formData: values,
+          formType: 'Campeonato Animekê'
+        }
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Inscrição enviada!",
+        description: "Você receberá um email de confirmação em breve.",
+      });
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Erro ao enviar inscrição",
+        description: "Por favor, tente novamente ou entre em contato conosco.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
