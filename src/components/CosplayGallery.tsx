@@ -5,8 +5,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import cosplay1 from "@/assets/cosplay-1.jpg";
 import cosplay2 from "@/assets/cosplay-2.jpg";
@@ -16,6 +14,10 @@ import cosplay5 from "@/assets/cosplay-5.jpg";
 import cosplay6 from "@/assets/cosplay-6.jpg";
 import cosplay7 from "@/assets/cosplay-7.jpg";
 import cosplay8 from "@/assets/cosplay-8.jpg";
+import cosplay9 from "@/assets/cosplay-9.jpg";
+import cosplay10 from "@/assets/cosplay-10.jpg";
+import cosplay11 from "@/assets/cosplay-11.jpg";
+import cosplay12 from "@/assets/cosplay-12.jpg";
 
 const CosplayGallery = () => {
   const photos = [
@@ -27,6 +29,10 @@ const CosplayGallery = () => {
     { id: 6, src: cosplay6, alt: "Cosplayer masculino com espada" },
     { id: 7, src: cosplay7, alt: "Cosplay steampunk" },
     { id: 8, src: cosplay8, alt: "Dupla de cosplayers" },
+    { id: 9, src: cosplay9, alt: "Cosplayer com fantasia elaborada de anime" },
+    { id: 10, src: cosplay10, alt: "Cosplayer em armadura de fantasia épica" },
+    { id: 11, src: cosplay11, alt: "Grupo de cosplayers coloridos" },
+    { id: 12, src: cosplay12, alt: "Cosplayer com fantasia de personagem de videogame" },
   ];
 
   return (
@@ -37,7 +43,7 @@ const CosplayGallery = () => {
             CONCURSO DE COSPLAYS
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Confira momentos incríveis dos nossos eventos anteriores
+            Participe agora do concurso da equipe Alucard
           </p>
         </div>
         
@@ -64,8 +70,6 @@ const CosplayGallery = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
         </Carousel>
 
         <div className="mt-12 text-center px-4">
