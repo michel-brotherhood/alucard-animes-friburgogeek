@@ -108,6 +108,22 @@ const LineUp = () => {
             </p>
           </div>
         </div>
+
+        {/* CTA Section */}
+        <div className="mt-16 text-center bg-accent/20 backdrop-blur-sm rounded-3xl p-8 border-2 border-accent max-w-4xl mx-auto">
+          <h3 className="text-3xl font-black text-accent mb-4">
+            Não perca essa experiência! 🎉
+          </h3>
+          <p className="text-white/90 text-lg mb-6">
+            Garanta seu ingresso agora e curta todos os artistas e atrações do Friburgo Geek Natal!
+          </p>
+          <a 
+            href="/#ingressos" 
+            className="inline-block bg-primary hover:bg-primary/90 text-white font-black text-xl px-12 py-4 rounded-full shadow-lg transition-all hover:scale-105"
+          >
+            Comprar Ingressos
+          </a>
+        </div>
       </section>
 
       <FAQ />

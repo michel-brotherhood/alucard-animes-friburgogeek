@@ -2,8 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
 import FAQ from "@/components/FAQ";
+import MapSection from "@/components/MapSection";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Calendar, MapPin, Star } from "lucide-react";
+import alucardLogo from "@/assets/alucard-animes-logo.png";
 
 const stats = [
   { icon: Users, value: "50.000+", label: "Visitantes esperados" },
@@ -31,10 +33,10 @@ const OEvento = () => {
             <h2 className="text-3xl md:text-4xl font-black text-accent mb-6">
               Bem-vindo ao Friburgo Geek Natal! 🎄
             </h2>
-            <div className="space-y-4 text-white/90 text-lg">
+          <div className="space-y-4 text-white/90 text-lg">
               <p>
-                O <strong className="text-accent">Friburgo Geek Natal</strong> é um evento focado no universo 
-                geek, otaku e gamer, produzido pela Alucard Animes. Prepare-se para um dia incrível repleto de 
+                O <strong className="text-accent">Friburgo Geek Natal</strong> acontecerá no <strong className="text-accent">Sindicato Dos Têxteis, Nova Friburgo - RJ</strong>, e é um evento focado no universo 
+                geek, otaku e gamer. Prepare-se para um dia incrível repleto de 
                 atividades, competições e muita diversão!
               </p>
               <p>
@@ -145,9 +147,34 @@ const OEvento = () => {
               Comprar Ingressos
             </a>
           </div>
+
+          {/* Alucard Animes Section */}
+          <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 border-2 border-accent">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <img src={alucardLogo} alt="Alucard Animes" className="w-48 h-48 object-contain" />
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-3xl font-black text-accent mb-4">
+                  Produção: Alucard Animes
+                </h3>
+                <p className="text-white/90 text-lg mb-4">
+                  Alucard Animes é uma produtora de eventos especializada no universo geek, otaku e gamer! 
+                  Criamos experiências incríveis com shows, cosplay, k-pop, torneios, feira geek, oficinas e muito mais.
+                </p>
+                <a 
+                  href="https://www.alucardanimes.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block text-accent hover:text-accent/80 font-bold text-lg underline"
+                >
+                  🌐 www.alucardanimes.com
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
+      <MapSection />
       <FAQ />
       <Footer />
       <FloatingMenu />
