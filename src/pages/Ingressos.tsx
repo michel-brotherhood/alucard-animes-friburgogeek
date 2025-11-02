@@ -13,47 +13,38 @@ const tickets = [
     {
       name: "INGRESSO ÚNICO",
       price: "35,00",
-      badge: "promocional",
+      badge: "PROMOCIONAL",
       features: [
-        "Acesso ao evento das 12h às 18h",
-        "Todas as atrações incluídas",
-        "Grátis para crianças de 0 a 6 anos",
-        "Grátis para idosos acima de 65 anos"
+        "Entrada no evento"
       ]
     },
     {
       name: "INGRESSO DUPLO",
       price: "60,00",
-      badge: "promocional",
+      badge: "PROMOCIONAL",
       popular: false,
       features: [
-        "2 ingressos para o evento",
-        "Acesso a todas as atrações",
-        "Economia de R$ 10,00",
-        "Válido para duas pessoas"
+        "Entrada no evento para duas pessoas"
       ]
     },
     {
       name: "INGRESSO TRIPLO",
       price: "85,00",
-      badge: "promocional",
+      badge: "PROMOCIONAL",
       features: [
-        "3 ingressos para o evento",
-        "Acesso a todas as atrações",
-        "Economia de R$ 20,00",
-        "Válido para três pessoas"
+        "Entrada no evento para três pessoas"
       ]
     },
     {
       name: "VIP",
       price: "130,00",
-      badge: "promocional",
+      badge: "PROMOCIONAL",
       popular: true,
       features: [
-        "Acesso VIP exclusivo",
-        "Benefícios especiais",
-        "Experiência premium",
-        "Brindes exclusivos"
+        "Entrada antecipada (a partir das 11:00h, sem filas)",
+        "Acesso ao camarim dos artistas/dubladores/youtubers",
+        "Crachá exclusivo",
+        "R$ 130,00 em produtos nos estandes Marikanime Shop e Konoha Lanches"
       ]
     }
   ];
@@ -115,12 +106,19 @@ const tickets = [
               </CardContent>
               
               <CardFooter className="px-3 md:px-6">
-                <Button 
-                  className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 md:py-6 rounded-full text-sm md:text-lg shadow-lg"
+                <a 
+                  href="https://www.uticket.com.br/event/01LD7EIVF0XD8Q/checkout/tickets"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
                 >
-                  <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
-                  QUERO ESTE
-                </Button>
+                  <Button 
+                    className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 md:py-6 rounded-full text-sm md:text-lg shadow-lg"
+                  >
+                    <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
+                    QUERO ESTE
+                  </Button>
+                </a>
               </CardFooter>
             </Card>
           ))}
