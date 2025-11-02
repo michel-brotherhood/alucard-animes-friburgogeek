@@ -23,13 +23,13 @@ const Features = () => {
           O QUE TODOS OS INGRESSOS INCLUEM?
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {features.map((feature, index) => (
-            <div key={index} className="flex items-start gap-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-              <div className="bg-accent rounded-full p-1 flex-shrink-0 mt-1">
-                <Check className="w-5 h-5 text-secondary" />
+            <div key={index} className="flex items-start gap-3 md:gap-4 bg-white/10 backdrop-blur-sm p-3 md:p-4 rounded-xl">
+              <div className="bg-accent rounded-full p-1 flex-shrink-0 mt-0.5 md:mt-1">
+                <Check className="w-4 h-4 md:w-5 md:h-5 text-secondary" />
               </div>
-              <span className="text-white text-lg">{feature}</span>
+              <span className="text-white text-sm md:text-lg">{feature}</span>
             </div>
           ))}
         </div>

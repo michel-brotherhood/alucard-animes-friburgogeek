@@ -68,8 +68,8 @@ const CosplayGallery = () => {
           <CarouselNext />
         </Carousel>
 
-        <div className="mt-12 text-center">
-          <Button asChild size="lg" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg shadow-primary/30">
+        <div className="mt-12 text-center px-4">
+          <Button asChild size="lg" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white font-bold text-sm md:text-lg px-4 md:px-8 py-5 md:py-6 rounded-full shadow-lg shadow-primary/30 w-full sm:w-auto">
             <Link to="/concursos/cosplay">
               VER DETALHES DO CONCURSO
             </Link>

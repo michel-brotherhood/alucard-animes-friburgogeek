@@ -100,11 +100,11 @@ const TicketCards = () => {
                 ))}
               </CardContent>
 
-              <CardFooter className="flex flex-col gap-3">
-                <Button variant="skewed" className="w-full text-lg py-6 rounded-2xl">
+              <CardFooter className="flex flex-col gap-3 px-4">
+                <Button variant="skewed" className="w-full text-sm md:text-lg py-5 md:py-6 rounded-2xl">
                   QUERO ESTE
                 </Button>
-                <p className="text-xs text-center text-foreground/60">{ticket.note}</p>
+                <p className="text-xs text-center text-foreground/60 px-2">{ticket.note}</p>
               </CardFooter>
             </Card>
           ))}

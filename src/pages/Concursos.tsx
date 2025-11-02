@@ -72,10 +72,10 @@ const Concursos = () => {
                     {concurso.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-white/80 text-center">{concurso.description}</p>
+                <CardContent className="space-y-4 px-4 md:px-6">
+                  <p className="text-white/80 text-center text-sm md:text-base">{concurso.description}</p>
                   <Link to={concurso.link} className="block">
-                    <Button className="w-full bg-accent text-primary hover:bg-accent/90 font-bold text-lg py-6 rounded-full">
+                    <Button className="w-full bg-accent text-primary hover:bg-accent/90 font-bold text-xs sm:text-sm md:text-base py-4 md:py-6 rounded-full">
                       VER REGULAMENTO E INSCREVER-SE
                     </Button>
                   </Link>

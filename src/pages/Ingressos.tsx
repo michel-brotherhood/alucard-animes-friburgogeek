@@ -114,11 +114,11 @@ const tickets = [
                 ))}
               </CardContent>
               
-              <CardFooter className="px-4 md:px-6">
+              <CardFooter className="px-3 md:px-6">
                 <Button 
-                  className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-5 md:py-6 rounded-full text-base md:text-lg shadow-lg"
+                  className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 md:py-6 rounded-full text-sm md:text-lg shadow-lg"
                 >
-                  <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                  <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
                   QUERO ESTE
                 </Button>
               </CardFooter>
