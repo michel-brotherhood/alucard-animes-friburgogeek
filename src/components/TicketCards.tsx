@@ -48,12 +48,14 @@ const tickets = [
     badge: "promocional",
     badgeColor: "bg-destructive text-white",
     features: [
-      "Acesso VIP exclusivo",
-      "Benefícios especiais",
-      "Experiência premium",
-      "Brindes exclusivos",
+      "Entrada antecipada (a partir das 11:00h, sem filas)",
+      "Acesso ao camarim dos artistas/dubladores/youtubers",
+      "Crachá exclusivo VIP",
+      "R$ 30,00 em produtos nos estandes Marikanime Shop",
+      "R$ 30,00 em produtos no Konoha Lanches",
     ],
     note: "Experiência completa e diferenciada!",
+    isVip: true,
   },
 ];
 
@@ -78,7 +80,9 @@ const TicketCards = () => {
           {tickets.map((ticket) => (
             <Card 
               key={ticket.name} 
-              className="relative overflow-hidden border-2 hover:border-primary transition-all hover:shadow-2xl"
+              className={`relative overflow-hidden border-2 hover:border-primary transition-all hover:shadow-2xl ${
+                ticket.isVip ? 'md:col-span-2 lg:col-span-1 ring-2 ring-primary/50' : ''
+              }`}
             >
               <CardHeader className="text-center pb-4">
                 <h3 className="text-2xl font-black text-secondary mb-2">{ticket.name}</h3>
