@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Link } from "react-router-dom";
 
 const faqs = [
   {
@@ -28,7 +29,18 @@ const faqs = [
   },
   {
     question: "Onde consigo comprar o meu ingresso?",
-    answer: "Online pelo site da Uticket e PIX via lista amiga."
+    answer: (
+      <>
+        Online pelo site da Uticket e PIX via lista amiga.{" "}
+        <Link 
+          to="/ingressos" 
+          className="font-bold text-primary hover:text-secondary underline transition-colors"
+        >
+          Veja todos os tipos de ingressos disponíveis aqui
+        </Link>
+        .
+      </>
+    )
   },
   {
     question: "Venderá ingressos no dia do evento?",
