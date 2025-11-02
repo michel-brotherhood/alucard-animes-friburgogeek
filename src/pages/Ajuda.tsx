@@ -92,7 +92,7 @@ const Ajuda = () => {
         </section>
 
         {/* Regras Gerais */}
-        <section className="py-16 px-6 bg-background">
+        <section id="regras-gerais" className="py-16 px-6 bg-background">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-8">
               <Shield className="w-8 h-8 text-primary" />

@@ -127,7 +127,7 @@ const TicketCards = () => {
 
         <div className="mt-12 text-center">
           <a 
-            href="#regras-gerais" 
+            href="/ajuda#regras-gerais" 
             className="inline-flex items-center gap-2 text-lg font-bold text-primary hover:text-secondary transition-colors"
           >
             Ver regras gerais dos ingressos
