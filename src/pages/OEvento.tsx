@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
+import FAQ from "@/components/FAQ";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Calendar, MapPin, Star } from "lucide-react";
 
@@ -147,6 +148,7 @@ const OEvento = () => {
         </div>
       </section>
 
+      <FAQ />
       <Footer />
       <FloatingMenu />
     </div>

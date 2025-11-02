@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
+import FAQ from "@/components/FAQ";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star, Instagram } from "lucide-react";
@@ -109,6 +110,7 @@ const LineUp = () => {
         </div>
       </section>
 
+      <FAQ />
       <Footer />
       <FloatingMenu />
     </div>

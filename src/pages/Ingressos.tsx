@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
+import FAQ from "@/components/FAQ";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, ShoppingCart } from "lucide-react";
@@ -149,6 +150,7 @@ const tickets = [
         </Card>
       </main>
       
+      <FAQ />
       <Footer />
       <FloatingMenu />
     </div>
