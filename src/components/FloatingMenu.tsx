@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MessageSquare, Sparkles, TicketCheck } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoFrente from "@/assets/logo_vetor_2.svg";
+import logoFrente from "@/assets/logov2.webp";
 import logoVerso from "@/assets/logo_vetor_2_verso.svg";
 
 const FloatingMenu = () => {
@@ -121,15 +121,13 @@ const FloatingMenu = () => {
               <img 
                 src={logoVerso} 
                 alt="Fechar" 
-                className="w-14 h-14 md:w-16 md:h-16 transition-all duration-300 object-cover object-top"
-                style={{ objectPosition: '50% 30%' }}
+                className="w-14 h-14 md:w-16 md:h-16 transition-all duration-300 object-contain"
               />
             ) : (
               <img 
                 src={logoFrente} 
                 alt="Menu" 
-                className="w-14 h-14 md:w-16 md:h-16 transition-transform duration-300 group-hover:scale-110 object-cover object-top"
-                style={{ objectPosition: '50% 30%' }}
+                className="w-14 h-14 md:w-16 md:h-16 transition-transform duration-300 group-hover:scale-110 object-contain"
               />
             )}
           </div>
