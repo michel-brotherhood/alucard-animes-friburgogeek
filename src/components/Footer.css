@@ -1,8 +1,23 @@
 footer::before,
 footer::after {
+  content: none !important;
   display: none !important;
 }
 
 footer * {
   position: relative;
+}
+
+footer,
+footer > *,
+footer > * > *,
+footer > * > * > * {
+  overflow: visible !important;
+}
+
+/* Remove any pseudo-elements that might be creating lines */
+footer *::before,
+footer *::after {
+  content: none !important;
+  display: none !important;
 }
