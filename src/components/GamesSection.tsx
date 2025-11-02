@@ -89,7 +89,7 @@ const GamesSection = () => {
               className="text-sm md:text-lg px-4 md:px-8 py-5 md:py-6 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full sm:w-auto"
             >
               <Gamepad2 className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-              VER REGULAMENTO COMPLETO
+              VER REGULAMENTO
             </Button>
           </Link>
         </div>
