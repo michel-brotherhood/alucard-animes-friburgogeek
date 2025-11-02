@@ -114,8 +114,8 @@ const ConcursoKpop = () => {
             <Card className="bg-white/10 backdrop-blur-sm border-2 border-accent/30">
               <CardContent className="pt-6 text-center">
                 <Calendar className="w-12 h-12 text-accent mx-auto mb-3" />
-                <h3 className="text-white font-bold text-lg mb-2">Inscrições</h3>
-                <p className="text-white/80 text-sm">15/Jun a 16/Ago 2026</p>
+                <h3 className="text-white font-bold text-lg mb-2">Data do Evento</h3>
+                <p className="text-white/80 text-sm">16 e 17 de Agosto de 2026</p>
               </CardContent>
             </Card>
 
