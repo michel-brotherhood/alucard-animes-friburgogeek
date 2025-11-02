@@ -73,38 +73,40 @@ const Header = () => {
               </button>
               
               {isConcursosOpen && (
-                <div className="absolute top-full left-0 mt-2 bg-primary rounded-2xl shadow-2xl py-2 min-w-[200px] z-50 border-2 border-accent/30">
-                  <Link 
-                    to="/concursos" 
-                    className="block px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors"
-                  >
-                    Todos os Concursos
-                  </Link>
-                  <div className="border-t border-white/10 my-1"></div>
-                  <Link 
-                    to="/concursos/cosplay" 
-                    className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
-                  >
-                    🏆 Cosplay
-                  </Link>
-                  <Link 
-                    to="/concursos/kpop" 
-                    className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
-                  >
-                    🎵 K-pop
-                  </Link>
-                  <Link 
-                    to="/concursos/animeke" 
-                    className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
-                  >
-                    🎤 Animekê
-                  </Link>
-                  <Link 
-                    to="/concursos/videogames" 
-                    className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
-                  >
-                    🎮 Videogames
-                  </Link>
+                <div className="absolute top-full left-0 pt-2 z-50">
+                  <div className="bg-primary rounded-2xl shadow-2xl py-2 min-w-[200px] border-2 border-accent/30">
+                    <Link 
+                      to="/concursos" 
+                      className="block px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors"
+                    >
+                      Todos os Concursos
+                    </Link>
+                    <div className="border-t border-white/10 my-1"></div>
+                    <Link 
+                      to="/concursos/cosplay" 
+                      className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
+                    >
+                      🏆 Cosplay
+                    </Link>
+                    <Link 
+                      to="/concursos/kpop" 
+                      className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
+                    >
+                      🎵 K-pop
+                    </Link>
+                    <Link 
+                      to="/concursos/animeke" 
+                      className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
+                    >
+                      🎤 Animekê
+                    </Link>
+                    <Link 
+                      to="/concursos/videogames" 
+                      className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
+                    >
+                      🎮 Videogames
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
