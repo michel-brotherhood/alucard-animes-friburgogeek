@@ -23,8 +23,8 @@ const Header = () => {
   return (
     <header className="w-full bg-background">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-4">
-        <nav className="relative bg-gradient-to-br from-primary via-primary/95 to-primary/80 rounded-full py-2 md:py-3 px-4 md:px-8 flex items-center justify-between shadow-[0_8px_32px_rgba(0,0,0,0.3),inset_0_-4px_8px_rgba(0,0,0,0.2),inset_0_2px_8px_rgba(255,255,255,0.15)] before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-t before:from-black/10 before:to-white/10 before:pointer-events-none overflow-hidden">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/5 via-transparent to-black/5 pointer-events-none" />
+        <nav className="relative bg-gradient-to-br from-primary via-[hsl(354,70%,45%)] to-[hsl(354,70%,35%)] rounded-full py-2 md:py-3 px-4 md:px-8 flex items-center justify-between shadow-lg before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-t before:from-black/20 before:to-white/5 before:pointer-events-none overflow-hidden">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/10 via-transparent to-black/10 pointer-events-none" />
           <div className="flex items-center gap-4 md:gap-12 relative z-10">
             <Link to="/" className="flex items-center hover:opacity-90 transition-opacity">
               <img 
