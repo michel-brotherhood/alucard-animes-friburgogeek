@@ -61,7 +61,7 @@ const ConcursoKpop = () => {
 
       toast({
         title: "Inscrição enviada!",
-        description: "Você receberá um email de confirmação com instruções para pagamento.",
+        description: "Você receberá um email de confirmação em breve.",
       });
       form.reset();
     } catch (error) {
@@ -94,12 +94,12 @@ const ConcursoKpop = () => {
           </p>
 
           {/* Informações Principais */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <Card className="bg-white/10 backdrop-blur-sm border-2 border-accent/30">
               <CardContent className="pt-6 text-center">
                 <DollarSign className="w-12 h-12 text-accent mx-auto mb-3" />
                 <h3 className="text-white font-bold text-lg mb-2">Premiação</h3>
-                <p className="text-white/80 text-sm">R$ 300,00 por chave</p>
+                <p className="text-white/80 text-sm">R$ 400,00 por chave</p>
               </CardContent>
             </Card>
             
@@ -118,70 +118,80 @@ const ConcursoKpop = () => {
                 <p className="text-white/80 text-sm">14 de Dezembro de 2025</p>
               </CardContent>
             </Card>
-
-            <Card className="bg-white/10 backdrop-blur-sm border-2 border-accent/30">
-              <CardContent className="pt-6 text-center">
-                <Music className="w-12 h-12 text-accent mx-auto mb-3" />
-                <h3 className="text-white font-bold text-lg mb-2">Taxa</h3>
-                <p className="text-white/80 text-sm">R$ 60,00 por pessoa</p>
-              </CardContent>
-            </Card>
           </div>
 
-          {/* Regras Principais */}
+          {/* Regras Completas */}
           <Card className="bg-white/10 backdrop-blur-sm border-2 border-accent mb-12">
             <CardHeader>
-              <CardTitle className="text-white text-2xl font-black">📋 Regras Principais</CardTitle>
+              <CardTitle className="text-white text-2xl font-black">📋 REGRAS DO K-POP BATALHA DAS GERAÇÕES</CardTitle>
             </CardHeader>
-            <CardContent className="text-white/90 space-y-4">
+            <CardContent className="text-white/90 space-y-6">
               <div>
-                <h4 className="font-bold text-accent mb-2">Formato:</h4>
-                <ul className="list-disc list-inside space-y-1 text-sm">
-                  <li>Modalidade exclusiva para grupos de 3 a 10 integrantes</li>
-                  <li>Inscrições apenas online até 14 de Dezembro de 2025</li>
-                  <li>Taxa de inscrição: R$ 60,00 por pessoa (inclui entrada no evento)</li>
-                  <li>O campeonato será realizado a partir das 14 horas</li>
+                <h4 className="font-bold text-accent mb-3 text-lg">1) REGRAS GERAIS</h4>
+                <ul className="list-disc list-inside space-y-2 text-sm">
+                  <li><strong>1.1</strong> – As inscrições serão realizadas somente pelo formulário desta página. Não aceitaremos inscrições no dia do evento ou após o prazo</li>
+                  <li><strong>1.2</strong> – O uso de palavrões, apelo sexual desnecessário ou abusivo, ofensas a qualquer pessoa, apologia ao uso de drogas, preconceito ou racismo resultam na desclassificação do concorrente</li>
+                  <li><strong>1.3</strong> – Apresentações que desrespeitem qualquer artigo ou disposição criminal vigentes nas leis brasileiras são de responsabilidade do(s) autor(es)</li>
+                  <li><strong>1.4</strong> – É proibida a utilização de armas (de fogo ou brancas) e acessórios que possam colocar em risco os presentes no evento</li>
+                  <li><strong>1.5</strong> – Serão aceitas inscrições de covers de grupos com o limite de até 10 (dez) integrantes. Todas as equipes serão julgadas com o mesmo rigor independentemente do número de participantes</li>
+                  <li><strong>1.6</strong> – As inscrições começam dia 22/09/2025 e vão até o dia 12/12/2025 às 00:00hs</li>
+                  <li><strong>1.7</strong> – Após a inscrição, os integrantes de uma equipe só poderão ser alterados (acrescidos ou subtraídos) ATÉ o fechamento das inscrições</li>
+                  <li><strong>1.8</strong> – Após o fechamento das inscrições, os integrantes de uma equipe só poderão ser subtraídos, jamais acrescidos ou alterados</li>
+                  <li><strong>1.9</strong> – Cada grupo deverá ter expressamente 1 (um) representante relatado na inscrição com todos os dados solicitados. Quanto aos demais participantes, deverão informar: Nome completo, idade e telefone para contato</li>
+                  <li><strong>1.10</strong> – Menores de idade deverão apresentar documento de autorização de imagem disponível no site, assinado pelos pais ou representantes legais no momento da inscrição</li>
+                  <li><strong>1.11</strong> – Será apenas modalidade grupo (3 a 10 participantes)</li>
+                  <li><strong>1.12</strong> – Os grupos poderão competir no MÁXIMO duas chaves da competição. Desta maneira, o pagamento de inscrição deverá ser realizado proporcionalmente para cada chave que competir</li>
+                  <li><strong>1.13</strong> – As vagas são limitadas. A inscrição é gratuita, mas garante a entrada de até 5 participantes ao evento. Participantes adicionais devem adquirir seus ingressos normalmente</li>
+                  <li><strong>1.14</strong> – A inscrição inclui a entrada no evento para até 5 integrantes</li>
+                  <li><strong>1.15</strong> – Em caso de desistência, não há reembolso</li>
+                  <li><strong>1.16</strong> – O Campeonato será realizado no dia 14 DE DEZEMBRO DE 2025, NO SINDICATO DOS TEXTEIS, CENTRO DE NOVA FRIBURGO a partir das 14 horas</li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="font-bold text-accent mb-2">Chaves de Competição:</h4>
-                <ul className="list-disc list-inside space-y-1 text-sm">
-                  <li><strong>Old School:</strong> 1ª e 2ª Gerações do K-Pop - Premiação R$ 300,00</li>
-                  <li><strong>Middle School:</strong> 3ª Geração do K-Pop - Premiação R$ 300,00</li>
-                  <li><strong>New School:</strong> 4ª e 5ª Gerações do K-Pop - Premiação R$ 300,00</li>
-                  <li>Grupos podem competir no máximo em duas chaves</li>
+                <h4 className="font-bold text-accent mb-3 text-lg">2) SOBRE AS MÚSICAS</h4>
+                <ul className="list-disc list-inside space-y-2 text-sm">
+                  <li><strong>2.1</strong> – As músicas para a apresentação deverão estar no formato MP3 salvas em um pen-drive somente (tendo em vista que qualquer erro no equipamento trazido é de responsabilidade do grupo)</li>
+                  <li><strong>2.2</strong> – A organização adverte: "Os participantes deverão apresentar boa qualidade nas músicas a serem usadas no campeonato". A organização não se responsabiliza por áudios danificados ou com volume ruim</li>
+                  <li><strong>2.3</strong> – O tempo máximo de apresentação é de 5 minutos</li>
+                  <li><strong>2.4</strong> – É permitido adaptar/alterar as coreografias desde que 50% da apresentação ainda seja original</li>
+                  <li><strong>2.5</strong> – Não será permitida a apresentação de pessoas embriagadas ou sob efeito de entorpecentes</li>
+                  <li><strong>2.6</strong> – A ordem de apresentação no evento será definida pela organização e anunciada aos representantes dos grupos no dia do evento</li>
+                  <li><strong>2.7</strong> – Os grupos deverão realizar Check-in até às 13h no local do evento, onde também entregarão a música em um pen-drive somente. O Check-in será realizado em um local a ser informado no C.A.V do evento</li>
+                  <li><strong>2.8</strong> – A confirmação da participação será mediante a confirmação de inscrição e o aceite do grupo nas informações dos termos de responsabilidades</li>
+                  <li><strong>2.9</strong> – Os participantes que não estiverem presentes ao serem chamados para subir no palco serão colocados em último lugar na lista. Caso não estejam presentes na segunda chamada, serão considerados como desistentes e desclassificados</li>
+                  <li><strong>2.10</strong> – Não é permitido nada que suje o palco ou prejudique a apresentação dos outros participantes. Qualquer objeto utilizado ou a necessidade de uma iluminação específica na apresentação devem ser informadas previamente à organização</li>
+                  <li><strong>2.11</strong> – O grupo deverá entregar o palco após a sua apresentação livre de objetos e pessoas, em tempo para a próxima apresentação</li>
+                  <li><strong>2.12</strong> – É expressamente proibido o uso de quaisquer acessórios, equipamentos, cenários etc., que possam causar danos à empresa realizadora do evento, ao local do evento, ao público e aos grupos seguintes. Em qualquer hipótese o grupo que desrespeitar será obrigado a indenizar imediatamente o sujeito passivo e poderá ser desclassificado se os jurados assim entenderem</li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="font-bold text-accent mb-2">Apresentação:</h4>
-                <ul className="list-disc list-inside space-y-1 text-sm">
-                  <li>Tempo máximo: 5 minutos</li>
-                  <li>Coreografia pode ser adaptada, desde que 50% seja original</li>
-                  <li>Check-in obrigatório até 13h no local do evento</li>
-                  <li>Música em formato MP3 em pen-drive</li>
+                <h4 className="font-bold text-accent mb-3 text-lg">3) CRITÉRIO DE JULGAMENTO</h4>
+                <p className="text-sm mb-2"><strong>3.1</strong> – Será composta por até 3 (três) jurados previamente selecionados pela organização. Em caso de empate não previsto no regulamento, o presidente da comissão julgadora terá a palavra final.</p>
+                <ul className="list-decimal list-inside space-y-1 text-sm ml-4">
+                  <li>ORIGINALIDADE – PESO: 2</li>
+                  <li>EXPRESSÃO ARTÍSTICA – PESO: 2</li>
+                  <li>SINCRONIA – PESO: 2</li>
+                  <li>FIGURINO – PESO: 2</li>
+                  <li>PRESENÇA DE PALCO – PESO: 2</li>
+                  <li>Cálculo da nota final: 3.1.1 + 3.1.2 + 3.1.3 + 3.1.4 + 3.1.5 = 10</li>
                 </ul>
+                <p className="text-sm mt-2"><strong>3.2</strong> – Em caso de empate, fica sobre critério do júri optar por uma pontuação justificável para o desempate, sem ser contestado</p>
               </div>
 
               <div>
-                <h4 className="font-bold text-accent mb-2">Critérios de Julgamento (Peso 2 cada):</h4>
-                <ul className="list-disc list-inside space-y-1 text-sm">
-                  <li>Originalidade</li>
-                  <li>Expressão Artística</li>
-                  <li>Sincronia</li>
-                  <li>Figurino</li>
-                  <li>Presença de Palco</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-bold text-accent mb-2">Proibições:</h4>
-                <ul className="list-disc list-inside space-y-1 text-sm">
-                  <li>Palavrões, apelo sexual desnecessário, ofensas</li>
-                  <li>Apologia a drogas, preconceito ou racismo</li>
-                  <li>Uso de armas ou acessórios perigosos</li>
-                  <li>Sujar o palco ou apresentar-se sob efeito de entorpecentes</li>
+                <h4 className="font-bold text-accent mb-3 text-lg">4) PREMIAÇÃO</h4>
+                <ul className="list-disc list-inside space-y-2 text-sm">
+                  <li><strong>4.1</strong> – Premiações em dinheiro para os vencedores de cada chave:
+                    <ul className="list-none ml-6 mt-1 space-y-1">
+                      <li>• Chave Old School – 1ª e 2ª Gerações do Kpop – R$ 400,00</li>
+                      <li>• Chave Middle School – 3ª Geração do Kpop – R$ 400,00</li>
+                      <li>• Chave New School – 4ª e 5ª Gerações do Kpop – R$ 400,00</li>
+                    </ul>
+                  </li>
+                  <li><strong>4.2</strong> – Caso não tenha completado o mínimo de 5 grupos por categoria, os grupos serão mesclados a outras categorias até obter o mínimo de 5 grupos para o início do campeonato</li>
+                  <li><strong>4.3</strong> – Caso o campeonato não alcance o mínimo de 5 grupos em qualquer das categorias, a premiação será reduzida em 50% ao valor da premiação inicial</li>
                 </ul>
               </div>
             </CardContent>
@@ -362,10 +372,10 @@ const ConcursoKpop = () => {
                   <div className="bg-accent/20 border-2 border-accent rounded-lg p-4 space-y-2">
                     <p className="text-white/90 text-sm font-bold">⚠️ Informações Importantes:</p>
                     <ul className="text-white/80 text-sm space-y-1 list-disc list-inside">
-                      <li>Taxa de inscrição: R$ 60,00 por pessoa</li>
-                      <li>O pagamento garante a vaga e inclui entrada no evento</li>
-                      <li>Em caso de desistência, não há reembolso</li>
-                      <li>Você receberá instruções de pagamento por email após o envio</li>
+                      <li>Inscrição GRATUITA</li>
+                      <li>A inscrição garante entrada no evento para até 5 integrantes</li>
+                      <li>Integrantes adicionais devem adquirir ingressos normalmente</li>
+                      <li>Você receberá confirmação por email após o envio</li>
                     </ul>
                   </div>
 
