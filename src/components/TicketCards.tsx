@@ -124,6 +124,16 @@ const TicketCards = () => {
             </Card>
           ))}
         </div>
+
+        <div className="mt-12 text-center">
+          <a 
+            href="#regras-gerais" 
+            className="inline-flex items-center gap-2 text-lg font-bold text-primary hover:text-secondary transition-colors group"
+          >
+            <span>Ver regras gerais dos ingressos</span>
+            <Check className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
       </div>
     </section>
   );
