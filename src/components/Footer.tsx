@@ -5,7 +5,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary py-12 px-6 relative" style={{ overflow: 'visible' }}>
+    <footer className="bg-secondary py-12 px-6 overflow-hidden relative">
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>

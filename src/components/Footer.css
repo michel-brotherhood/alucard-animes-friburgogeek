@@ -4,15 +4,11 @@ footer::after {
   display: none !important;
 }
 
+footer,
 footer * {
   position: relative;
-}
-
-footer,
-footer > *,
-footer > * > *,
-footer > * > * > * {
   overflow: visible !important;
+  transform: none !important;
 }
 
 /* Remove any pseudo-elements that might be creating lines */
@@ -20,4 +16,20 @@ footer *::before,
 footer *::after {
   content: none !important;
   display: none !important;
+}
+
+/* Remove any transforms that might be creating perspective effects */
+footer .btn-skewed {
+  transform: none !important;
+  perspective: none !important;
+}
+
+footer .btn-skewed:hover {
+  transform: translateY(-2px) !important;
+  perspective: none !important;
+}
+
+footer .btn-skewed:active {
+  transform: translateY(0px) !important;
+  perspective: none !important;
 }
