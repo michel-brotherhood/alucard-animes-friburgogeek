@@ -220,7 +220,7 @@ const ConcursoAnimeke = () => {
                         <FormItem>
                           <FormLabel className="text-white">Nome Completo *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Seu nome completo" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="Seu nome completo" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -234,7 +234,7 @@ const ConcursoAnimeke = () => {
                         <FormItem>
                           <FormLabel className="text-white">Email *</FormLabel>
                           <FormControl>
-                            <Input type="email" placeholder="seu@email.com" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input type="email" placeholder="seu@email.com" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -248,7 +248,7 @@ const ConcursoAnimeke = () => {
                         <FormItem>
                           <FormLabel className="text-white">Telefone *</FormLabel>
                           <FormControl>
-                            <Input placeholder="(00) 00000-0000" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="(00) 00000-0000" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -262,7 +262,7 @@ const ConcursoAnimeke = () => {
                         <FormItem>
                           <FormLabel className="text-white">Idade *</FormLabel>
                           <FormControl>
-                            <Input type="number" placeholder="Sua idade" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input type="number" placeholder="Sua idade" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -309,7 +309,7 @@ const ConcursoAnimeke = () => {
                             <Input 
                               placeholder="https://www.youtube.com/watch?v=..." 
                               {...field} 
-                              className="bg-white/20 text-white border-white/30" 
+                              className="bg-white/20 text-white border-white/30 placeholder:text-white/70" 
                             />
                           </FormControl>
                           <FormMessage />
@@ -329,7 +329,7 @@ const ConcursoAnimeke = () => {
                             <Input 
                               placeholder="Ex: Blue Bird - Naruto" 
                               {...field} 
-                              className="bg-white/20 text-white border-white/30" 
+                              className="bg-white/20 text-white border-white/30 placeholder:text-white/70" 
                             />
                           </FormControl>
                           <FormMessage />
@@ -347,7 +347,7 @@ const ConcursoAnimeke = () => {
                         <FormControl>
                           <Textarea 
                             placeholder="Alguma informação adicional que gostaria de compartilhar"
-                            className="bg-white/20 text-white border-white/30 min-h-[100px]"
+                            className="bg-white/20 text-white border-white/30 placeholder:text-white/70 min-h-[100px]"
                             {...field}
                           />
                         </FormControl>

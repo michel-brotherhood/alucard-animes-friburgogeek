@@ -216,7 +216,7 @@ const ConcursoKpop = () => {
                         <FormItem>
                           <FormLabel className="text-white">Nome do Grupo *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Nome do grupo K-Pop" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="Nome do grupo K-Pop" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -230,7 +230,7 @@ const ConcursoKpop = () => {
                         <FormItem>
                           <FormLabel className="text-white">Nome do Líder *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Nome completo do líder" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="Nome completo do líder" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -244,7 +244,7 @@ const ConcursoKpop = () => {
                         <FormItem>
                           <FormLabel className="text-white">Email *</FormLabel>
                           <FormControl>
-                            <Input type="email" placeholder="email@exemplo.com" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input type="email" placeholder="email@exemplo.com" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -258,7 +258,7 @@ const ConcursoKpop = () => {
                         <FormItem>
                           <FormLabel className="text-white">Telefone *</FormLabel>
                           <FormControl>
-                            <Input placeholder="(00) 00000-0000" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="(00) 00000-0000" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -273,8 +273,8 @@ const ConcursoKpop = () => {
                           <FormLabel className="text-white">Chave de Competição *</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                              <SelectTrigger className="bg-white/20 text-white border-white/30">
-                                <SelectValue placeholder="Selecione a chave" />
+                              <SelectTrigger className="bg-white/20 text-white border-white/30 placeholder:text-white/70">
+                                <SelectValue placeholder="Selecione a chave" className="placeholder:text-white/70" />
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent className="bg-white">
@@ -297,7 +297,7 @@ const ConcursoKpop = () => {
                         <FormItem>
                           <FormLabel className="text-white">Número de Integrantes *</FormLabel>
                           <FormControl>
-                            <Input type="number" min="3" max="10" placeholder="3 a 10" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input type="number" min="3" max="10" placeholder="3 a 10" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -311,7 +311,7 @@ const ConcursoKpop = () => {
                         <FormItem>
                           <FormLabel className="text-white">Nome da Música *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Nome da música K-Pop" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="Nome da música K-Pop" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -325,7 +325,7 @@ const ConcursoKpop = () => {
                         <FormItem>
                           <FormLabel className="text-white">Artista Original *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Nome do artista/grupo original" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="Nome do artista/grupo original" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -342,7 +342,7 @@ const ConcursoKpop = () => {
                         <FormControl>
                           <Textarea 
                             placeholder="Liste todos os integrantes (nome completo, um por linha)"
-                            className="bg-white/20 text-white border-white/30 min-h-[100px]"
+                            className="bg-white/20 text-white border-white/30 placeholder:text-white/70 min-h-[100px]"
                             {...field}
                           />
                         </FormControl>
@@ -360,7 +360,7 @@ const ConcursoKpop = () => {
                         <FormControl>
                           <Textarea 
                             placeholder="Descreva brevemente a coreografia e o conceito da apresentação"
-                            className="bg-white/20 text-white border-white/30 min-h-[100px]"
+                            className="bg-white/20 text-white border-white/30 placeholder:text-white/70 min-h-[100px]"
                             {...field}
                           />
                         </FormControl>

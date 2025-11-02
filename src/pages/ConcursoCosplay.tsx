@@ -398,7 +398,7 @@ const ConcursoCosplay = () => {
                         <FormItem>
                           <FormLabel className="text-white">Nome Completo *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Seu nome completo" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="Seu nome completo" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -412,7 +412,7 @@ const ConcursoCosplay = () => {
                         <FormItem>
                           <FormLabel className="text-white">Email *</FormLabel>
                           <FormControl>
-                            <Input type="email" placeholder="seu@email.com" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input type="email" placeholder="seu@email.com" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -426,7 +426,7 @@ const ConcursoCosplay = () => {
                         <FormItem>
                           <FormLabel className="text-white">Telefone *</FormLabel>
                           <FormControl>
-                            <Input placeholder="(00) 00000-0000" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="(00) 00000-0000" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -440,7 +440,7 @@ const ConcursoCosplay = () => {
                         <FormItem>
                           <FormLabel className="text-white">Idade *</FormLabel>
                           <FormControl>
-                            <Input type="number" placeholder="Sua idade" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input type="number" placeholder="Sua idade" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -455,8 +455,8 @@ const ConcursoCosplay = () => {
                           <FormLabel className="text-white">Categoria *</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                              <SelectTrigger className="bg-white/20 text-white border-white/30">
-                                <SelectValue placeholder="Selecione a categoria" />
+                              <SelectTrigger className="bg-white/20 text-white border-white/30 placeholder:text-white/70">
+                                <SelectValue placeholder="Selecione a categoria" className="placeholder:text-white/70" />
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent className="bg-white">
@@ -479,7 +479,7 @@ const ConcursoCosplay = () => {
                         <FormItem>
                           <FormLabel className="text-white">Nome do Personagem *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Ex: Naruto Uzumaki" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="Ex: Naruto Uzumaki" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -493,7 +493,7 @@ const ConcursoCosplay = () => {
                         <FormItem>
                           <FormLabel className="text-white">Origem do Personagem *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Ex: Naruto Shippuden" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="Ex: Naruto Shippuden" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -507,7 +507,7 @@ const ConcursoCosplay = () => {
                         <FormItem>
                           <FormLabel className="text-white">Nome do Responsável (se menor de idade)</FormLabel>
                           <FormControl>
-                            <Input placeholder="Nome do responsável" {...field} className="bg-white/20 text-white border-white/30" />
+                            <Input placeholder="Nome do responsável" {...field} className="bg-white/20 text-white border-white/30 placeholder:text-white/70" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -524,7 +524,7 @@ const ConcursoCosplay = () => {
                         <FormControl>
                           <Textarea 
                             placeholder="Descreva brevemente sua apresentação, cosplay e materiais utilizados"
-                            className="bg-white/20 text-white border-white/30 min-h-[120px]"
+                            className="bg-white/20 text-white border-white/30 placeholder:text-white/70 min-h-[120px]"
                             {...field}
                           />
                         </FormControl>
