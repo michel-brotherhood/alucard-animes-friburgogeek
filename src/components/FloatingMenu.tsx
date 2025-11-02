@@ -121,13 +121,15 @@ const FloatingMenu = () => {
               <img 
                 src={logoVerso} 
                 alt="Fechar" 
-                className="w-14 h-14 md:w-16 md:h-16 transition-all duration-300"
+                className="w-14 h-14 md:w-16 md:h-16 transition-all duration-300 object-cover object-top"
+                style={{ objectPosition: '50% 30%' }}
               />
             ) : (
               <img 
                 src={logoFrente} 
                 alt="Menu" 
-                className="w-14 h-14 md:w-16 md:h-16 transition-transform duration-300 group-hover:scale-110"
+                className="w-14 h-14 md:w-16 md:h-16 transition-transform duration-300 group-hover:scale-110 object-cover object-top"
+                style={{ objectPosition: '50% 30%' }}
               />
             )}
           </div>
