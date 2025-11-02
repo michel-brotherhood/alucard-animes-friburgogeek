@@ -80,17 +80,25 @@ const TicketCards = () => {
           {tickets.map((ticket) => (
             <Card 
               key={ticket.name} 
-              className={`relative overflow-hidden border-2 hover:border-primary transition-all hover:shadow-2xl ${
-                ticket.isVip ? 'md:col-span-2 lg:col-span-1 ring-2 ring-primary/50' : ''
+              className={`relative overflow-hidden border-2 transition-all ${
+                ticket.isVip 
+                  ? 'md:col-span-2 lg:col-span-1 bg-gradient-to-br from-destructive/20 via-primary/10 to-accent/20 border-primary hover:border-destructive hover:shadow-[0_0_30px_rgba(var(--primary),0.5)] animate-pulse-slow hover:scale-105' 
+                  : 'hover:border-primary hover:shadow-2xl'
               }`}
             >
+              {ticket.isVip && (
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-destructive to-primary animate-shimmer" 
+                     style={{ backgroundSize: '200% 100%' }}></div>
+              )}
               <CardHeader className="text-center pb-4">
-                <h3 className="text-2xl font-black text-secondary mb-2">{ticket.name}</h3>
+                <h3 className={`text-2xl font-black mb-2 ${ticket.isVip ? 'text-transparent bg-clip-text bg-gradient-to-r from-primary to-destructive' : 'text-secondary'}`}>
+                  {ticket.name}
+                </h3>
                 <p className="text-sm text-foreground/60 mb-4">A partir de</p>
-                <div className="text-5xl font-black text-primary mb-2">
+                <div className={`text-5xl font-black mb-2 ${ticket.isVip ? 'text-transparent bg-clip-text bg-gradient-to-r from-destructive to-primary' : 'text-primary'}`}>
                   {ticket.price}
                 </div>
-                <div className={`inline-block px-4 py-1 rounded-full text-sm font-bold ${ticket.badgeColor}`}>
+                <div className={`inline-block px-4 py-1 rounded-full text-sm font-bold ${ticket.badgeColor} ${ticket.isVip ? 'animate-pulse' : ''}`}>
                   {ticket.badge}
                 </div>
               </CardHeader>
@@ -105,7 +113,12 @@ const TicketCards = () => {
               </CardContent>
 
               <CardFooter className="flex flex-col gap-3 px-4">
-                <Button variant="skewed" className="w-full text-sm md:text-lg py-5 md:py-6 rounded-2xl">
+                <Button 
+                  variant="skewed" 
+                  className={`w-full text-sm md:text-lg py-5 md:py-6 rounded-2xl ${
+                    ticket.isVip ? 'bg-gradient-to-r from-destructive to-primary hover:from-primary hover:to-destructive shadow-lg hover:shadow-destructive/50' : ''
+                  }`}
+                >
                   QUERO ESTE
                 </Button>
                 <p className="text-xs text-center text-foreground/60 px-2">{ticket.note}</p>
