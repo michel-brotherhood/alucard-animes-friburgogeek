@@ -87,7 +87,7 @@ const Contato = () => {
     try {
       const { data: result, error } = await supabase.functions.invoke('send-contact-email', {
         body: {
-          to: 'contato@alucardanimes.com.br',
+          to: 'friburgogeek@alucardanimes.com.br',
           subject: 'Novo Contato - Friburgo Geek',
           formData: data,
           formType: 'Formulário de Contato'

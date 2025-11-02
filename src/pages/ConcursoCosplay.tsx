@@ -48,7 +48,7 @@ const ConcursoCosplay = () => {
     try {
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: {
-          to: 'contato@alucardanimes.com.br',
+          to: 'friburgogeek@alucardanimes.com.br',
           subject: 'Nova Inscrição - Concurso Cosplay',
           formData: values,
           formType: 'Concurso Cosplay'

@@ -50,7 +50,7 @@ const ConcursoKpop = () => {
     try {
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: {
-          to: 'contato@alucardanimes.com.br',
+          to: 'friburgogeek@alucardanimes.com.br',
           subject: 'Nova Inscrição - Campeonato K-Pop',
           formData: values,
           formType: 'Campeonato K-Pop'
