@@ -11,8 +11,6 @@ const tickets = [
     features: [
       "Acesso ao evento das 12h às 18h",
       "Todas as atrações incluídas",
-      "Grátis para crianças de 0 a 6 anos",
-      "Grátis para idosos acima de 65 anos",
     ],
     note: "Meia-entrada com 1kg de alimento não perecível",
   },
@@ -22,10 +20,10 @@ const tickets = [
     badge: "promocional",
     badgeColor: "bg-accent text-primary",
     features: [
+      "Benefícios do único...",
       "2 ingressos para o evento",
-      "Acesso a todas as atrações",
-      "Economia de R$ 10,00",
       "Válido para duas pessoas",
+      "Economia de R$ 10,00",
     ],
     note: "Meia-entrada com 1kg de alimento não perecível",
   },
@@ -35,10 +33,10 @@ const tickets = [
     badge: "promocional",
     badgeColor: "bg-accent text-primary",
     features: [
+      "Benefícios do único...",
       "3 ingressos para o evento",
-      "Acesso a todas as atrações",
-      "Economia de R$ 20,00",
       "Válido para três pessoas",
+      "Economia de R$ 20,00",
     ],
     note: "Meia-entrada com 1kg de alimento não perecível",
   },
@@ -116,7 +114,7 @@ const TicketCards = () => {
                 <Button 
                   variant="skewed" 
                   className={`w-full text-sm md:text-lg py-5 md:py-6 rounded-2xl ${
-                    ticket.isVip ? 'bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-500 hover:from-amber-500 hover:to-yellow-400 shadow-lg hover:shadow-yellow-500/50 text-black font-black' : ''
+                    ticket.isVip ? 'bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-500 hover:from-amber-500 hover:to-yellow-400 shadow-lg hover:shadow-yellow-500/50 text-white font-black' : ''
                   }`}
                 >
                   QUERO ESTE
