@@ -32,7 +32,7 @@ const schedule = {
 
 const Cronograma = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Header />
       
       <section className="bg-gradient-to-b from-primary to-secondary py-16 px-6">

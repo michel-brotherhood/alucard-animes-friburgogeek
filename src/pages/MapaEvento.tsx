@@ -45,7 +45,7 @@ const areas = [
 
 const MapaEvento = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Header />
       
       <section className="bg-gradient-to-b from-secondary to-primary py-16 px-6">

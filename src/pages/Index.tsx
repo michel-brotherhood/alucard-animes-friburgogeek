@@ -15,7 +15,7 @@ import SnowEffect from "@/components/SnowEffect";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <SnowEffect />
       <Header />
       <Hero />

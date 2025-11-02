@@ -34,7 +34,7 @@ const ConcursoVideogames = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Header />
       
       <section className="py-16 px-4 bg-gradient-to-b from-background to-muted">
