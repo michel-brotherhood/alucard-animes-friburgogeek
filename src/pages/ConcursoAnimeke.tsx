@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
 import { Mic, Users, Award, Music } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -18,10 +20,21 @@ const formSchema = z.object({
   email: z.string().email("Email inválido").max(255),
   telefone: z.string().min(10, "Telefone inválido").max(20),
   idade: z.string().min(1, "Idade é obrigatória"),
-  musica: z.string().min(2, "Nome da música é obrigatório").max(200),
-  anime: z.string().min(2, "Nome do anime/jogo é obrigatório").max(200),
-  idioma: z.string().min(2, "Idioma é obrigatório").max(50),
+  formaEnvio: z.enum(["link", "nome"], { required_error: "Selecione a forma de envio" }),
+  youtubeUrl: z.string().url("URL inválida").optional().or(z.literal("")),
+  nomeMusica: z.string().max(200).optional().or(z.literal("")),
   observacoes: z.string().max(500, "Observações muito longas").optional(),
+}).refine((data) => {
+  if (data.formaEnvio === "link") {
+    return data.youtubeUrl && data.youtubeUrl.length > 0;
+  }
+  if (data.formaEnvio === "nome") {
+    return data.nomeMusica && data.nomeMusica.length > 0;
+  }
+  return true;
+}, {
+  message: "Preencha o campo correspondente à forma de envio selecionada",
+  path: ["formaEnvio"],
 });
 
 const ConcursoAnimeke = () => {
@@ -33,12 +46,14 @@ const ConcursoAnimeke = () => {
       email: "",
       telefone: "",
       idade: "",
-      musica: "",
-      anime: "",
-      idioma: "",
+      formaEnvio: undefined,
+      youtubeUrl: "",
+      nomeMusica: "",
       observacoes: "",
     },
   });
+
+  const formaEnvio = form.watch("formaEnvio");
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
@@ -125,7 +140,7 @@ const ConcursoAnimeke = () => {
               <div>
                 <h4 className="font-bold text-accent mb-3 text-lg">1) INTRODUÇÃO</h4>
                 <ul className="list-disc list-inside space-y-2 text-sm">
-                  <li><strong>1.1</strong> – O campeonato de Animekê no Friburgo Geek é um concurso cultural de canto onde são apresentadas apenas canções tema ou músicas originais de animes, live-actions (tokusatsu), vocaloid, games (somente música original do jogo, fica vetada as músicas de jogos musicais – tais como Guitar Hero, Ouedan, Rock Band e demais jogos deste gênero); a música deve ser de um idioma real, podendo ser cantada no idioma original ou na sua versão adaptada para diferentes países</li>
+                  <li><strong>1.1</strong> – O campeonato de Animekê no Friburgo Geek é um concurso cultural de canto onde são apresentadas <strong>APENAS músicas de anime</strong>. A letra da música NÃO poderá aparecer no telão durante a apresentação</li>
                   <li><strong>1.2</strong> – O concurso é aberto para pessoas com idade superior a 03 anos; sendo vetada a participação de parceiros do evento, jurados, equipe organizadora do evento</li>
                   <li><strong>1.3</strong> – O participante concorda em liberar o uso da sua imagem para fins de divulgação</li>
                 </ul>
@@ -254,48 +269,74 @@ const ConcursoAnimeke = () => {
                       )}
                     />
 
-                    <FormField
-                      control={form.control}
-                      name="musica"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-white">Nome da Música *</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Nome da música que irá cantar" {...field} className="bg-white/20 text-white border-white/30" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="anime"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-white">Anime/Game de Origem *</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Ex: Naruto, Final Fantasy, etc." {...field} className="bg-white/20 text-white border-white/30" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="idioma"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-white">Idioma da Música *</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Ex: Japonês, Português, Inglês" {...field} className="bg-white/20 text-white border-white/30" />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
                   </div>
+
+                  <FormField
+                    control={form.control}
+                    name="formaEnvio"
+                    render={({ field }) => (
+                      <FormItem className="space-y-3">
+                        <FormLabel className="text-white">Forma de Enviar Música *</FormLabel>
+                        <FormControl>
+                          <RadioGroup
+                            onValueChange={field.onChange}
+                            defaultValue={field.value}
+                            className="flex flex-col space-y-2"
+                          >
+                            <div className="flex items-center space-x-3 bg-white/10 p-3 rounded-lg">
+                              <RadioGroupItem value="link" id="link" className="border-white text-accent" />
+                              <Label htmlFor="link" className="text-white cursor-pointer flex-1">Link do YouTube</Label>
+                            </div>
+                            <div className="flex items-center space-x-3 bg-white/10 p-3 rounded-lg">
+                              <RadioGroupItem value="nome" id="nome" className="border-white text-accent" />
+                              <Label htmlFor="nome" className="text-white cursor-pointer flex-1">Nome da Música/Anime</Label>
+                            </div>
+                          </RadioGroup>
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  {formaEnvio === "link" && (
+                    <FormField
+                      control={form.control}
+                      name="youtubeUrl"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-white">URL do YouTube *</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="https://www.youtube.com/watch?v=..." 
+                              {...field} 
+                              className="bg-white/20 text-white border-white/30" 
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  )}
+
+                  {formaEnvio === "nome" && (
+                    <FormField
+                      control={form.control}
+                      name="nomeMusica"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-white">Nome da Música/Anime *</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Ex: Blue Bird - Naruto" 
+                              {...field} 
+                              className="bg-white/20 text-white border-white/30" 
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  )}
 
                   <FormField
                     control={form.control}
