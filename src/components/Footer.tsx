@@ -29,7 +29,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-white/80">
                 <Calendar className="w-4 h-4 text-accent" />
-                <span>16 e 17 de Agosto de 2026</span>
+                <span>14 de Dezembro de 2025</span>
               </li>
               <li className="flex items-center gap-2 text-white/80">
                 <Clock className="w-4 h-4 text-accent" />

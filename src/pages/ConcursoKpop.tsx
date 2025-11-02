@@ -115,7 +115,7 @@ const ConcursoKpop = () => {
               <CardContent className="pt-6 text-center">
                 <Calendar className="w-12 h-12 text-accent mx-auto mb-3" />
                 <h3 className="text-white font-bold text-lg mb-2">Data do Evento</h3>
-                <p className="text-white/80 text-sm">16 e 17 de Agosto de 2026</p>
+                <p className="text-white/80 text-sm">14 de Dezembro de 2025</p>
               </CardContent>
             </Card>
 
@@ -138,7 +138,7 @@ const ConcursoKpop = () => {
                 <h4 className="font-bold text-accent mb-2">Formato:</h4>
                 <ul className="list-disc list-inside space-y-1 text-sm">
                   <li>Modalidade exclusiva para grupos de 3 a 10 integrantes</li>
-                  <li>Inscrições apenas online de 15 de Junho a 15 de Agosto de 2026</li>
+                  <li>Inscrições apenas online até 14 de Dezembro de 2025</li>
                   <li>Taxa de inscrição: R$ 60,00 por pessoa (inclui entrada no evento)</li>
                   <li>O campeonato será realizado a partir das 14 horas</li>
                 </ul>
