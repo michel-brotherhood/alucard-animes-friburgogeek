@@ -31,7 +31,7 @@ const Cronograma = () => {
             CRONOGRAMA
           </h1>
           <p className="text-xl text-white/90 text-center mb-12">
-            Programação completa do evento - Domingo, 14 de Dezembro de 2025
+            Programação completa
           </p>
 
           <div className="max-w-4xl mx-auto">
