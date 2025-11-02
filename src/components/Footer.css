@@ -1,0 +1,8 @@
+footer::before,
+footer::after {
+  display: none !important;
+}
+
+footer * {
+  position: relative;
+}

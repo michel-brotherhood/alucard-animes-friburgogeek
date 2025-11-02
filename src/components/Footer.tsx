@@ -1,11 +1,12 @@
 import { Facebook, Instagram, MessageCircle, MapPin, Calendar, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import friburgoGeekLogo from "@/assets/friburgo-geek-logo.png";
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary py-12 px-6">
-      <div className="max-w-6xl mx-auto">
+    <footer className="bg-secondary py-12 px-6 overflow-hidden relative">
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <img src={friburgoGeekLogo} alt="Friburgo Geek" className="h-20 mb-4" />
@@ -14,7 +15,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div>
+          <div className="md:pl-8">
             <h4 className="text-white font-bold mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
               <li><Link to="/o-evento" className="text-white/80 hover:text-accent transition-colors">O Evento</Link></li>
