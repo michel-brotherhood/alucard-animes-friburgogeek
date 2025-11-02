@@ -547,13 +547,15 @@ const ConcursoCosplay = () => {
                     ENVIAR INSCRIÇÃO
                   </Button>
 
-                  <div className="text-center">
-                    <p className="text-white/70 mb-3">Ou envie um e-mail:</p>
+                  <div className="text-center bg-white/5 rounded-lg p-4 md:p-6">
+                    <p className="text-white/90 mb-4 text-sm md:text-base">Dúvidas ou prefere se inscrever por e-mail?</p>
                     <a 
                       href="mailto:friburgogeek@alucardanimes.com?subject=Inscrição%20Concurso%20Cosplay"
-                      className="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-colors border border-white/30"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block w-full sm:w-auto bg-accent hover:bg-accent/90 text-secondary font-bold px-6 md:px-8 py-3 md:py-4 rounded-full transition-all hover:scale-105 text-sm md:text-base"
                     >
-                      📧 friburgogeek@alucardanimes.com
+                      📧 Enviar E-mail
                     </a>
                   </div>
                 </form>

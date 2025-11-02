@@ -54,33 +54,33 @@ const OEvento = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
             <Card className="bg-accent border-0 text-center">
-              <CardContent className="p-6">
-                <Users className="w-12 h-12 text-secondary mx-auto mb-4" />
-                <div className="text-4xl font-black text-secondary mb-2">1 Dia</div>
-                <div className="text-secondary/80 font-bold">De pura diversão</div>
+              <CardContent className="p-4 md:p-6">
+                <Users className="w-8 h-8 md:w-12 md:h-12 text-secondary mx-auto mb-2 md:mb-4" />
+                <div className="text-2xl md:text-4xl font-black text-secondary mb-1 md:mb-2">1 Dia</div>
+                <div className="text-xs md:text-base text-secondary/80 font-bold">De pura diversão</div>
               </CardContent>
             </Card>
             <Card className="bg-accent border-0 text-center">
-              <CardContent className="p-6">
-                <Calendar className="w-12 h-12 text-secondary mx-auto mb-4" />
-                <div className="text-4xl font-black text-secondary mb-2">6 horas</div>
-                <div className="text-secondary/80 font-bold">Das 12h às 18h</div>
+              <CardContent className="p-4 md:p-6">
+                <Calendar className="w-8 h-8 md:w-12 md:h-12 text-secondary mx-auto mb-2 md:mb-4" />
+                <div className="text-2xl md:text-4xl font-black text-secondary mb-1 md:mb-2">6 horas</div>
+                <div className="text-xs md:text-base text-secondary/80 font-bold">Das 12h às 18h</div>
               </CardContent>
             </Card>
             <Card className="bg-accent border-0 text-center">
-              <CardContent className="p-6">
-                <MapPin className="w-12 h-12 text-secondary mx-auto mb-4" />
-                <div className="text-4xl font-black text-secondary mb-2">10+</div>
-                <div className="text-secondary/80 font-bold">Videogames free play</div>
+              <CardContent className="p-4 md:p-6">
+                <MapPin className="w-8 h-8 md:w-12 md:h-12 text-secondary mx-auto mb-2 md:mb-4" />
+                <div className="text-2xl md:text-4xl font-black text-secondary mb-1 md:mb-2">10+</div>
+                <div className="text-xs md:text-base text-secondary/80 font-bold">Videogames free play</div>
               </CardContent>
             </Card>
             <Card className="bg-accent border-0 text-center">
-              <CardContent className="p-6">
-                <Star className="w-12 h-12 text-secondary mx-auto mb-4" />
-                <div className="text-4xl font-black text-secondary mb-2">8</div>
-                <div className="text-secondary/80 font-bold">Campeonatos</div>
+              <CardContent className="p-4 md:p-6">
+                <Star className="w-8 h-8 md:w-12 md:h-12 text-secondary mx-auto mb-2 md:mb-4" />
+                <div className="text-2xl md:text-4xl font-black text-secondary mb-1 md:mb-2">8</div>
+                <div className="text-xs md:text-base text-secondary/80 font-bold">Campeonatos</div>
               </CardContent>
             </Card>
           </div>
@@ -169,7 +169,7 @@ const OEvento = () => {
                     rel="noopener noreferrer"
                     className="inline-block bg-primary hover:bg-primary/90 text-white font-bold text-lg px-8 py-3 rounded-full shadow-lg transition-all hover:scale-105"
                   >
-                    Conhecer mais sobre a Alucard Animes
+                    Conhecer Mais
                   </a>
                 </div>
                 <div className="flex items-center justify-center md:justify-start gap-4">
