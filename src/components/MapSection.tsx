@@ -12,8 +12,12 @@ const MapSection = () => {
             </h2>
           </div>
           <p className="text-sm md:text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            Sindicato Dos Têxteis - Rua Augusto Spinelli, 84 - Centro<br />
-            Nova Friburgo - RJ | CEP: 28610-190
+            Sindicato Dos Têxteis<br className="md:hidden" />
+            <span className="hidden md:inline"> - </span>
+            Rua Augusto Spinelli, 84 - Centro<br />
+            Nova Friburgo - RJ<br className="md:hidden" />
+            <span className="hidden md:inline"> | </span>
+            CEP: 28610-190
           </p>
         </div>
 
