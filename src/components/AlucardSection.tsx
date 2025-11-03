@@ -36,11 +36,7 @@ const AlucardSection = () => {
             className="bg-accent text-primary hover:bg-accent/90 font-bold text-base px-10 py-6 rounded-full"
             asChild
           >
-            <a 
-              href="https://www.instagram.com/alucardanimes/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
+            <a href="/quem-somos">
               CONHECER MAIS
             </a>
           </Button>
