@@ -104,7 +104,7 @@ const Concursos = () => {
                   <li>Cosplay: Medalhas + até R$ 100 em brindes</li>
                   <li>K-pop: R$ 300,00 por chave</li>
                   <li>Animekê: Medalha + Kit de produtos</li>
-                  <li>Videogames: R$ 100,00 (Passaporte Gamer)</li>
+                  <li>Videogames: R$ 100,00</li>
                 </ul>
               </div>
             </div>
