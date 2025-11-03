@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: "Qual o benefício do ingresso V.I.P?",
-    answer: "Entrada antecipada (a partir das 11:00h, sem filas), acesso ao camarim dos artistas/dubladores/youtubers, crachá exclusivo e R$ 130,00 em produtos nos estandes Marikanime Shop e Konoha Lanches."
+    answer: "Entrada antecipada ao evento, crachá exclusivo VIP e R$ 130,00 em compras no estande Yume Geek Store ou na Lanchonete Konoha Lanches."
   },
   {
     question: "Posso tirar foto com as atrações?",
