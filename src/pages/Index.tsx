@@ -10,6 +10,7 @@ import GamesSection from "@/components/GamesSection";
 import ActivitySection from "@/components/ActivitySection";
 import VendorsSection from "@/components/VendorsSection";
 import ConcursosCallToAction from "@/components/ConcursosCallToAction";
+import AlucardSection from "@/components/AlucardSection";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
@@ -31,6 +32,7 @@ const Index = () => {
       <ActivitySection />
       <ConcursosCallToAction />
       <VendorsSection />
+      <AlucardSection />
       <FAQ />
       <Footer />
       <FloatingMenu />
