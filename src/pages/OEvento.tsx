@@ -53,6 +53,18 @@ const OEvento = () => {
             <img src={logoFg} alt="Friburgo Geek" className="w-32 h-auto object-contain" />
           </div>
 
+          {/* Hero Section */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 border-2 border-accent">
+            <h2 className="text-3xl md:text-4xl font-black text-accent mb-6">
+              Bem-vindo ao Friburgo Geek Natal! 🎄
+            </h2>
+            <div className="space-y-4 text-white/90 text-lg">
+              <p>
+                O Friburgo Geek tem a missão de celebrar a cultura geek — e as muitas culturas que a compõem, como games, quadrinhos, cinema, anime e tecnologia — em um formato acolhedor para toda a família. Promovemos eventos seguros e bem organizados em Nova Friburgo e região, com programação pensada para crianças, jovens e adultos, espaços de convivência, oficinas e atividades educativas. Nosso foco é simples: respeito, boa convivência e acessibilidade, sem bandeiras ou discursos — aqui o protagonismo é da experiência em família, do encontro entre gerações e do compartilhamento de referências. Queremos que cada edição seja um ponto de encontro da cidade e das cidades vizinhas, onde todos se sintam à vontade para curtir, descobrir novidades e voltar para casa com boas memórias.
+              </p>
+            </div>
+          </div>
+
           {/* Event Photos Carousel */}
           <div className="mb-12">
             <Carousel
@@ -107,18 +119,6 @@ const OEvento = () => {
               <Facebook className="w-6 h-6" />
               Curtir no Facebook
             </a>
-          </div>
-
-          {/* Hero Section */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 border-2 border-accent">
-            <h2 className="text-3xl md:text-4xl font-black text-accent mb-6">
-              Bem-vindo ao Friburgo Geek Natal! 🎄
-            </h2>
-            <div className="space-y-4 text-white/90 text-lg">
-              <p>
-                O Friburgo Geek tem a missão de celebrar a cultura geek — e as muitas culturas que a compõem, como games, quadrinhos, cinema, anime e tecnologia — em um formato acolhedor para toda a família. Promovemos eventos seguros e bem organizados em Nova Friburgo e região, com programação pensada para crianças, jovens e adultos, espaços de convivência, oficinas e atividades educativas. Nosso foco é simples: respeito, boa convivência e acessibilidade, sem bandeiras ou discursos — aqui o protagonismo é da experiência em família, do encontro entre gerações e do compartilhamento de referências. Queremos que cada edição seja um ponto de encontro da cidade e das cidades vizinhas, onde todos se sintam à vontade para curtir, descobrir novidades e voltar para casa com boas memórias.
-              </p>
-            </div>
           </div>
 
           {/* Stats */}
