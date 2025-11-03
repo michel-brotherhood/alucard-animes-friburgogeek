@@ -19,7 +19,7 @@ const Hero = () => {
               <div className="h-1 w-20 md:w-32 bg-foreground"></div>
               
               <p className="text-muted-foreground text-base md:text-lg max-w-md leading-relaxed">
-                Experiência única que oferece aos fãs controle incomparável sobre cultura geek, anime, cosplay e games.
+                Experiência única que oferece aos fãs controle incomparável sobre cultura geek, anime, cosplay, games, E-sports e muito mais...
               </p>
               
               <div className="flex gap-3 md:gap-4 flex-wrap">
