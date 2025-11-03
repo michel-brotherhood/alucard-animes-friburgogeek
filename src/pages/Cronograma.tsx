@@ -6,12 +6,13 @@ import { Clock } from "lucide-react";
 
 const schedule = [
   { time: "12:00", event: "Abertura dos portões", location: "Entrada Principal" },
+  { time: "12:15", event: "Cine Anime", location: "Sala de Cinema" },
   { time: "12:30", event: "Início das atividades", location: "Áreas Temáticas" },
+  { time: "12:45", event: "Gincanas com o Misheru", location: "STAGE Principal" },
   { time: "13:00", event: "Arena Gamer & Retrô Games", location: "Arena Games" },
   { time: "13:30", event: "Campeonatos de Videogames", location: "Arena Games" },
   { time: "14:00", event: "Show com o Guitarrista Raphael Freitas", location: "STAGE Principal" },
-  { time: "15:00", event: "Cine Anime", location: "Sala de Cinema" },
-  { time: "15:30", event: "Concurso de Cosplay", location: "STAGE Principal" },
+  { time: "15:00", event: "Concurso de Cosplay", location: "STAGE Principal" },
   { time: "16:00", event: "Campeonato K-POP Generations", location: "STAGE Principal" },
   { time: "16:30", event: "Beat Saber VR", location: "Arena VR" },
   { time: "17:00", event: "Animeke Livre", location: "STAGE Principal" },
