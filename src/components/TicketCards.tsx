@@ -13,7 +13,7 @@ const tickets = [
       "Acesso ao evento das 12h às 18h",
       "Todas as atrações incluídas",
     ],
-    note: "Meia-entrada com 1kg de alimento não perecível",
+    note: "Garanta sua entrada para o evento!",
   },
   {
     name: "INGRESSO DUPLO",
@@ -26,7 +26,7 @@ const tickets = [
       "Válido para duas pessoas",
       "Economia de R$ 10,00",
     ],
-    note: "Meia-entrada com 1kg de alimento não perecível",
+    note: "Mais economia comprando junto!",
   },
   {
     name: "INGRESSO TRIPLO",
@@ -39,7 +39,7 @@ const tickets = [
       "Válido para três pessoas",
       "Economia de R$ 20,00",
     ],
-    note: "Meia-entrada com 1kg de alimento não perecível",
+    note: "A melhor economia para grupos!",
   },
   {
     name: "VIP",
