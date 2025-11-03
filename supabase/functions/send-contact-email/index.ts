@@ -63,8 +63,9 @@ const handler = async (req: Request): Promise<Response> => {
     };
 
     const emailResponse = await resend.emails.send({
-      from: "Friburgo Geek <noreply@alucardanimes.com.br>",
-      to: [to],
+      from: "Contato <no-reply@alucardanimes.com.br>",
+      to: ["contato@alucardanimes.com.br"],
+      reply_to: formData.email || undefined,
       subject: subject,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
