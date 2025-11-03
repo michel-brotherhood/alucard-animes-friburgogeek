@@ -32,8 +32,8 @@ const Index = () => {
       <GamesSection />
       <ActivitySection />
       <ConcursosCallToAction />
-      <VendorsSection />
       <FriburgoGeekSection />
+      <VendorsSection />
       <AlucardSection />
       <FAQ />
       <Footer />
