@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
 import SnowEffect from "@/components/SnowEffect";
+import BatsEffect from "@/components/BatsEffect";
 import alucardLogo from "@/assets/alucard-animes-logo.png";
 import { Button } from "@/components/ui/button";
 import { Instagram, Facebook } from "lucide-react";
@@ -169,11 +170,12 @@ const QuemSomos = () => {
           <h1 className="text-4xl md:text-6xl font-black text-accent mb-8">
             QUEM SOMOS
           </h1>
-          <div className="flex justify-center mb-2">
+          <div className="flex justify-center mb-2 relative">
+            <BatsEffect />
             <img 
               src={alucardLogo} 
               alt="Alucard Animes - Desde 2003" 
-              className="w-48 md:w-64 h-auto"
+              className="w-48 md:w-64 h-auto relative z-10"
             />
           </div>
         </div>
