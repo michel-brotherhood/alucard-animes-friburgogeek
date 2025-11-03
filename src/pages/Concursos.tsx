@@ -20,7 +20,7 @@ const concursos = [
   {
     title: "K-pop",
     icon: Music,
-    description: "Batalha das Gerações! Grupos de 3 a 10 integrantes concorrem a R$ 300,00 em cada chave.",
+    description: "Batalha das Gerações! Grupos de 3 a 10 integrantes concorrem a R$ 400,00 em cada chave.",
     image: "🎵",
     link: "/concursos/kpop",
     color: "from-purple-500 to-blue-500"
@@ -102,7 +102,7 @@ const Concursos = () => {
                 <h3 className="font-bold text-accent mb-2">Premiações:</h3>
                 <ul className="list-disc list-inside space-y-1 text-sm">
                   <li>Cosplay: Medalhas + até R$ 100 em brindes</li>
-                  <li>K-pop: R$ 300,00 por chave</li>
+                  <li>K-pop: R$ 400,00 por chave</li>
                   <li>Animekê: Medalha + Kit de produtos</li>
                   <li>Videogames: R$ 100,00</li>
                 </ul>
