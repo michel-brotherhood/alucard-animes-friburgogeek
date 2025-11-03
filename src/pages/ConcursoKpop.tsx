@@ -167,32 +167,68 @@ const ConcursoKpop = () => {
               </div>
 
               <div>
-                <h4 className="font-bold text-accent mb-3 text-lg">3) CRITÉRIO DE JULGAMENTO</h4>
-                <p className="text-sm mb-2"><strong>3.1</strong> – Será composta por até 3 (três) jurados previamente selecionados pela organização. Em caso de empate não previsto no regulamento, o presidente da comissão julgadora terá a palavra final.</p>
+                <h4 className="font-bold text-accent mb-3 text-lg">3) GERAÇÕES DO K-POP</h4>
+                <div className="space-y-3 text-sm">
+                  <div className="bg-white/5 p-3 rounded-lg">
+                    <p className="font-bold text-white mb-1">1ª Geração (Meados dos anos 90 – 2003)</p>
+                    <p>Início do K-pop, com grupos como Seo Taiji & Boys, que trouxeram influências estrangeiras, como rap, rock e techno, para a música coreana.</p>
+                  </div>
+                  
+                  <div className="bg-white/5 p-3 rounded-lg">
+                    <p className="font-bold text-white mb-1">2ª Geração (2003 – 2012)</p>
+                    <p>Expansão do K-pop, com a internacionalização e o surgimento de grupos populares como TVXQ, Super Junior, Girls' Generation, SHINee e 2PM.</p>
+                  </div>
+                  
+                  <div className="bg-white/5 p-3 rounded-lg">
+                    <p className="font-bold text-white mb-1">3ª Geração (2012 – 2017)</p>
+                    <p>Consolidação do K-pop como um fenômeno global, com grupos como EXO, BTS, GOT7, MAMAMOO, Red Velvet e TWICE.</p>
+                  </div>
+                  
+                  <div className="bg-white/5 p-3 rounded-lg">
+                    <p className="font-bold text-white mb-1">4ª Geração (2018 – 2022)</p>
+                    <p>Crescimento ainda maior do K-pop, com o surgimento de grupos como Stray Kids, (G)I-DLE, ATEEZ, ITZY, TOMORROW X TOGETHER e aespa.</p>
+                  </div>
+                  
+                  <div className="bg-white/5 p-3 rounded-lg">
+                    <p className="font-bold text-white mb-1">5ª Geração (2023 – presente)</p>
+                    <p>Nova geração iniciada em 2023, com grupos como ZEROBASEONE, RIIZE e BABYMONSTER considerados pioneiros, conforme a Billboard Philippines.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-bold text-accent mb-3 text-lg">4) CRITÉRIO DE JULGAMENTO</h4>
+                <p className="text-sm mb-2"><strong>4.1</strong> – Será composta por até 3 (três) jurados previamente selecionados pela organização. Em caso de empate não previsto no regulamento, o presidente da comissão julgadora terá a palavra final.</p>
                 <ul className="list-decimal list-inside space-y-1 text-sm ml-4">
                   <li>ORIGINALIDADE – PESO: 2</li>
                   <li>EXPRESSÃO ARTÍSTICA – PESO: 2</li>
                   <li>SINCRONIA – PESO: 2</li>
                   <li>FIGURINO – PESO: 2</li>
                   <li>PRESENÇA DE PALCO – PESO: 2</li>
-                  <li>Cálculo da nota final: 3.1.1 + 3.1.2 + 3.1.3 + 3.1.4 + 3.1.5 = 10</li>
+                  <li>Cálculo da nota final: 4.1.1 + 4.1.2 + 4.1.3 + 4.1.4 + 4.1.5 = 10</li>
                 </ul>
-                <p className="text-sm mt-2"><strong>3.2</strong> – Em caso de empate, fica sobre critério do júri optar por uma pontuação justificável para o desempate, sem ser contestado</p>
+                <p className="text-sm mt-2"><strong>4.2</strong> – Em caso de empate, fica sobre critério do júri optar por uma pontuação justificável para o desempate, sem ser contestado</p>
               </div>
 
               <div>
-                <h4 className="font-bold text-accent mb-3 text-lg">4) PREMIAÇÃO</h4>
+                <h4 className="font-bold text-accent mb-3 text-lg">5) PREMIAÇÃO</h4>
                 <ul className="list-disc list-inside space-y-2 text-sm">
-                  <li><strong>4.1</strong> – Premiações em dinheiro para os vencedores de cada chave:
+                  <li><strong>5.1</strong> – Premiações em dinheiro para os vencedores de cada chave:
                     <ul className="list-none ml-6 mt-1 space-y-1">
                       <li>• Chave Old School – 1ª e 2ª Gerações do Kpop – R$ 400,00</li>
                       <li>• Chave Middle School – 3ª Geração do Kpop – R$ 400,00</li>
                       <li>• Chave New School – 4ª e 5ª Gerações do Kpop – R$ 400,00</li>
                     </ul>
                   </li>
-                  <li><strong>4.2</strong> – Caso não tenha completado o mínimo de 5 grupos por categoria, os grupos serão mesclados a outras categorias até obter o mínimo de 5 grupos para o início do campeonato</li>
-                  <li><strong>4.3</strong> – Caso o campeonato não alcance o mínimo de 5 grupos em qualquer das categorias, a premiação será reduzida em 50% ao valor da premiação inicial</li>
+                  <li><strong>5.2</strong> – Caso não tenha completado o mínimo de 5 grupos por categoria, os grupos serão mesclados a outras categorias até obter o mínimo de 5 grupos para o início do campeonato</li>
+                  <li><strong>5.3</strong> – Caso o campeonato não alcance o mínimo de 5 grupos em qualquer das categorias, a premiação será reduzida em 50% ao valor da premiação inicial</li>
                 </ul>
+              </div>
+
+              <div className="bg-accent/20 border-2 border-accent rounded-lg p-4">
+                <h4 className="font-bold text-accent mb-3 text-lg">💰 INFORMAÇÕES IMPORTANTES</h4>
+                <p className="text-white text-sm"><strong>Valor da Inscrição:</strong> R$ 400,00 por chave</p>
+                <p className="text-white/80 text-sm mt-2">O pagamento deverá ser realizado proporcionalmente para cada chave que o grupo competir.</p>
               </div>
             </CardContent>
           </Card>

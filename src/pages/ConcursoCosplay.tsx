@@ -102,7 +102,7 @@ const ConcursoCosplay = () => {
               <CardContent className="pt-6 text-center">
                 <Trophy className="w-12 h-12 text-accent mx-auto mb-3" />
                 <h3 className="text-white font-bold text-lg mb-2">Premiação</h3>
-                <p className="text-white/80 text-sm">Medalhas + até R$ 125 em brindes</p>
+                <p className="text-white/80 text-sm">Medalha + Kit de produtos</p>
               </CardContent>
             </Card>
             
@@ -344,9 +344,7 @@ const ConcursoCosplay = () => {
                 <div className="bg-accent/20 border-2 border-accent rounded-lg p-4 space-y-2">
                   <p className="font-bold text-white">Todas as categorias:</p>
                   <ul className="list-disc list-inside space-y-1 text-sm ml-4">
-                    <li><strong>1º Lugar:</strong> Medalha + R$ 125 em brindes</li>
-                    <li><strong>2º Lugar:</strong> Ingresso para o próximo evento da Alucard Animes</li>
-                    <li><strong>3º Lugar:</strong> Brinde</li>
+                    <li><strong>Vencedor:</strong> Medalha + Kit de produtos</li>
                   </ul>
                   <p className="text-sm mt-3 ml-4"><strong>Observação:</strong> Mínimo de 5 participantes por categoria. Se não houver o número mínimo, as premiações poderão ser alteradas ou canceladas sem aviso prévio.</p>
                 </div>
