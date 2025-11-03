@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Store, ShoppingBag, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import vendorBooths from "@/assets/vendor-booths.jpg";
+import videoStands from "@/assets/video-stands.mp4";
 
 const VendorsSection = () => {
   return (
@@ -19,12 +19,15 @@ const VendorsSection = () => {
           </p>
         </div>
 
-        {/* Imagem dos Estandes */}
+        {/* Vídeo dos Estandes */}
         <div className="mb-12 max-w-3xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-            <img
-              src={vendorBooths}
-              alt="Estandes de vendas com mangás e produtos geek"
+            <video
+              src={videoStands}
+              autoPlay
+              loop
+              muted
+              playsInline
               className="w-full h-auto object-cover max-h-[400px]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
