@@ -12,8 +12,8 @@ const Hero = () => {
             
             {/* Left Content */}
             <div className="space-y-6 md:space-y-8 order-2 lg:order-1">
-              <h1 className="text-3xl md:text-4xl xl:text-6xl font-black text-foreground leading-[1.2] tracking-tight max-w-lg">
-                A maior experiência <span className="text-accent">geek</span> <br className="hidden md:block" />de Nova Friburgo
+              <h1 className="text-3xl md:text-4xl xl:text-5xl font-black text-foreground leading-[1.3] tracking-tight max-w-lg">
+                A maior experiência <span className="text-accent">geek</span> de Nova Friburgo
               </h1>
               
               <div className="h-1 w-20 md:w-32 bg-foreground"></div>
