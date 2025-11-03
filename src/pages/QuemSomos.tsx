@@ -25,6 +25,7 @@ import timeline2017Nitgeek from "@/assets/timeline-2017-nitgeek.png";
 import timeline2018Faf from "@/assets/timeline-2018-faf.png";
 import timeline2019Geekinrio from "@/assets/timeline-2019-geekinrio.png";
 import timeline2022Animegonca from "@/assets/timeline-2022-animegonca.png";
+import timeline20242025Nitferias from "@/assets/timeline-2024-2025-nitferias.png";
 
 const QuemSomos = () => {
   const timelineEvents = [
@@ -128,7 +129,8 @@ const QuemSomos = () => {
       year: "2017",
       title: "Evento NitGeek Festival",
       description: "Nasce o evento NitGeek Festival, primeiro evento com temática geek da cidade de Niterói.",
-      image: timeline2017Nitgeek
+      image: timeline2017Nitgeek,
+      link: "https://www.facebook.com/nitgeek"
     },
     {
       year: "2018",
@@ -147,6 +149,12 @@ const QuemSomos = () => {
       title: "Evento Anime no Gonça",
       description: "Atualização do evento Projeto Otaku, agora com o nome Anime no Gonça, o evento mais antigo de animes da cidade de São Gonçalo.",
       image: timeline2022Animegonca
+    },
+    {
+      year: "2024 - 2025",
+      title: "Nit Férias Geek",
+      description: "Junção de 3 projetos do edital Geek 2024 de Niterói, nasce o Nit Férias Geek, realizado no Campo de São Bento em Icaraí/Niterói, no mês de janeiro de 2025.",
+      image: timeline20242025Nitferias
     }
   ];
 
@@ -161,7 +169,7 @@ const QuemSomos = () => {
           <h1 className="text-4xl md:text-6xl font-black text-accent mb-8">
             QUEM SOMOS
           </h1>
-          <div className="flex justify-center mb-4">
+          <div className="flex justify-center mb-2">
             <img 
               src={alucardLogo} 
               alt="Alucard Animes - Desde 2003" 
@@ -202,6 +210,28 @@ const QuemSomos = () => {
             </div>
           </div>
 
+          {/* Social Media Links */}
+          <div className="flex justify-center gap-4 mt-8">
+            <a
+              href="https://www.instagram.com/alucardanimes/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/10 backdrop-blur-sm border-2 border-accent/30 rounded-full p-4 hover:bg-accent/20 hover:scale-110 transition-all"
+              aria-label="Instagram Alucard Animes"
+            >
+              <Instagram className="w-6 h-6 text-accent" />
+            </a>
+            <a
+              href="https://www.facebook.com/AlucardAnimes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/10 backdrop-blur-sm border-2 border-accent/30 rounded-full p-4 hover:bg-accent/20 hover:scale-110 transition-all"
+              aria-label="Facebook Alucard Animes"
+            >
+              <Facebook className="w-6 h-6 text-accent" />
+            </a>
+          </div>
+
         </div>
       </section>
 
@@ -228,7 +258,20 @@ const QuemSomos = () => {
                   {/* Content */}
                   <div className="md:w-1/2 bg-white/10 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-6">
                     <div className="text-accent font-black text-2xl mb-2">{event.year}</div>
-                    <h3 className="text-white font-bold text-xl mb-3">{event.title}</h3>
+                    <h3 className="text-white font-bold text-xl mb-3">
+                      {event.link ? (
+                        <a 
+                          href={event.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-accent transition-colors underline"
+                        >
+                          {event.title}
+                        </a>
+                      ) : (
+                        event.title
+                      )}
+                    </h3>
                     <p className="text-white/80 text-sm leading-relaxed">{event.description}</p>
                   </div>
                   
