@@ -102,7 +102,7 @@ const ConcursoAnimeke = () => {
               <CardContent className="pt-6 text-center">
                 <Award className="w-12 h-12 text-accent mx-auto mb-3" />
                 <h3 className="text-white font-bold text-lg mb-2">Premiação</h3>
-                <p className="text-white/80 text-sm">Medalha + Kit de produtos</p>
+                <p className="text-white/80 text-sm">Kit de produtos (brinde)</p>
               </CardContent>
             </Card>
             
