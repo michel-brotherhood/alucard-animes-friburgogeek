@@ -15,6 +15,21 @@ import * as z from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { supabase } from "@/integrations/supabase/client";
 import cosplay1 from "@/assets/cosplay-1.jpg";
+import eventPhoto1 from "@/assets/event-photo-1.jpg";
+import eventPhoto2 from "@/assets/event-photo-2.jpg";
+import eventPhoto3 from "@/assets/event-photo-3.jpg";
+import eventPhoto4 from "@/assets/event-photo-4.jpg";
+import eventPhoto5 from "@/assets/event-photo-5.jpg";
+import eventPhoto6 from "@/assets/event-photo-6.jpg";
+import eventPhoto7 from "@/assets/event-photo-7.jpg";
+import eventPhoto8 from "@/assets/event-photo-8.jpg";
+import eventPhoto9 from "@/assets/event-photo-9.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const formSchema = z.object({
   nome: z.string().min(3, "Nome deve ter no mínimo 3 caracteres").max(100),
@@ -142,6 +157,39 @@ const ConcursoCosplay = () => {
                 <p className="text-white/80 text-sm">8 categorias disponíveis</p>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Event Photos Carousel */}
+          <div className="mb-12">
+            <p className="text-white/70 text-sm text-center mb-4">algumas fotos da última edição</p>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 2000,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent>
+                {[eventPhoto1, eventPhoto2, eventPhoto3, eventPhoto4, eventPhoto5, eventPhoto6, eventPhoto7, eventPhoto8, eventPhoto9].map((photo, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <Card className="border-2 border-accent overflow-hidden">
+                      <CardContent className="p-0">
+                        <img 
+                          src={photo} 
+                          alt={`Foto do evento ${index + 1}`}
+                          className="w-full h-64 object-cover hover:scale-110 transition-transform duration-300"
+                        />
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
           </div>
 
           {/* Regulamento Completo */}
