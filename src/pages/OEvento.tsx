@@ -4,6 +4,7 @@ import FloatingMenu from "@/components/FloatingMenu";
 import FAQ from "@/components/FAQ";
 import MapSection from "@/components/MapSection";
 import SnowEffect from "@/components/SnowEffect";
+import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Calendar, MapPin, Star, Instagram, Facebook } from "lucide-react";
 import alucardLogo from "@/assets/alucard-animes-logo.png";
@@ -34,6 +35,12 @@ const stats = [
 const OEvento = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <SEO 
+        title="O Evento - Friburgo Geek Natal 2025"
+        description="O maior evento geek de Nova Friburgo! Cosplay, k-pop, games, animekê, retro games, stands de vendas e muito mais. 14 de dezembro de 2025, das 12h às 18h. Venha participar!"
+        canonical="/o-evento"
+        keywords="Friburgo Geek, evento geek Nova Friburgo, convenção anime, cultura pop, Alucard Animes"
+      />
       <SnowEffect />
       <Header />
       

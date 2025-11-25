@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
+import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Clock } from "lucide-react";
 
@@ -23,6 +24,12 @@ const schedule = [
 const Cronograma = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <SEO 
+        title="Cronograma 2025 - Programação Completa do Evento"
+        description="Veja a programação completa do Friburgo Geek Natal 2025: concurso de cosplay, k-pop, animekê, torneios de games, show do guitarrista Raphael Freitas, retro games e muito mais! Das 12h às 18h."
+        canonical="/cronograma"
+        keywords="cronograma Friburgo Geek, programação evento geek, horários concursos, Nova Friburgo"
+      />
       <Header />
       
       <section className="bg-gradient-to-b from-primary to-secondary py-16 px-6">

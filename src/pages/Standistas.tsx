@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
 import MapSection from "@/components/MapSection";
+import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -71,6 +72,12 @@ const Standistas = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-secondary via-primary to-secondary">
+      <SEO 
+        title="Standistas - Seja um Expositor no Friburgo Geek 2025"
+        description="Seja um expositor no Friburgo Geek Natal 2025! Stands de 2m, 3m e 4m disponíveis. Oportunidade única para vender produtos geek, anime, cosplay e cultura pop. Inscreva-se!"
+        canonical="/standistas"
+        keywords="expositor Friburgo Geek, stand evento geek, vender produtos anime, expositor Nova Friburgo"
+      />
       <Header />
       
       <section className="py-16 px-6">

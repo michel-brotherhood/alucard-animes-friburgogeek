@@ -4,6 +4,7 @@ import * as z from "zod";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -114,6 +115,12 @@ const Contato = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEO 
+        title="Contato - Fale Conosco"
+        description="Entre em contato com a equipe do Friburgo Geek e Alucard Animes. Tire suas dúvidas, envie sugestões ou solicite informações sobre o evento. Estamos aqui para ajudar!"
+        canonical="/contato"
+        keywords="contato Friburgo Geek, falar com Alucard Animes, suporte evento, email contato"
+      />
       <Header />
       
       <main className="flex-grow">

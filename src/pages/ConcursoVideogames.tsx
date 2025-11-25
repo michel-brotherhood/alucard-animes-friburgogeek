@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
+import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, Users, Gamepad2 } from "lucide-react";
@@ -48,6 +49,12 @@ const ConcursoVideogames = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
+      <SEO 
+        title="Campeonato de Videogames 2025 - Tekken 8, Street Fighter 6, MK1 e mais"
+        description="Torneios de videogames no Friburgo Geek: Tekken 8, Street Fighter 6, Mortal Kombat 1, League of Legends, FIFA 2025 e Just Dance. Formato mata-mata, premiação R$ 100. Inscrições abertas!"
+        canonical="/concursos/videogames"
+        keywords="torneio Tekken 8, campeonato Street Fighter 6, Mortal Kombat 1, League of Legends torneio, FIFA 2025, Just Dance, videogames Nova Friburgo"
+      />
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"

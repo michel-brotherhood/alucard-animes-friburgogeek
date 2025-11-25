@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
+import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Store, Utensils, Gamepad2, Camera, Shirt } from "lucide-react";
 
@@ -46,6 +47,12 @@ const areas = [
 const MapaEvento = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <SEO 
+        title="Mapa do Evento - Localização e Áreas"
+        description="Veja o mapa do Friburgo Geek 2025: localização do STAGE Principal, Artist Alley, Arena Games, Food Park, área cosplay e muito mais. Como chegar e estacionamento."
+        canonical="/mapa"
+        keywords="mapa Friburgo Geek, localização evento, como chegar, áreas do evento, Nova Friburgo"
+      />
       <Header />
       
       <section className="bg-gradient-to-b from-secondary to-primary py-16 px-6">

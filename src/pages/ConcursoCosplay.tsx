@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
+import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -101,6 +102,12 @@ const ConcursoCosplay = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
+      <SEO 
+        title="Concurso Cosplay 2025 - Regulamento e Inscrições"
+        description="Concurso de cosplay no Friburgo Geek Natal 2025: 8 categorias, desfile livre, apresentação tradicional e cospobre. Premiação com medalhas e kit de produtos até R$ 100. Inscreva-se!"
+        canonical="/concursos/cosplay"
+        keywords="concurso cosplay, desfile cosplay, cosplay infantil, cospobre, Nova Friburgo, Friburgo Geek"
+      />
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"

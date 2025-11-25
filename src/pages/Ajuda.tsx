@@ -2,11 +2,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
 import FAQ from "@/components/FAQ";
+import { SEO } from "@/components/SEO";
 import { AlertCircle, Shield, Info, MessageSquare } from "lucide-react";
 
 const Ajuda = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEO 
+        title="Ajuda - Central de Suporte e Informações"
+        description="Central de ajuda do Friburgo Geek 2025: dúvidas frequentes, regras do evento, informações sobre ingressos, concursos e atrações. Encontre todas as respostas aqui!"
+        canonical="/ajuda"
+        keywords="ajuda Friburgo Geek, dúvidas evento, FAQ, regras evento geek, suporte"
+      />
       <Header />
       
       <main className="flex-grow">
