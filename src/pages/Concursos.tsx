@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
 import FAQ from "@/components/FAQ";
 import SnowEffect from "@/components/SnowEffect";
+import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Trophy, Music, Mic, Gamepad2 } from "lucide-react";
@@ -46,6 +47,12 @@ const concursos = [
 const Concursos = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <SEO 
+        title="Concursos - Cosplay, K-pop, Animekê e Videogames"
+        description="Participe dos concursos do Friburgo Geek Natal 2025: cosplay com medalhas e prêmios, k-pop com R$ 400 por chave, animekê e torneios de videogames. Inscrições abertas!"
+        canonical="/concursos"
+        keywords="concurso cosplay Nova Friburgo, campeonato k-pop, animekê, torneio videogames, Friburgo Geek, concursos geek"
+      />
       <SnowEffect />
       <Header />
       

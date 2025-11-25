@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
 import SnowEffect from "@/components/SnowEffect";
+import { SEO } from "@/components/SEO";
 import alucardLogo from "@/assets/alucard-animes-logo.png";
 import { Button } from "@/components/ui/button";
 import { Instagram, Facebook } from "lucide-react";
@@ -26,6 +27,7 @@ import timeline2018Faf from "@/assets/timeline-2018-faf.png";
 import timeline2019Geekinrio from "@/assets/timeline-2019-geekinrio.png";
 import timeline2022Animegonca from "@/assets/timeline-2022-animegonca.png";
 import timeline20242025Nitferias from "@/assets/timeline-2024-2025-nitferias.png";
+
 
 const QuemSomos = () => {
   const timelineEvents = [
@@ -159,7 +161,13 @@ const QuemSomos = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary via-secondary to-primary">
+    <div className="min-h-screen overflow-x-hidden">
+      <SEO 
+        title="Quem Somos - História da Alucard Animes"
+        description="Conheça a Alucard Animes Produções: 25 anos produzindo eventos geek, anime e cultura pop em Nova Friburgo e região. Nossa história desde 2000, realizando convenções e concursos memoráveis."
+        canonical="/quem-somos"
+        keywords="Alucard Animes, história Alucard, produtora eventos geek, Nova Friburgo, CVG Mangá"
+      />
       <SnowEffect />
       <Header />
       

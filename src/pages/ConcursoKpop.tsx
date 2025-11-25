@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
+import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -83,6 +84,12 @@ const ConcursoKpop = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
+      <SEO 
+        title="Campeonato K-Pop 2025 - Batalha das Gerações"
+        description="Campeonato K-Pop no Friburgo Geek: Batalha das Gerações com 3 chaves (Old School, Middle School, New School). Premiação de R$ 400 por chave. Grupos de 3 a 10 integrantes. Inscreva-se!"
+        canonical="/concursos/kpop"
+        keywords="campeonato k-pop, batalha gerações k-pop, cover k-pop, dança k-pop, Nova Friburgo, Friburgo Geek"
+      />
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"

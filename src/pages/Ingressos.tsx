@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
 import FAQ from "@/components/FAQ";
 import SnowEffect from "@/components/SnowEffect";
+import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, ShoppingCart } from "lucide-react";
@@ -64,6 +65,12 @@ const Ingressos = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Ingressos 2025 - Valores e Compra Online"
+        description="Garanta seu ingresso para o Friburgo Geek Natal 2025! Ingresso único R$ 35, duplo R$ 60, triplo R$ 80 e VIP R$ 150 (entrada antecipada + brinde exclusivo). Compre online agora!"
+        canonical="/ingressos"
+        keywords="ingressos Friburgo Geek, comprar ingresso evento geek, ingresso VIP Nova Friburgo, preço ingresso"
+      />
       <SnowEffect />
       <Header />
       

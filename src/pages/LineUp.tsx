@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
 import FAQ from "@/components/FAQ";
 import SnowEffect from "@/components/SnowEffect";
+import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star, Instagram } from "lucide-react";
@@ -30,6 +31,12 @@ const guests = [
 const LineUp = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <SEO 
+        title="Line-Up 2025 - Artistas e Atrações Confirmadas"
+        description="Confira os artistas confirmados no Friburgo Geek Natal 2025: show do guitarrista Raphael Freitas com músicas de games retrô e muito mais! Acompanhe as novidades."
+        canonical="/line-up"
+        keywords="line-up Friburgo Geek, artistas Friburgo Geek, Raphael Freitas, show games retrô, Nova Friburgo"
+      />
       <SnowEffect />
       <Header />
       

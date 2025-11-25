@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
+import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -86,6 +87,12 @@ const ConcursoAnimeke = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
+      <SEO 
+        title="Campeonato Animekê 2025 - Karaokê de Animes"
+        description="Campeonato de Animekê no Friburgo Geek: concurso cultural de canto com músicas de anime, vocaloid e games. Premiação com kit de produtos. A partir de 3 anos. Inscreva-se!"
+        canonical="/concursos/animeke"
+        keywords="animekê, karaokê anime, concurso canto anime, anime songs, Nova Friburgo, Friburgo Geek"
+      />
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
