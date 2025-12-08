@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const tickets = [
   {
-    name: "INGRESSO ÚNICO",
+    name: "MEIA ENTRADA",
     price: "35,00",
-    badge: "promocional",
+    badge: "penúltimo lote",
     badgeColor: "bg-accent text-primary",
     features: [
       "Acesso ao evento das 12h às 18h",
@@ -18,10 +18,10 @@ const tickets = [
   {
     name: "INGRESSO DUPLO",
     price: "60,00",
-    badge: "promocional",
+    badge: "penúltimo lote",
     badgeColor: "bg-accent text-primary",
     features: [
-      "Benefícios do único...",
+      "Benefícios da meia entrada...",
       "2 ingressos para o evento",
       "Válido para duas pessoas",
       "Economia de R$ 10,00",
@@ -30,21 +30,21 @@ const tickets = [
   },
   {
     name: "INGRESSO TRIPLO",
-    price: "85,00",
-    badge: "promocional",
+    price: "90,00",
+    badge: "penúltimo lote",
     badgeColor: "bg-accent text-primary",
     features: [
-      "Benefícios do único...",
+      "Benefícios da meia entrada...",
       "3 ingressos para o evento",
       "Válido para três pessoas",
-      "Economia de R$ 20,00",
+      "Economia de R$ 15,00",
     ],
     note: "A melhor economia para grupos!",
   },
   {
     name: "VIP",
     price: "130,00",
-    badge: "promocional",
+    badge: "último lote",
     badgeColor: "bg-destructive text-white",
     features: [
       "Entrada antecipada ao evento",
