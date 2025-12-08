@@ -154,7 +154,7 @@ const Header = () => {
         </div>
 
         <div className="flex items-center gap-2 md:gap-3">
-          <a href="https://www.uticket.com.br/event/01LD7EIVF0XD8Q/" target="_blank" rel="noopener noreferrer">
+          <a href="https://uticket.com.br/event/01LLMQ11S9BXU4" target="_blank" rel="noopener noreferrer">
             <Button 
               className="bg-accent text-primary hover:bg-accent/90 font-bold text-xs md:text-sm px-4 md:px-8 py-2 md:py-2.5 rounded-full shadow-lg"
             >
@@ -314,7 +314,7 @@ const Header = () => {
 
                 {/* CTA Button */}
                 <a 
-                  href="https://www.uticket.com.br/event/01LD7EIVF0XD8Q/"
+                  href="https://uticket.com.br/event/01LLMQ11S9BXU4"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMenuOpen(false)}
