@@ -117,7 +117,7 @@ const TicketCards = () => {
                   }`}
                   asChild
                 >
-                  <a href="https://www.uticket.com.br/event/01LD7EIVF0XD8Q/checkout/tickets" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.uticket.com.br/event/01LD7EIVF0XD8Q/" target="_blank" rel="noopener noreferrer">
                     QUERO ESTE
                   </a>
                 </Button>
