@@ -6,6 +6,7 @@ import { SEO } from "@/components/SEO";
 import alucardLogo from "@/assets/alucard-animes-logo.png";
 import { Button } from "@/components/ui/button";
 import { Instagram, Facebook } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import timeline2000 from "@/assets/timeline-2000.png";
 import timeline2001 from "@/assets/timeline-2001.png";
 import timeline2002Badge from "@/assets/timeline-2002-badge.png";
@@ -28,8 +29,10 @@ import timeline2019Geekinrio from "@/assets/timeline-2019-geekinrio.png";
 import timeline2022Animegonca from "@/assets/timeline-2022-animegonca.png";
 import timeline20242025Nitferias from "@/assets/timeline-2024-2025-nitferias.png";
 
-
 const QuemSomos = () => {
+  const heroRef = useScrollAnimation();
+  const aboutRef = useScrollAnimation();
+  const timelineTitleRef = useScrollAnimation();
   const timelineEvents = [
     {
       year: "2000",
@@ -175,7 +178,10 @@ const QuemSomos = () => {
       <main className="bg-gradient-to-b from-secondary to-primary">
         {/* Hero Section */}
         <section className="pt-32 pb-16 px-6">
-          <div className="max-w-6xl mx-auto text-center">
+          <div 
+            ref={heroRef.ref}
+            className={`max-w-6xl mx-auto text-center opacity-0 ${heroRef.isVisible ? 'animate-fade-up' : ''}`}
+          >
             <h1 className="text-4xl md:text-6xl font-black text-accent mb-8">
               QUEM SOMOS
             </h1>
@@ -183,7 +189,8 @@ const QuemSomos = () => {
               <img 
                 src={alucardLogo} 
                 alt="Alucard Animes - Desde 2003" 
-                className="w-48 md:w-64 h-auto"
+                className={`w-48 md:w-64 h-auto opacity-0 ${heroRef.isVisible ? 'animate-scale-fade' : ''}`}
+                style={{ animationDelay: '0.2s' }}
               />
             </div>
           </div>
@@ -191,7 +198,10 @@ const QuemSomos = () => {
 
         {/* About Text */}
         <section className="py-12 px-6">
-          <div className="max-w-6xl mx-auto">
+          <div 
+            ref={aboutRef.ref}
+            className={`max-w-6xl mx-auto opacity-0 ${aboutRef.isVisible ? 'animate-fade-up' : ''}`}
+          >
             <div className="bg-white/10 backdrop-blur-sm border-2 border-accent/30 rounded-3xl p-8 md:p-12 mb-12">
               <div className="prose prose-invert max-w-none">
                 <p className="text-white/90 text-base md:text-lg leading-relaxed mb-6">
@@ -248,9 +258,14 @@ const QuemSomos = () => {
         {/* Timeline Section */}
         <section className="py-16 px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-black text-accent text-center mb-16">
-              NOSSA HISTÓRIA
-            </h2>
+            <div 
+              ref={timelineTitleRef.ref}
+              className={`opacity-0 ${timelineTitleRef.isVisible ? 'animate-fade-up' : ''}`}
+            >
+              <h2 className="text-3xl md:text-5xl font-black text-accent text-center mb-16">
+                NOSSA HISTÓRIA
+              </h2>
+            </div>
             
             <div className="relative">
               {/* Timeline Line */}
@@ -259,43 +274,7 @@ const QuemSomos = () => {
               {/* Timeline Events */}
               <div className="space-y-12">
                 {timelineEvents.map((event, index) => (
-                  <div 
-                    key={index} 
-                    className={`flex flex-col md:flex-row gap-8 items-center ${
-                      index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                    }`}
-                  >
-                    {/* Content */}
-                    <div className="md:w-1/2 bg-white/10 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-6">
-                      <div className="text-accent font-black text-2xl mb-2">{event.year}</div>
-                      <h3 className="text-white font-bold text-xl mb-3">{event.title}</h3>
-                      <p className="text-white/80 text-sm leading-relaxed mb-4">{event.description}</p>
-                      {event.link && (
-                        <a
-                          href={event.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block bg-accent text-primary hover:bg-accent/90 font-bold text-sm px-6 py-2 rounded-full transition-colors"
-                        >
-                          SABER MAIS
-                        </a>
-                      )}
-                    </div>
-                    
-                    {/* Timeline Dot */}
-                    <div className="hidden md:block w-6 h-6 bg-accent rounded-full border-4 border-primary z-10 flex-shrink-0"></div>
-                    
-                    {/* Image */}
-                    <div className="md:w-1/2">
-                      <div className="bg-white/10 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-4 overflow-hidden">
-                        <img 
-                          src={event.image} 
-                          alt={`${event.year} - ${event.title}`}
-                          className="w-full h-auto rounded-lg object-cover"
-                        />
-                      </div>
-                    </div>
-                  </div>
+                  <TimelineEvent key={index} event={event} index={index} />
                 ))}
               </div>
             </div>
@@ -305,6 +284,53 @@ const QuemSomos = () => {
 
       <Footer />
       <FloatingMenu />
+    </div>
+  );
+};
+
+// Componente separado para aplicar animação individual em cada item
+const TimelineEvent = ({ event, index }: { event: { year: string; title: string; description: string; image: string; link?: string }; index: number }) => {
+  const eventRef = useScrollAnimation({ threshold: 0.2 });
+  const isEven = index % 2 === 0;
+  
+  return (
+    <div 
+      ref={eventRef.ref}
+      className={`flex flex-col md:flex-row gap-8 items-center opacity-0 ${
+        isEven ? 'md:flex-row' : 'md:flex-row-reverse'
+      } ${eventRef.isVisible ? (isEven ? 'animate-fade-right' : 'animate-fade-left') : ''}`}
+      style={{ animationDelay: '0.1s' }}
+    >
+      {/* Content */}
+      <div className="md:w-1/2 bg-white/10 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-6">
+        <div className="text-accent font-black text-2xl mb-2">{event.year}</div>
+        <h3 className="text-white font-bold text-xl mb-3">{event.title}</h3>
+        <p className="text-white/80 text-sm leading-relaxed mb-4">{event.description}</p>
+        {event.link && (
+          <a
+            href={event.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-accent text-primary hover:bg-accent/90 font-bold text-sm px-6 py-2 rounded-full transition-colors"
+          >
+            SABER MAIS
+          </a>
+        )}
+      </div>
+      
+      {/* Timeline Dot */}
+      <div className="hidden md:block w-6 h-6 bg-accent rounded-full border-4 border-primary z-10 flex-shrink-0"></div>
+      
+      {/* Image */}
+      <div className="md:w-1/2">
+        <div className="bg-white/10 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-4 overflow-hidden">
+          <img 
+            src={event.image} 
+            alt={`${event.year} - ${event.title}`}
+            className="w-full h-auto rounded-lg object-cover"
+          />
+        </div>
+      </div>
     </div>
   );
 };
