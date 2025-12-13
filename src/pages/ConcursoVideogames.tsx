@@ -8,9 +8,7 @@ import { Clock, Users, Gamepad2 } from "lucide-react";
 import mortalKombat from "@/assets/mortal-kombat-1-banner.webp";
 import streetFighter from "@/assets/street-fighter-6-banner.webp";
 import tekken8 from "@/assets/tekken-8-banner.webp";
-import justDance from "@/assets/just-dance-banner.webp";
 import fifa2025 from "@/assets/fifa-2025-banner.webp";
-import leagueOfLegends from "@/assets/league-of-legends-banner.webp";
 import gamesBackground from "@/assets/games-background.jpg";
 
 const ConcursoVideogames = () => {
@@ -35,25 +33,15 @@ const ConcursoVideogames = () => {
       categoria: "Futebol",
       image: fifa2025,
     },
-    {
-      title: "Just Dance",
-      categoria: "Dança",
-      image: justDance,
-    },
-    {
-      title: "League of Legends",
-      categoria: "MOBA",
-      image: leagueOfLegends,
-    },
   ];
 
   return (
     <div className="min-h-screen relative overflow-hidden">
       <SEO 
-        title="Campeonato de Videogames 2025 - Tekken 8, Street Fighter 6, MK1 e mais"
-        description="Torneios de videogames no Friburgo Geek: Tekken 8, Street Fighter 6, Mortal Kombat 1, League of Legends, FIFA 2025 e Just Dance. Formato mata-mata, premiação R$ 100. Inscrições abertas!"
+        title="Campeonato de Videogames 2025 - Tekken 8, Street Fighter 6, MK1 e FIFA"
+        description="Torneios de videogames no Friburgo Geek: Tekken 8, Street Fighter 6, Mortal Kombat 1 e FIFA 2025. Formato mata-mata, premiação R$ 100. Inscrições abertas!"
         canonical="/concursos/videogames"
-        keywords="torneio Tekken 8, campeonato Street Fighter 6, Mortal Kombat 1, League of Legends torneio, FIFA 2025, Just Dance, videogames Nova Friburgo"
+        keywords="torneio Tekken 8, campeonato Street Fighter 6, Mortal Kombat 1, FIFA 2025, videogames Nova Friburgo"
       />
       {/* Background Image with Overlay */}
       <div 
@@ -110,7 +98,7 @@ const ConcursoVideogames = () => {
           {/* Jogos Disponíveis */}
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-center mb-8">Jogos Disponíveis</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {jogos.map((jogo, index) => (
                 <Card key={index} className="overflow-hidden group hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                   <div className="relative h-80 overflow-hidden">
