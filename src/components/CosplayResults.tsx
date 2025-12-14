@@ -53,24 +53,24 @@ const ResultCard = ({ posicao, nome, personagem, nota }: ResultCardProps) => {
     <div 
       className={`flex items-center justify-between p-4 rounded-xl transition-all ${
         isFirst 
-          ? "bg-gradient-to-r from-red-900/40 to-red-800/20 border-2 border-red-500 shadow-lg shadow-red-500/20" 
-          : "bg-secondary/60 border border-border/30 hover:border-border/50"
+          ? "bg-gradient-to-r from-red-900/60 to-red-800/40 border-2 border-red-400 shadow-lg shadow-red-500/30" 
+          : "bg-black/40 border border-white/20 hover:border-white/30"
       }`}
     >
       <div className="flex items-center gap-3">
         <span className="text-2xl">{getMedalEmoji(posicao)}</span>
         <div>
-          <p className={`font-bold ${isFirst ? "text-foreground text-lg" : "text-foreground"}`}>
+          <p className={`font-bold ${isFirst ? "text-white text-lg" : "text-white"}`}>
             {nome}
           </p>
-          <p className="text-muted-foreground text-sm">{personagem}</p>
+          <p className="text-gray-300 text-sm italic">{personagem}</p>
         </div>
       </div>
       <div className="text-right">
-        <p className={`font-bold ${isFirst ? "text-accent text-xl" : "text-accent text-lg"}`}>
+        <p className={`font-extrabold ${isFirst ? "text-yellow-400 text-2xl" : "text-yellow-300 text-xl"}`}>
           {nota.toFixed(2)}
         </p>
-        <p className="text-muted-foreground text-xs">média</p>
+        <p className="text-gray-400 text-xs uppercase tracking-wide">média</p>
       </div>
     </div>
   );
@@ -83,7 +83,7 @@ interface CategorySectionProps {
 
 const CategorySection = ({ title, results }: CategorySectionProps) => {
   return (
-    <div className="bg-secondary/40 rounded-2xl p-5 md:p-6 border border-border/20">
+    <div className="bg-black/50 backdrop-blur-sm rounded-2xl p-5 md:p-6 border border-white/10">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-accent font-bold text-xl uppercase tracking-wide flex items-center gap-2">
           <Trophy className="w-5 h-5" />
