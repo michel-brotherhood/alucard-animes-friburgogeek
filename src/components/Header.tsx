@@ -113,6 +113,13 @@ const Header = () => {
                     >
                       🎮 Videogames
                     </Link>
+                    <div className="border-t border-white/10 my-1"></div>
+                    <Link 
+                      to="/#resultados-cosplay" 
+                      className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
+                    >
+                      📊 Resultados
+                    </Link>
                   </div>
                 </div>
               )}
@@ -277,6 +284,14 @@ const Header = () => {
                   >
                     <span className="text-base">🎮</span>
                     <span>Videogames</span>
+                  </Link>
+                  <Link 
+                    to="/#resultados-cosplay" 
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-white/90 text-sm py-2 px-3 rounded-full hover:bg-white/10 transition-colors flex items-center gap-2"
+                  >
+                    <span className="text-base">📊</span>
+                    <span>Resultados</span>
                   </Link>
                 </div>
 
