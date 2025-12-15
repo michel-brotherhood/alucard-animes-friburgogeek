@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import friburgoGeekLogo from "@/assets/friburgo-geek-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isConcursosOpen, setIsConcursosOpen] = useState(false);
 
   // Bloquear scroll do body quando menu abrir
   useEffect(() => {
@@ -59,32 +58,12 @@ const Header = () => {
               Cronograma
             </Link>
             
-            {/* Dropdown Concursos */}
-            <div 
-              className="relative group"
-              onMouseEnter={() => setIsConcursosOpen(true)}
-              onMouseLeave={() => setIsConcursosOpen(false)}
+            <Link 
+              to="/resultados-concursos" 
+              className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full"
             >
-              <button 
-                className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full flex items-center gap-1"
-              >
-                Concursos
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              
-              {isConcursosOpen && (
-                <div className="absolute top-full left-0 pt-2 z-50">
-                  <div className="bg-primary rounded-2xl shadow-2xl py-2 min-w-[200px] border-2 border-accent/30">
-                    <Link 
-                      to="/#resultados-cosplay" 
-                      className="block px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors"
-                    >
-                      📊 Resultados
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
+              Resultados Concursos
+            </Link>
             
             <Link 
               to="/contato" 
@@ -176,22 +155,13 @@ const Header = () => {
                   Cronograma
                 </Link>
                 
-                {/* Concursos Section */}
-                <div className="mt-2 mb-1">
-                  <p className="text-accent text-xs font-bold uppercase tracking-wider px-3 mb-1">
-                    Concursos
-                  </p>
-                  <Link 
-                    to="/#resultados-cosplay" 
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-white/90 text-sm py-2 px-3 rounded-full hover:bg-white/10 transition-colors flex items-center gap-2"
-                  >
-                    <span className="text-base">📊</span>
-                    <span>Resultados</span>
-                  </Link>
-                </div>
-
-                <div className="border-t border-white/20 my-2"></div>
+                <Link 
+                  to="/resultados-concursos" 
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-white font-semibold py-2.5 px-3 rounded-full hover:bg-white/10 transition-colors"
+                >
+                  Resultados Concursos
+                </Link>
                 
                 <Link 
                   to="/contato" 
