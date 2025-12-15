@@ -7,15 +7,18 @@ import friburgoGeekLogo from "@/assets/friburgo-geek-logo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Bloquear scroll do body quando menu abrir
+  // Bloquear scroll do body e esconder floating menu quando menu abrir
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
+      document.body.classList.add('mobile-menu-open');
     } else {
       document.body.style.overflow = 'unset';
+      document.body.classList.remove('mobile-menu-open');
     }
     return () => {
       document.body.style.overflow = 'unset';
+      document.body.classList.remove('mobile-menu-open');
     };
   }, [isMenuOpen]);
 
