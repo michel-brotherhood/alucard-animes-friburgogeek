@@ -84,14 +84,11 @@ interface CategorySectionProps {
 const CategorySection = ({ title, results }: CategorySectionProps) => {
   return (
     <div className="bg-black/50 backdrop-blur-sm rounded-2xl p-5 md:p-6 border border-white/10">
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center mb-4">
         <h3 className="text-accent font-bold text-xl uppercase tracking-wide flex items-center gap-2">
           <Trophy className="w-5 h-5" />
           {title}
         </h3>
-        <span className="text-muted-foreground text-sm">
-          {results.length} classificados
-        </span>
       </div>
       <div className="flex flex-col gap-3">
         {results.map((result) => (
