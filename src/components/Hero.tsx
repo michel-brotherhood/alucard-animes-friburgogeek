@@ -6,11 +6,11 @@ const Hero = () => {
   return (
     <section className="bg-background py-8 md:py-12 px-4 md:px-8 relative">
       <div className="max-w-[1400px] mx-auto">
-        <div className="border-[12px] md:border-[16px] border-foreground rounded-[3rem] md:rounded-[4rem] p-6 md:p-12 bg-gradient-to-br from-background to-secondary/20">
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="border-[12px] md:border-[16px] border-foreground rounded-[3rem] md:rounded-[4rem] p-8 md:p-14 lg:p-16 bg-gradient-to-br from-background to-secondary/20">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-20 items-center">
             
             {/* Left Content */}
-            <div className="space-y-6 md:space-y-8 order-2 lg:order-1">
+            <div className="space-y-8 md:space-y-10 order-2 lg:order-1">
               <p className="text-muted-foreground text-sm md:text-base font-semibold uppercase tracking-wider">
                 Obrigado por participar!
               </p>
@@ -41,7 +41,7 @@ const Hero = () => {
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center gap-3 text-background/80">
                       <Calendar className="w-4 h-4 text-accent" />
-                      <span className="text-sm">Em breve</span>
+                      <span className="text-sm">18 de Janeiro de 2026</span>
                     </div>
                     <div className="flex items-center gap-3 text-background/80">
                       <Clock className="w-4 h-4 text-accent" />
