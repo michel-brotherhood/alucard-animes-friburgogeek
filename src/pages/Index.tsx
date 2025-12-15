@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import EventInfo from "@/components/EventInfo";
-import Countdown from "@/components/Countdown";
+import ThankYouSection from "@/components/ThankYouSection";
 import TicketCards from "@/components/TicketCards";
 import Features from "@/components/Features";
 import MapSection from "@/components/MapSection";
@@ -32,7 +32,7 @@ const Index = () => {
       <Header />
       <Hero />
       <EventInfo />
-      <Countdown />
+      <ThankYouSection />
       <TicketCards />
       <Features />
       <MapSection />

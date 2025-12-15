@@ -130,7 +130,7 @@ const Ingressos = () => {
                   }`}
                   asChild
                 >
-                  <a href="https://uticket.com.br/event/01LLMQ11S9BXU4" target="_blank" rel="noopener noreferrer">
+                  <a href="https://nitgeekfestival.alucardanimes.com.br/" target="_blank" rel="noopener noreferrer">
                     QUERO ESTE
                   </a>
                 </Button>
