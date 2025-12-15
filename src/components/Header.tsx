@@ -100,7 +100,7 @@ const Header = () => {
             <Button 
               className="bg-accent text-primary hover:bg-accent/90 font-bold text-xs md:text-sm px-4 md:px-8 py-2 md:py-2.5 rounded-full shadow-lg"
             >
-              Quero Participar
+              Quero Participar do Próximo Evento
             </Button>
           </a>
           
