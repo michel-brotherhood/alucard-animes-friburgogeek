@@ -1,17 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import EventInfo from "@/components/EventInfo";
-import ThankYouSection from "@/components/ThankYouSection";
-import TicketCards from "@/components/TicketCards";
-import Features from "@/components/Features";
-import MapSection from "@/components/MapSection";
 import CosplayGallery from "@/components/CosplayGallery";
 import CosplayResults from "@/components/CosplayResults";
-import GamesSection from "@/components/GamesSection";
-import ActivitySection from "@/components/ActivitySection";
 import VendorsSection from "@/components/VendorsSection";
-import ConcursosCallToAction from "@/components/ConcursosCallToAction";
-import FriburgoGeekSection from "@/components/FriburgoGeekSection";
 import AlucardSection from "@/components/AlucardSection";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -32,16 +24,8 @@ const Index = () => {
       <Header />
       <Hero />
       <EventInfo />
-      <ThankYouSection />
-      <TicketCards />
-      <Features />
-      <MapSection />
       <CosplayGallery />
       <CosplayResults />
-      <GamesSection />
-      <ActivitySection />
-      <ConcursosCallToAction />
-      <FriburgoGeekSection />
       <VendorsSection />
       <AlucardSection />
       <FAQ />
