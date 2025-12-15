@@ -26,7 +26,7 @@ const FloatingMenu = () => {
       icon: TicketCheck,
       label: "Ingressos",
       color: "bg-gradient-to-br from-pink-400 to-pink-600",
-      href: "https://uticket.com.br/event/01LLMQ11S9BXU4",
+      href: "https://nitgeekfestival.alucardanimes.com.br/",
       external: true,
     },
   ];

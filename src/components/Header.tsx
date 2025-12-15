@@ -7,7 +7,6 @@ import friburgoGeekLogo from "@/assets/friburgo-geek-logo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isConcursosOpen, setIsConcursosOpen] = useState(false);
-  const [isContatoOpen, setIsContatoOpen] = useState(false);
 
   // Bloquear scroll do body quando menu abrir
   useEffect(() => {
@@ -54,12 +53,6 @@ const Header = () => {
               Quem somos
             </Link>
             <Link 
-              to="/line-up" 
-              className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full"
-            >
-              Line up
-            </Link>
-            <Link 
               to="/cronograma" 
               className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full"
             >
@@ -83,40 +76,8 @@ const Header = () => {
                 <div className="absolute top-full left-0 pt-2 z-50">
                   <div className="bg-primary rounded-2xl shadow-2xl py-2 min-w-[200px] border-2 border-accent/30">
                     <Link 
-                      to="/concursos" 
-                      className="block px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors"
-                    >
-                      Todos os Concursos
-                    </Link>
-                    <div className="border-t border-white/10 my-1"></div>
-                    <Link 
-                      to="/concursos/cosplay" 
-                      className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
-                    >
-                      🏆 Cosplay
-                    </Link>
-                    <Link 
-                      to="/concursos/kpop" 
-                      className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
-                    >
-                      🎵 K-pop
-                    </Link>
-                    <Link 
-                      to="/concursos/animeke" 
-                      className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
-                    >
-                      🎤 Animekê
-                    </Link>
-                    <Link 
-                      to="/concursos/videogames" 
-                      className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
-                    >
-                      🎮 Videogames
-                    </Link>
-                    <div className="border-t border-white/10 my-1"></div>
-                    <Link 
                       to="/#resultados-cosplay" 
-                      className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
+                      className="block px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors"
                     >
                       📊 Resultados
                     </Link>
@@ -125,47 +86,21 @@ const Header = () => {
               )}
             </div>
             
-            {/* Dropdown Contato */}
-            <div 
-              className="relative group"
-              onMouseEnter={() => setIsContatoOpen(true)}
-              onMouseLeave={() => setIsContatoOpen(false)}
+            <Link 
+              to="/contato" 
+              className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full"
             >
-              <button 
-                className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full flex items-center gap-1"
-              >
-                Contato
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              
-              {isContatoOpen && (
-                <div className="absolute top-full left-0 pt-2 z-50">
-                  <div className="bg-primary rounded-2xl shadow-2xl py-2 min-w-[180px] border-2 border-accent/30">
-                    <Link 
-                      to="/contato" 
-                      className="block px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors"
-                    >
-                      Fale Conosco
-                    </Link>
-                    <Link 
-                      to="/ajuda" 
-                      className="block px-4 py-2 text-white text-sm hover:bg-white/10 transition-colors"
-                    >
-                      Ajuda
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
+              Contato
+            </Link>
           </div>
         </div>
 
         <div className="flex items-center gap-2 md:gap-3">
-          <a href="https://uticket.com.br/event/01LLMQ11S9BXU4" target="_blank" rel="noopener noreferrer">
+          <a href="https://nitgeekfestival.alucardanimes.com.br/" target="_blank" rel="noopener noreferrer">
             <Button 
               className="bg-accent text-primary hover:bg-accent/90 font-bold text-xs md:text-sm px-4 md:px-8 py-2 md:py-2.5 rounded-full shadow-lg"
             >
-              Ingressos
+              Quero Participar
             </Button>
           </a>
           
@@ -227,11 +162,11 @@ const Header = () => {
                   O evento
                 </Link>
                 <Link 
-                  to="/line-up" 
+                  to="/quem-somos" 
                   onClick={() => setIsMenuOpen(false)}
                   className="text-white font-semibold py-2.5 px-3 rounded-full hover:bg-white/10 transition-colors"
                 >
-                  Line up
+                  Quem somos
                 </Link>
                 <Link 
                   to="/cronograma" 
@@ -247,45 +182,6 @@ const Header = () => {
                     Concursos
                   </p>
                   <Link 
-                    to="/concursos" 
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-white font-semibold py-2.5 px-3 rounded-full hover:bg-white/10 transition-colors block"
-                  >
-                    Todos
-                  </Link>
-                  <Link 
-                    to="/concursos/cosplay" 
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-white/90 text-sm py-2 px-3 rounded-full hover:bg-white/10 transition-colors flex items-center gap-2"
-                  >
-                    <span className="text-base">🏆</span>
-                    <span>Cosplay</span>
-                  </Link>
-                  <Link 
-                    to="/concursos/kpop" 
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-white/90 text-sm py-2 px-3 rounded-full hover:bg-white/10 transition-colors flex items-center gap-2"
-                  >
-                    <span className="text-base">🎵</span>
-                    <span>K-pop</span>
-                  </Link>
-                  <Link 
-                    to="/concursos/animeke" 
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-white/90 text-sm py-2 px-3 rounded-full hover:bg-white/10 transition-colors flex items-center gap-2"
-                  >
-                    <span className="text-base">🎤</span>
-                    <span>Animekê</span>
-                  </Link>
-                  <Link 
-                    to="/concursos/videogames" 
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-white/90 text-sm py-2 px-3 rounded-full hover:bg-white/10 transition-colors flex items-center gap-2"
-                  >
-                    <span className="text-base">🎮</span>
-                    <span>Videogames</span>
-                  </Link>
-                  <Link 
                     to="/#resultados-cosplay" 
                     onClick={() => setIsMenuOpen(false)}
                     className="text-white/90 text-sm py-2 px-3 rounded-full hover:bg-white/10 transition-colors flex items-center gap-2"
@@ -298,45 +194,23 @@ const Header = () => {
                 <div className="border-t border-white/20 my-2"></div>
                 
                 <Link 
-                  to="/quem-somos" 
+                  to="/contato" 
                   onClick={() => setIsMenuOpen(false)}
                   className="text-white font-semibold py-2.5 px-3 rounded-full hover:bg-white/10 transition-colors"
                 >
-                  Quem somos
+                  Contato
                 </Link>
-                
-                {/* Contato Section */}
-                <div className="mt-2 mb-1">
-                  <p className="text-accent text-xs font-bold uppercase tracking-wider px-3 mb-1">
-                    Contato
-                  </p>
-                  <Link 
-                    to="/contato" 
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-white font-semibold py-2.5 px-3 rounded-full hover:bg-white/10 transition-colors block"
-                  >
-                    Fale Conosco
-                  </Link>
-                  <Link 
-                    to="/ajuda" 
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-white/90 text-sm py-2 px-3 rounded-full hover:bg-white/10 transition-colors flex items-center gap-2"
-                  >
-                    <span className="text-base">❓</span>
-                    <span>Ajuda</span>
-                  </Link>
-                </div>
 
                 {/* CTA Button */}
                 <a 
-                  href="https://uticket.com.br/event/01LLMQ11S9BXU4"
+                  href="https://nitgeekfestival.alucardanimes.com.br/"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMenuOpen(false)}
                   className="mt-4"
                 >
                   <Button className="w-full bg-accent text-primary hover:bg-accent/90 font-bold py-5 rounded-full">
-                    COMPRAR INGRESSOS
+                    QUERO PARTICIPAR DO PRÓXIMO EVENTO
                   </Button>
                 </a>
               </nav>
