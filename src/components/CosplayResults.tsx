@@ -4,12 +4,12 @@ const resultados = {
   geek: [
     { posicao: 1, nome: "Thayse", personagem: "Bella - A Bela e a Fera", nota: 9.25 },
     { posicao: 2, nome: "Romulo Oliveira", personagem: "Spawn", nota: 9.00 },
-    { posicao: 3, nome: "RODRIGO", personagem: "Indiana Jones", nota: 8.60 },
+    { posicao: 3, nome: "Rodrigo", personagem: "Indiana Jones", nota: 8.60 },
   ],
   game: [
     { posicao: 1, nome: "Italo Belorio", personagem: "Guarda Five Nights at Freddy", nota: 8.70 },
     { posicao: 2, nome: "Erick Augusto", personagem: "Resident Evil - Umbrela Corps", nota: 8.25 },
-    { posicao: 3, nome: "guilherme", personagem: "cloud - final fantasy 7", nota: 7.50 },
+    { posicao: 3, nome: "Guilherme", personagem: "Cloud - Final Fantasy 7", nota: 7.50 },
   ],
 };
 
