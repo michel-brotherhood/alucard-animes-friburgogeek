@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MessageSquare, Sparkles, TicketCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoFrente from "@/assets/nova_logo_balao_frente.svg";
@@ -6,6 +6,16 @@ import logoVerso from "@/assets/verso_novo.svg";
 
 const FloatingMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Esconder quando menu mobile do header estiver aberto
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsMobileMenuOpen(document.body.classList.contains('mobile-menu-open'));
+    });
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
 
   const menuItems = [
     {
@@ -34,6 +44,11 @@ const FloatingMenu = () => {
   const handleClick = () => {
     setIsOpen(false);
   };
+
+  // Esconder quando menu mobile está aberto
+  if (isMobileMenuOpen) {
+    return null;
+  }
 
   return (
     <>
