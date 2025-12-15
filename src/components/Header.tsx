@@ -103,87 +103,83 @@ const Header = () => {
           />
           
           {/* Menu Drawer */}
-          <div className="lg:hidden fixed inset-0 w-full bg-primary shadow-2xl z-50 animate-slide-in-right overflow-y-auto">
-            <div className="p-5 pb-6">
-              {/* Close Button */}
-              <button 
-                onClick={() => setIsMenuOpen(false)}
-                className="absolute top-3 right-3 text-white/80 hover:text-white transition-colors"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-
-              {/* Logo */}
-              <div className="mb-6">
+          <div className="lg:hidden fixed inset-0 w-full bg-primary shadow-2xl z-50 animate-slide-in-right overflow-hidden flex flex-col">
+            <div className="p-6 flex flex-col h-full">
+              {/* Header com Logo e Close */}
+              <div className="flex items-start justify-between mb-8">
                 <img 
                   src={friburgoGeekLogo} 
                   alt="Friburgo Geek" 
-                  className="h-10 w-auto"
+                  className="h-12 w-auto"
                 />
+                <button 
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-white/80 hover:text-white transition-colors p-1"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
               </div>
 
               {/* Menu Items */}
-              <nav className="flex flex-col gap-0.5">
+              <nav className="flex flex-col gap-2 flex-1">
                 <Link 
                   to="/" 
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-white font-bold py-2.5 px-3 rounded-full hover:bg-white/10 transition-colors"
+                  className="text-white font-bold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
                 >
                   Home
                 </Link>
                 <Link 
                   to="/o-evento" 
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-white font-semibold py-2.5 px-3 rounded-full hover:bg-white/10 transition-colors"
+                  className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
                 >
                   O evento
                 </Link>
                 <Link 
                   to="/quem-somos" 
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-white font-semibold py-2.5 px-3 rounded-full hover:bg-white/10 transition-colors"
+                  className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
                 >
                   Quem somos
                 </Link>
                 <Link 
                   to="/cronograma" 
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-white font-semibold py-2.5 px-3 rounded-full hover:bg-white/10 transition-colors"
+                  className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
                 >
                   Cronograma
                 </Link>
-                
                 <Link 
                   to="/resultados-concursos" 
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-white font-semibold py-2.5 px-3 rounded-full hover:bg-white/10 transition-colors"
+                  className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
                 >
                   Resultados Concursos
                 </Link>
-                
                 <Link 
                   to="/contato" 
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-white font-semibold py-2.5 px-3 rounded-full hover:bg-white/10 transition-colors"
+                  className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
                 >
                   Contato
                 </Link>
-
-                {/* CTA Button */}
-                <a 
-                  href="https://nitgeekfestival.alucardanimes.com.br/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="mt-4"
-                >
-                  <Button className="w-full bg-accent text-primary hover:bg-accent/90 font-bold py-5 rounded-full">
-                    QUERO PARTICIPAR DO PRÓXIMO EVENTO
-                  </Button>
-                </a>
               </nav>
+
+              {/* CTA Button - fixo no final */}
+              <a 
+                href="https://nitgeekfestival.alucardanimes.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+                className="mt-auto pt-6"
+              >
+                <Button className="w-full bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-primary font-bold py-5 rounded-full transition-colors">
+                  QUERO PARTICIPAR DO PRÓXIMO EVENTO
+                </Button>
+              </a>
             </div>
           </div>
         </>
