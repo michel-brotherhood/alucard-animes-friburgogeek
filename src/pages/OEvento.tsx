@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
 import FAQ from "@/components/FAQ";
 import MapSection from "@/components/MapSection";
-import SnowEffect from "@/components/SnowEffect";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Calendar, MapPin, Star, Instagram, Facebook } from "lucide-react";
@@ -36,12 +35,11 @@ const OEvento = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <SEO 
-        title="O Evento - Friburgo Geek Natal 2025"
-        description="O maior evento geek de Nova Friburgo! Cosplay, k-pop, games, animekê, retro games, stands de vendas e muito mais. 14 de dezembro de 2025, das 12h às 18h. Venha participar!"
+        title="O Evento - Friburgo Geek 2026"
+        description="O maior evento geek de Nova Friburgo! Cosplay, k-pop, games, animekê, retro games, stands de vendas e muito mais. 15 de março de 2026, das 12h às 18h. Venha participar!"
         canonical="/o-evento"
         keywords="Friburgo Geek, evento geek Nova Friburgo, convenção anime, cultura pop, Alucard Animes"
       />
-      <SnowEffect />
       <Header />
       
       <section className="bg-gradient-to-b from-secondary to-primary py-16 px-6">
@@ -61,7 +59,7 @@ const OEvento = () => {
           {/* Hero Section */}
           <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 border-2 border-accent">
             <h2 className="text-3xl md:text-4xl font-black text-accent mb-6">
-              Bem-vindo ao Friburgo Geek Natal! 🎄
+              Bem-vindo ao Friburgo Geek! 🎮
             </h2>
             <div className="space-y-4 text-white/90 text-lg">
               <p>
@@ -215,7 +213,9 @@ const OEvento = () => {
               Garanta seu ingresso agora e faça parte dessa experiência inesquecível!
             </p>
             <a 
-              href="/#ingressos" 
+              href="https://www.uticket.com.br/event/01LQBL1W152TA5" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-primary hover:bg-primary/90 text-white font-black text-xl px-12 py-4 rounded-full shadow-lg transition-all hover:scale-105"
             >
               Comprar Ingressos

@@ -62,10 +62,10 @@ const Header = () => {
             </Link>
             
             <Link 
-              to="/resultados-concursos" 
+              to="/line-up" 
               className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full"
             >
-              Resultados Concursos
+              Line-up
             </Link>
             
             <Link 
@@ -78,11 +78,11 @@ const Header = () => {
         </div>
 
         <div className="flex items-center gap-2 md:gap-3">
-          <a href="https://nitgeekfestival.alucardanimes.com.br/" target="_blank" rel="noopener noreferrer" className="hidden md:block">
+          <a href="https://www.uticket.com.br/event/01LQBL1W152TA5" target="_blank" rel="noopener noreferrer" className="hidden md:block">
             <Button 
               className="bg-accent text-primary hover:bg-accent/90 font-bold text-xs md:text-sm px-4 md:px-8 py-2 md:py-2.5 rounded-full shadow-lg"
             >
-              Quero Participar do Próximo Evento
+              Quero Participar
             </Button>
           </a>
           
@@ -156,11 +156,11 @@ const Header = () => {
                   Cronograma
                 </Link>
                 <Link 
-                  to="/resultados-concursos" 
+                  to="/line-up" 
                   onClick={() => setIsMenuOpen(false)}
                   className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
                 >
-                  Resultados Concursos
+                  Line-up
                 </Link>
                 <Link 
                   to="/contato" 
@@ -173,14 +173,14 @@ const Header = () => {
 
               {/* CTA Button - fixo no final */}
               <a 
-                href="https://nitgeekfestival.alucardanimes.com.br/"
+                href="https://www.uticket.com.br/event/01LQBL1W152TA5"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
                 className="mt-auto pt-6"
               >
                 <Button className="w-full bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-primary font-bold py-5 rounded-full transition-colors">
-                  QUERO PARTICIPAR DO PRÓXIMO EVENTO
+                  QUERO PARTICIPAR
                 </Button>
               </a>
             </div>

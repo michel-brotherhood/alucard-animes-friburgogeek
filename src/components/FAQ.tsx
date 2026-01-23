@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const faqs = [
   {
     question: "Quando será realizado o evento?",
-    answer: "14 de dezembro de 2025."
+    answer: "15 de março de 2026."
   },
   {
     question: "Onde será realizado?",
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: "É um evento para toda família?",
-    answer: "Sim, o Friburgo Geek Natal é um evento familiar."
+    answer: "Sim, o Friburgo Geek é um evento familiar."
   },
   {
     question: "Tem que pagar para entrar?",
@@ -33,7 +33,7 @@ const faqs = [
       <>
         Online pelo site da Uticket e PIX via lista amiga.{" "}
         <a 
-          href="https://uticket.com.br/event/01LLMQ11S9BXU4" 
+          href="https://www.uticket.com.br/event/01LQBL1W152TA5" 
           target="_blank"
           rel="noopener noreferrer"
           className="font-bold text-primary hover:text-secondary underline transition-colors"

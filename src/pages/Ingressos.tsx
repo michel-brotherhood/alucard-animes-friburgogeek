@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
 import FAQ from "@/components/FAQ";
-import SnowEffect from "@/components/SnowEffect";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -66,12 +65,11 @@ const Ingressos = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Ingressos 2025 - Valores e Compra Online"
-        description="Garanta seu ingresso para o Friburgo Geek Natal 2025! Ingresso único R$ 35, duplo R$ 60, triplo R$ 80 e VIP R$ 150 (entrada antecipada + brinde exclusivo). Compre online agora!"
+        title="Ingressos 2026 - Valores e Compra Online"
+        description="Garanta seu ingresso para o Friburgo Geek 2026! Ingresso único R$ 35, duplo R$ 60, triplo R$ 80 e VIP R$ 150 (entrada antecipada + brinde exclusivo). Compre online agora!"
         canonical="/ingressos"
         keywords="ingressos Friburgo Geek, comprar ingresso evento geek, ingresso VIP Nova Friburgo, preço ingresso"
       />
-      <SnowEffect />
       <Header />
       
       <main className="container mx-auto px-4 py-12">
@@ -80,7 +78,7 @@ const Ingressos = () => {
             COMO VAI SER A SUA AVENTURA?
           </h1>
           <p className="text-base md:text-lg text-foreground/80 max-w-3xl mx-auto">
-            Compare os ingressos e encontre a opção perfeita para a aventura que você quer viver no <span className="font-bold text-primary">Friburgo Geek Natal</span>.
+            Compare os ingressos e encontre a opção perfeita para a aventura que você quer viver no <span className="font-bold text-primary">Friburgo Geek</span>.
             <br className="hidden sm:block" />
             <span className="block sm:inline mt-2 sm:mt-0">Todos os ingressos possuem disponibilidade limitada.</span>
           </p>
@@ -130,7 +128,7 @@ const Ingressos = () => {
                   }`}
                   asChild
                 >
-                  <a href="https://nitgeekfestival.alucardanimes.com.br/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.uticket.com.br/event/01LQBL1W152TA5" target="_blank" rel="noopener noreferrer">
                     QUERO ESTE
                   </a>
                 </Button>
