@@ -1,72 +1,49 @@
 
-# Plano: Contador Regressivo e Vídeo do Hero
 
-## Resumo das Alterações
+# Plano: Trocar Logo do Botão Flutuante
 
-Este plano adiciona o contador regressivo à homepage e troca o vídeo do Hero para o vídeo anterior do evento.
+## Objetivo
 
----
-
-## 1. Adicionar Contador Regressivo na Homepage
-
-### Arquivo: `src/pages/Index.tsx`
-
-O componente `Countdown` já existe e está configurado para a data correta (15/03/2026). Só preciso adicioná-lo na homepage.
-
-**Alteração:**
-```tsx
-// Adicionar import
-import Countdown from "@/components/Countdown";
-
-// Adicionar após o Hero
-<Header />
-<Hero />
-<Countdown />  // <-- Novo
-<EventInfo />
-```
-
-**Resultado:** Contador aparecerá logo abaixo do Hero, mostrando dias, horas, minutos e segundos até o evento.
+Substituir as logos de balão SVG pela logo principal colorida do Friburgo Geek no botão flutuante.
 
 ---
 
-## 2. Botão Flutuante com Logo
+## Alteração
 
-O botão flutuante já está usando a logo! O componente `FloatingMenu.tsx` já importa e usa:
-- `nova_logo_balao_frente.svg` (quando fechado)
-- `verso_novo.svg` (quando aberto)
+### Arquivo: `src/components/FloatingMenu.tsx`
 
-**Nenhuma alteração necessária** - já está implementado conforme desejado.
+**Mudança nos imports (linhas 4-5):**
+
+| Antes | Depois |
+|-------|--------|
+| `import logoFrente from "@/assets/nova_logo_balao_frente.svg"` | `import logoFrente from "@/assets/friburgo-geek-logo.png"` |
+| `import logoVerso from "@/assets/verso_novo.svg"` | `import logoVerso from "@/assets/friburgo-geek-logo.png"` |
+
+Como a logo principal é uma única imagem (não tem versão "verso"), vou usar a mesma logo para ambos os estados (aberto e fechado), com uma rotação/animação quando aberto para indicar que pode fechar.
+
+**Ajuste no botão (linhas 135-147):**
+
+Quando o menu estiver aberto, aplicar uma leve rotação ou opacidade reduzida para indicar estado "fechar", mantendo a mesma logo.
 
 ---
 
-## 3. Trocar Vídeo do Hero
+## Resultado Visual
 
-### Arquivo: `src/components/Hero.tsx`
+```text
+ANTES:
+┌─────────────────┐
+│ 🎈 Balão SVG    │ ← Logo de balão com frente/verso
+└─────────────────┘
 
-Trocar de `hero-video-new.mp4` para `hero-video.mp4` (vídeo anterior do evento).
-
-**Linha 3:**
-```tsx
-// De:
-import heroVideo from "@/assets/hero-video-new.mp4";
-
-// Para:
-import heroVideo from "@/assets/hero-video.mp4";
+DEPOIS:
+┌─────────────────┐
+│ 🎮 Logo FG      │ ← Logo principal do Friburgo Geek
+└─────────────────┘
 ```
 
 ---
 
-## Resumo Visual
+## Arquivo a Modificar
 
-| Alteração | Arquivo | Descrição |
-|-----------|---------|-----------|
-| Contador | `Index.tsx` | Adicionar `<Countdown />` após Hero |
-| Logo flutuante | - | Já está implementado |
-| Vídeo anterior | `Hero.tsx` | Trocar import para `hero-video.mp4` |
+- `src/components/FloatingMenu.tsx` - Trocar imports e ajustar animação do estado aberto/fechado
 
----
-
-## Arquivos a Modificar
-
-1. `src/pages/Index.tsx` - Adicionar import e componente Countdown
-2. `src/components/Hero.tsx` - Trocar import do vídeo
