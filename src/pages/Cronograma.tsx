@@ -25,8 +25,8 @@ const Cronograma = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <SEO 
-        title="Cronograma 2025 - Programação Completa do Evento"
-        description="Veja a programação completa do Friburgo Geek Natal 2025: concurso de cosplay, k-pop, animekê, torneios de games, show do guitarrista Raphael Freitas, retro games e muito mais! Das 12h às 18h."
+        title="Cronograma 2026 - Programação Completa do Evento"
+        description="Veja a programação completa do Friburgo Geek 2026: concurso de cosplay, k-pop, animekê, torneios de games, show do guitarrista Raphael Freitas, retro games e muito mais! Das 12h às 18h."
         canonical="/cronograma"
         keywords="cronograma Friburgo Geek, programação evento geek, horários concursos, Nova Friburgo"
       />
@@ -44,7 +44,7 @@ const Cronograma = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-accent rounded-t-2xl p-4 text-center">
               <h2 className="text-3xl font-black text-secondary">DOMINGO</h2>
-              <p className="text-secondary/80 font-bold">14 de Dezembro de 2025</p>
+              <p className="text-secondary/80 font-bold">15 de Março de 2026</p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-b-2xl p-4 md:p-6 space-y-3 md:space-y-4 border-2 border-accent/30">

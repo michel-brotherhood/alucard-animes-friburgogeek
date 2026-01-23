@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, MapPin, ArrowRight } from "lucide-react";
-import eventPhoto from "@/assets/event-photo-1.jpg";
+import heroVideo from "@/assets/hero-video-new.mp4";
 
 const Hero = () => {
   return (
@@ -12,36 +12,36 @@ const Hero = () => {
             {/* Left Content */}
             <div className="space-y-8 md:space-y-10 order-2 lg:order-1">
               <p className="text-muted-foreground text-sm md:text-base font-semibold uppercase tracking-wider">
-                Obrigado por participar!
+                Próximo Evento
               </p>
               
               <h1 className="text-3xl md:text-4xl xl:text-5xl font-black text-foreground leading-[1.3] tracking-tight max-w-lg">
-                Friburgo Geek Natal 2025 foi <span className="text-accent">incrível!</span>
+                Friburgo Geek <span className="text-accent">2026</span>
               </h1>
               
               <div className="h-1 w-20 md:w-32 bg-foreground"></div>
               
               <p className="text-muted-foreground text-base md:text-lg max-w-md leading-relaxed">
-                Agradecemos a todos que fizeram parte dessa edição especial. Vocês são a alma do nosso evento! Confira os resultados dos concursos e nos vemos no próximo!
+                O maior evento geek de Nova Friburgo está chegando! Cosplay, k-pop, animekê, torneios de videogames, retro games, estandes e muito mais. Garanta seu ingresso!
               </p>
               
-              {/* Próximo Evento Card */}
+              {/* Event Info Card */}
               <div className="bg-foreground text-background rounded-3xl p-6 md:p-8 max-w-sm relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 rounded-full -mr-16 -mt-16"></div>
                 
                 <div className="relative">
                   <p className="text-xs font-bold text-accent uppercase tracking-wider mb-2">
-                    Próximo Evento
+                    Informações do Evento
                   </p>
                   
                   <h3 className="text-xl md:text-2xl font-black text-background mb-4">
-                    Nit Geek Festival
+                    Friburgo Geek 2026
                   </h3>
                   
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center gap-3 text-background/80">
                       <Calendar className="w-4 h-4 text-accent" />
-                      <span className="text-sm">18 de Janeiro de 2026</span>
+                      <span className="text-sm">15 de Março de 2026</span>
                     </div>
                     <div className="flex items-center gap-3 text-background/80">
                       <Clock className="w-4 h-4 text-accent" />
@@ -49,19 +49,19 @@ const Hero = () => {
                     </div>
                     <div className="flex items-center gap-3 text-background/80">
                       <MapPin className="w-4 h-4 text-accent" />
-                      <span className="text-sm">Niterói - RJ</span>
+                      <span className="text-sm">Sindicato Dos Têxteis, Nova Friburgo - RJ</span>
                     </div>
                   </div>
                   
                   <a 
-                    href="https://nitgeekfestival.alucardanimes.com.br/" 
+                    href="https://www.uticket.com.br/event/01LQBL1W152TA5" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
                     <Button 
                       className="bg-accent text-foreground hover:bg-accent/90 font-bold rounded-full px-6 py-2 flex items-center gap-2"
                     >
-                      Saiba Mais
+                      Comprar Ingressos
                       <ArrowRight className="w-4 h-4" />
                     </Button>
                   </a>
@@ -69,14 +69,17 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Right Image */}
+            {/* Right Video */}
             <div className="relative order-1 lg:order-2">
               <div className="relative">
-                {/* Main Image */}
+                {/* Main Video */}
                 <div className="relative rounded-3xl md:rounded-[2.5rem] overflow-hidden border-8 md:border-[12px] border-foreground/80 shadow-2xl">
-                  <img 
-                    src={eventPhoto}
-                    alt="Friburgo Geek Natal 2025"
+                  <video 
+                    src={heroVideo}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     className="w-full h-auto object-cover"
                   />
                 </div>

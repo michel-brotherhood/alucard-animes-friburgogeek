@@ -20,7 +20,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/o-evento" className="text-white/80 hover:text-accent transition-colors">O Evento</Link></li>
               <li><Link to="/line-up" className="text-white/80 hover:text-accent transition-colors">Line-up</Link></li>
-              <li><a href="https://nitgeekfestival.alucardanimes.com.br/" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-accent transition-colors">Ingressos</a></li>
+              <li><a href="https://www.uticket.com.br/event/01LQBL1W152TA5" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-accent transition-colors">Ingressos</a></li>
               <li><Link to="/ajuda" className="text-white/80 hover:text-accent transition-colors">Ajuda</Link></li>
               <li><Link to="/politica-privacidade" className="text-white/80 hover:text-accent transition-colors">Política de Privacidade</Link></li>
             </ul>
@@ -31,7 +31,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-white/80">
                 <Calendar className="w-4 h-4 text-accent" />
-                <span>14 de Dezembro de 2025</span>
+                <span>15 de Março de 2026</span>
               </li>
               <li className="flex items-center gap-2 text-white/80">
                 <Clock className="w-4 h-4 text-accent" />
@@ -62,7 +62,7 @@ const Footer = () => {
 
         <div className="pt-8">
           <p className="text-white/60 text-center mb-2">
-            © 2025 Friburgo Geek Natal - Produzido por Alucard Animes. Todos os direitos reservados.
+            © 2026 Friburgo Geek - Produzido por Alucard Animes. Todos os direitos reservados.
           </p>
           <p className="text-white/40 text-center text-sm">
             Desenvolvido por Michel Brotherhood

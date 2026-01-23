@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
 import FAQ from "@/components/FAQ";
-import SnowEffect from "@/components/SnowEffect";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -49,11 +48,10 @@ const Concursos = () => {
     <div className="min-h-screen overflow-x-hidden">
       <SEO 
         title="Concursos - Cosplay, K-pop, Animekê e Videogames"
-        description="Participe dos concursos do Friburgo Geek Natal 2025: cosplay com medalhas e prêmios, k-pop com R$ 400 por chave, animekê e torneios de videogames. Inscrições abertas!"
+        description="Participe dos concursos do Friburgo Geek 2026: cosplay com medalhas e prêmios, k-pop com R$ 400 por chave, animekê e torneios de videogames. Inscrições abertas!"
         canonical="/concursos"
         keywords="concurso cosplay Nova Friburgo, campeonato k-pop, animekê, torneio videogames, Friburgo Geek, concursos geek"
       />
-      <SnowEffect />
       <Header />
       
       <section className="bg-gradient-to-b from-secondary via-primary to-secondary py-16 px-6">
@@ -62,7 +60,7 @@ const Concursos = () => {
             CONCURSOS
           </h1>
           <p className="text-xl text-white/90 text-center mb-12">
-            Participe das competições e mostre seu talento no Friburgo Geek Natal!
+            Participe das competições e mostre seu talento no Friburgo Geek!
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -99,8 +97,8 @@ const Concursos = () => {
               <div>
                 <h3 className="font-bold text-accent mb-2">Inscrições:</h3>
                 <ul className="list-disc list-inside space-y-1 text-sm">
-                  <li>Cosplay: Até 14 de Dezembro de 2025</li>
-                  <li>K-pop: Até 14 de Dezembro de 2025</li>
+                  <li>Cosplay: Até 15 de Março de 2026</li>
+                  <li>K-pop: Até 15 de Março de 2026</li>
                   <li>Animekê: Mínimo 3 e máximo 10 por dia</li>
                   <li>Videogames: Por ordem de chegada (8 a 16 vagas)</li>
                 </ul>
