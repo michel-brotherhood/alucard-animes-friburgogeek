@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { MessageSquare, Sparkles, TicketCheck } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoFrente from "@/assets/nova_logo_balao_frente.svg";
-import logoVerso from "@/assets/verso_novo.svg";
+import logoFriburgoGeek from "@/assets/friburgo-geek-logo.png";
 
 const FloatingMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -132,19 +131,13 @@ const FloatingMenu = () => {
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 md:w-16 md:h-16 hover:scale-110 active:scale-95 transition-all duration-300 group z-10"
         >
           <div className="relative flex items-center justify-center w-full h-full">
-            {isOpen ? (
-              <img 
-                src={logoVerso} 
-                alt="Fechar" 
-                className="w-14 h-14 md:w-16 md:h-16 transition-all duration-300 object-contain"
-              />
-            ) : (
-              <img 
-                src={logoFrente} 
-                alt="Menu" 
-                className="w-14 h-14 md:w-16 md:h-16 transition-transform duration-300 group-hover:scale-110 object-contain"
-              />
-            )}
+            <img 
+              src={logoFriburgoGeek} 
+              alt={isOpen ? "Fechar menu" : "Abrir menu"} 
+              className={`w-14 h-14 md:w-16 md:h-16 transition-all duration-300 object-contain ${
+                isOpen ? "rotate-180 opacity-80" : "group-hover:scale-110"
+              }`}
+            />
           </div>
         </button>
         </div>
