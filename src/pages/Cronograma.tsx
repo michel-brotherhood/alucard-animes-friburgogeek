@@ -3,22 +3,36 @@ import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
-import { Clock } from "lucide-react";
+import { 
+  RefreshCw, Mic, Film, Flag, Ticket, Music, 
+  Star, Trophy, Gift, HelpCircle, Edit, Gamepad2, 
+  Puzzle, Store, ShoppingBag, UtensilsCrossed, Mic2 
+} from "lucide-react";
 
-const schedule = [
-  { time: "12:00", event: "Abertura dos portões", location: "Entrada Principal" },
-  { time: "12:15", event: "Cine Anime", location: "Sala de Cinema" },
-  { time: "12:30", event: "Início das atividades", location: "Áreas Temáticas" },
-  { time: "12:45", event: "Gincanas com o Misheru", location: "STAGE Principal" },
-  { time: "13:00", event: "Arena Gamer & Retrô Games", location: "Arena Games" },
-  { time: "13:30", event: "Campeonatos de Videogames", location: "Arena Games" },
-  { time: "14:00", event: "Dublador: Pedro Azevedo", location: "STAGE Principal" },
-  { time: "15:00", event: "Concurso de Cosplay", location: "STAGE Principal" },
-  { time: "16:00", event: "Espaço K-pop", location: "STAGE Principal" },
-  { time: "16:30", event: "Beat Saber VR", location: "Arena VR" },
-  { time: "17:00", event: "Animeke Livre", location: "STAGE Principal" },
-  { time: "17:30", event: "Finais dos Campeonatos e Premiações", location: "STAGE Principal" },
-  { time: "18:00", event: "Encerramento", location: "STAGE Principal" },
+const atividadesContinuas = [
+  { Icon: Gamepad2, name: "Arena Gamer & Retrô Games" },
+  { Icon: Trophy, name: "Campeonatos de Videogames" },
+  { Icon: Gamepad2, name: "Mario Kart Live Home Circuit" },
+  { Icon: Puzzle, name: "Wood Games - Jogos de Madeira" },
+  { Icon: Store, name: "Stands de Vendas" },
+  { Icon: ShoppingBag, name: "Yume Geek Store" },
+  { Icon: UtensilsCrossed, name: "Praça de Alimentação" },
+];
+
+const stagePrincipal = [
+  { time: "11:00", Icon: Ticket, event: "Entrada VIPs/Cosplay" },
+  { time: "12:00", Icon: Ticket, event: "Entrada Antecipados" },
+  { time: "12:00", Icon: Film, event: "Cine Anime" },
+  { time: "13:00", Icon: Flag, event: "Gincanas" },
+  { time: "14:30", Icon: Mic, event: "Pedro Azevedo" },
+  { time: "15:00", Icon: Music, event: "K-Stage Live" },
+  { time: "15:30", Icon: Edit, event: "Encerramento Inscrições Cosplay" },
+  { time: "16:00", Icon: Star, event: "Cosplay" },
+  { time: "17:00", Icon: Mic2, event: "Animekê" },
+  { time: "17:30", Icon: Trophy, event: "Resultados/Campeonatos" },
+  { time: "17:40", Icon: Gift, event: "Sorteios" },
+  { time: "17:50", Icon: HelpCircle, event: "Last Quizz" },
+  { time: "18:00", Icon: Flag, event: "Encerramento" },
 ];
 
 const Cronograma = () => {
@@ -26,7 +40,7 @@ const Cronograma = () => {
     <div className="min-h-screen overflow-x-hidden">
       <SEO 
         title="Cronograma 2026 - Programação Completa do Evento"
-        description="Veja a programação completa do Friburgo Geek 2026: concurso de cosplay, k-pop, animekê, torneios de games, dublador Pedro Azevedo, retro games e muito mais! Das 12h às 18h."
+        description="Veja a programação completa do Friburgo Geek 2026: concurso de cosplay, k-pop, animekê, torneios de games, dublador Pedro Azevedo, retro games e muito mais! Das 11h às 18h."
         canonical="/cronograma"
         keywords="cronograma Friburgo Geek, programação evento geek, horários concursos, Nova Friburgo"
       />
@@ -41,29 +55,64 @@ const Cronograma = () => {
             Programação completa
           </p>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
+            {/* Header DOMINGO */}
             <div className="bg-accent rounded-t-2xl p-4 text-center">
               <h2 className="text-3xl font-black text-secondary">DOMINGO</h2>
-              <p className="text-secondary/80 font-bold">15 de Março de 2026</p>
+              <p className="text-secondary/80 font-bold">18 de Janeiro de 2026</p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-b-2xl p-4 md:p-6 space-y-3 md:space-y-4 border-2 border-accent/30">
-              {schedule.map((item, index) => (
-                <Card key={index} className="bg-secondary/50 border-accent/50">
-                  <CardContent className="p-3 md:p-4">
-                    <div className="flex items-start gap-3 md:gap-4">
-                      <div className="bg-accent rounded-full p-2 flex-shrink-0">
-                        <Clock className="w-4 h-4 md:w-5 md:h-5 text-secondary" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-accent font-black text-base md:text-lg">{item.time}</div>
-                        <div className="text-white font-bold text-sm md:text-base">{item.event}</div>
-                        <div className="text-white/70 text-xs md:text-sm">{item.location}</div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+            {/* Duas colunas */}
+            <div className="bg-[#1a5f7a]/80 backdrop-blur-sm rounded-b-2xl p-4 md:p-6 border-2 border-accent/30">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                {/* Coluna Esquerda - Atividades Contínuas */}
+                <div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <RefreshCw className="w-5 h-5 text-accent" />
+                    <h3 className="text-accent font-black text-lg uppercase">Atividades Contínuas</h3>
+                  </div>
+                  <p className="text-white/60 text-sm mb-4">Durante todo o evento</p>
+                  
+                  <div className="space-y-3">
+                    {atividadesContinuas.map((item, index) => (
+                      <Card key={index} className="bg-[#1a4a6e]/80 border-0">
+                        <CardContent className="p-3 flex items-center gap-3">
+                          <div className="bg-accent/20 rounded-lg p-2">
+                            <item.Icon className="w-5 h-5 text-accent" />
+                          </div>
+                          <span className="text-white font-medium text-sm">{item.name}</span>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Coluna Direita - Stage Principal */}
+                <div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <Star className="w-5 h-5 text-accent" />
+                    <h3 className="text-accent font-black text-lg uppercase">Stage Principal</h3>
+                  </div>
+                  <p className="text-white/60 text-sm mb-4">Horários programados</p>
+                  
+                  <div className="space-y-3">
+                    {stagePrincipal.map((item, index) => (
+                      <Card key={index} className="bg-[#1a4a6e]/80 border-0">
+                        <CardContent className="p-3 flex items-center gap-3">
+                          <div className="bg-accent rounded-lg px-2 py-1 min-w-[60px] text-center">
+                            <span className="text-secondary font-black text-sm">{item.time}</span>
+                          </div>
+                          <div className="bg-accent/20 rounded-lg p-2">
+                            <item.Icon className="w-4 h-4 text-accent" />
+                          </div>
+                          <span className="text-white font-medium text-sm">{item.event}</span>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 

@@ -45,9 +45,9 @@ const ConcursoKpop = () => {
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: {
           to: 'friburgogeek@alucardanimes.com.br',
-          subject: 'Nova Inscrição - Espaço K-Pop',
+          subject: 'Nova Inscrição - K-Stage Live',
           formData: values,
-          formType: 'Espaço K-Pop'
+          formType: 'K-Stage Live'
         }
       });
 
@@ -71,10 +71,10 @@ const ConcursoKpop = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
       <SEO 
-        title="Espaço K-pop 2026 - Apresentação de Dança K-pop"
-        description="Espaço K-pop no Friburgo Geek: apresentação livre de dança K-pop! Vagas limitadas, sem competição. Inscrição inclui entrada para até 5 integrantes."
+        title="K-Stage Live 2026 - Apresentação de Dança K-pop"
+        description="K-Stage Live no Friburgo Geek: apresentação livre de dança K-pop! Vagas limitadas, sem competição. Inscrição inclui entrada para até 5 integrantes."
         canonical="/concursos/kpop"
-        keywords="espaço k-pop, dança k-pop, apresentação k-pop, cover k-pop, Nova Friburgo, Friburgo Geek"
+        keywords="k-stage live, dança k-pop, apresentação k-pop, cover k-pop, Nova Friburgo, Friburgo Geek"
       />
       {/* Background Image with Overlay */}
       <div 
@@ -93,7 +93,7 @@ const ConcursoKpop = () => {
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-black text-accent text-center mb-6">
-            ESPAÇO K-POP
+            K-STAGE LIVE
           </h1>
           <p className="text-xl text-white/90 text-center mb-12 max-w-3xl mx-auto">
             Se você ama dançar e quer brilhar diante do público, essa é a sua chance! 💜
@@ -350,7 +350,7 @@ const ConcursoKpop = () => {
                     <p className="text-white/90 text-sm md:text-base">
                       Dúvidas? {" "}
                       <a 
-                        href="mailto:friburgogeek@alucardanimes.com.br?subject=Dúvida%20-%20Espaço%20K-Pop"
+                        href="mailto:friburgogeek@alucardanimes.com.br?subject=Dúvida%20-%20K-Stage%20Live"
                         className="text-accent hover:text-accent/80 underline font-semibold transition-colors"
                       >
                         Fale com a equipe Alucard
