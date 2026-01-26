@@ -20,7 +20,7 @@ const concursos = [
   {
     title: "K-pop",
     icon: Music,
-    description: "Batalha das Gerações! Grupos de 3 a 10 integrantes concorrem a R$ 400,00 em cada chave.",
+    description: "Espaço livre para danças K-pop! Apresentação sem competição, vagas limitadas.",
     image: "🎵",
     link: "/concursos/kpop",
     color: "from-purple-500 to-blue-500"
@@ -50,7 +50,7 @@ const Concursos = () => {
         title="Concursos - Cosplay, K-pop, Animekê e Videogames"
         description="Participe dos concursos do Friburgo Geek 2026: cosplay com medalhas e prêmios, k-pop com R$ 400 por chave, animekê e torneios de videogames. Inscrições abertas!"
         canonical="/concursos"
-        keywords="concurso cosplay Nova Friburgo, campeonato k-pop, animekê, torneio videogames, Friburgo Geek, concursos geek"
+        keywords="concurso cosplay Nova Friburgo, espaço k-pop, animekê, torneio videogames, Friburgo Geek, concursos geek"
       />
       <Header />
       
@@ -98,7 +98,7 @@ const Concursos = () => {
                 <h3 className="font-bold text-accent mb-2">Inscrições:</h3>
                 <ul className="list-disc list-inside space-y-1 text-sm">
                   <li>Cosplay: Até 15 de Março de 2026</li>
-                  <li>K-pop: Até 15 de Março de 2026</li>
+                  <li>K-pop: Por ordem de inscrição (vagas limitadas)</li>
                   <li>Animekê: Mínimo 3 e máximo 10 por dia</li>
                   <li>Videogames: Por ordem de chegada (8 a 16 vagas)</li>
                 </ul>
@@ -107,7 +107,7 @@ const Concursos = () => {
                 <h3 className="font-bold text-accent mb-2">Premiações:</h3>
                 <ul className="list-disc list-inside space-y-1 text-sm">
                   <li>Cosplay: Medalhas + até R$ 100 em brindes</li>
-                  <li>K-pop: R$ 400,00 por chave</li>
+                  <li>K-pop: Apresentação livre (sem premiação)</li>
                   <li>Animekê: Medalha + Kit de produtos</li>
                   <li>Videogames: R$ 100,00</li>
                 </ul>
