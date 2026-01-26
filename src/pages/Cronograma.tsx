@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingMenu from "@/components/FloatingMenu";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
 import { 
   RefreshCw, Mic, Film, Flag, Ticket, Music, 
   Star, Trophy, Gift, HelpCircle, Edit, Gamepad2, 
@@ -39,10 +40,10 @@ const Cronograma = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <SEO 
-        title="Cronograma 2026 - Programação Completa do Evento"
-        description="Veja a programação completa do Friburgo Geek 2026: concurso de cosplay, k-pop, animekê, torneios de games, dublador Pedro Azevedo, retro games e muito mais! Das 11h às 18h."
+        title="Cronograma 15 de Março de 2026 - Programação Completa do Evento"
+        description="Veja a programação completa do Friburgo Geek em 15 de Março de 2026: concurso de cosplay, k-pop, animekê, torneios de games, palestra com o dublador Pedro Azevedo, retro games e muito mais! Das 11h às 18h."
         canonical="/cronograma"
-        keywords="cronograma Friburgo Geek, programação evento geek, horários concursos, Nova Friburgo"
+        keywords="cronograma Friburgo Geek 2026, programação evento geek março 2026, horários concursos, Nova Friburgo"
       />
       <Header />
       
@@ -76,14 +77,21 @@ const Cronograma = () => {
                   
                   <div className="space-y-3">
                     {atividadesContinuas.map((item, index) => (
-                      <Card key={index} className="bg-[#1a4a6e]/80 border-0">
-                        <CardContent className="p-3 flex items-center gap-3">
-                          <div className="bg-accent/20 rounded-lg p-2">
-                            <item.Icon className="w-5 h-5 text-accent" />
-                          </div>
-                          <span className="text-white font-medium text-sm">{item.name}</span>
-                        </CardContent>
-                      </Card>
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                      >
+                        <Card className="bg-[#1a4a6e]/80 border-0 hover:bg-[#1a4a6e] transition-colors">
+                          <CardContent className="p-3 flex items-center gap-3">
+                            <div className="bg-accent/20 rounded-lg p-2">
+                              <item.Icon className="w-5 h-5 text-accent" />
+                            </div>
+                            <span className="text-white font-medium text-sm">{item.name}</span>
+                          </CardContent>
+                        </Card>
+                      </motion.div>
                     ))}
                   </div>
                 </div>
@@ -98,17 +106,24 @@ const Cronograma = () => {
                   
                   <div className="space-y-3">
                     {stagePrincipal.map((item, index) => (
-                      <Card key={index} className="bg-[#1a4a6e]/80 border-0">
-                        <CardContent className="p-3 flex items-center gap-3">
-                          <div className="bg-accent rounded-lg px-2 py-1 min-w-[60px] text-center">
-                            <span className="text-secondary font-black text-sm">{item.time}</span>
-                          </div>
-                          <div className="bg-accent/20 rounded-lg p-2">
-                            <item.Icon className="w-4 h-4 text-accent" />
-                          </div>
-                          <span className="text-white font-medium text-sm">{item.event}</span>
-                        </CardContent>
-                      </Card>
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: index * 0.08 }}
+                      >
+                        <Card className="bg-[#1a4a6e]/80 border-0 hover:bg-[#1a4a6e] transition-colors">
+                          <CardContent className="p-3 flex items-center gap-3">
+                            <div className="bg-accent rounded-lg px-2 py-1 min-w-[60px] text-center">
+                              <span className="text-secondary font-black text-sm">{item.time}</span>
+                            </div>
+                            <div className="bg-accent/20 rounded-lg p-2">
+                              <item.Icon className="w-4 h-4 text-accent" />
+                            </div>
+                            <span className="text-white font-medium text-sm">{item.event}</span>
+                          </CardContent>
+                        </Card>
+                      </motion.div>
                     ))}
                   </div>
                 </div>
