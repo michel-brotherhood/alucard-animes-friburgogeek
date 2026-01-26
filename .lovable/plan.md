@@ -1,114 +1,124 @@
 
 
-# Plano: Melhorar Visual do Card Pedro Azevedo
+# Plano: Redesenhar Card do Pedro Azevedo Seguindo a Referência
 
-## Problemas Identificados
+## Design da Referência Analisado
 
-1. **Imagem cortada** - Altura fixa `h-48` com `object-cover` está cortando a imagem
-2. **Cores erradas** - Usando amarelo (`accent`) quando deveria usar roxo/vermelho da marca
-3. **Release incompleto** - Só mostra 3 personagens, não a biografia completa
-4. **Efeitos hover simples** - Apenas `hover:scale-105`
-
-## Paleta de Cores da Identidade
-
-| Cor | Variável | HSL | Uso |
-|-----|----------|-----|-----|
-| Vermelho | `primary` | 354 70% 54% | Botões, destaques principais |
-| Roxo | `secondary` | 270 70% 35% | Backgrounds, seções |
-| Amarelo | `accent` | 48 100% 62% | Títulos, detalhes |
+O design de referência mostra:
+- Cards com **borda gradiente** (rosa/roxo para ciano)
+- **Imagem grande** no topo ocupando boa parte do card
+- **Nome em branco** abaixo da imagem (não amarelo)
+- **Descrição/bio completa** em texto claro
+- **Botao "Conhecer mais"** com icone do Instagram em rosa/vermelho
+- Background escuro (roxo/azul)
 
 ---
 
-## Solução: Card Destacado Maior
+## Alteracoes no Card do Pedro Azevedo
 
-Vou transformar o card do Pedro Azevedo em um **card featured horizontal** que ocupa mais espaço e mostra toda a informação.
-
-### Novo Layout
+### Estrutura do Card
 
 ```text
-┌──────────────────────────────────────────────────────────────────────────┐
-│                                                                          │
-│  ┌─────────────────┐   PEDRO AZEVEDO                                     │
-│  │                 │   Dublador • Ator • Diretor de Dublagem             │
-│  │     [IMAGEM     │                                                     │
-│  │     COMPLETA]   │   Pedro Henrique Barros de Azevedo (Niterói/RJ,     │
-│  │                 │   17 de outubro de 1990) é ator, dublador...        │
-│  │                 │                                                     │
-│  │                 │   TRABALHOS PRINCIPAIS:                             │
-│  │                 │   • Donkey Kong (Super Mario Bros. - O Filme)       │
-│  │                 │   • Hércules (Marvel/MCU)                           │
-│  │                 │   • Dot Barrett (Mashle: Magia e Músculos)          │
-│  │                 │   • Prowl (Transformers: War for Cybertron)         │
-│  │                 │   • Harold (Bunnicula: O Vampiro Coelho)            │
-│  │                 │                                                     │
-│  └─────────────────┘   [Instagram] @pedroazevedodub                      │
-│                                                                          │
-│  ┌────────────────┐                                                      │
-│  │  CONFIRMADO    │                                                      │
-│  └────────────────┘                                                      │
-└──────────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────┐
+│  ┌─────────────────────────────┐    │  <- Borda gradiente rosa/ciano
+│  │                             │    │
+│  │      [IMAGEM COMPLETA]      │    │  <- Imagem maior, sem corte
+│  │                             │    │
+│  └─────────────────────────────┘    │
+│                                     │
+│        Pedro Azevedo                │  <- Nome em branco, grande
+│                                     │
+│   Pedro Henrique Barros de          │
+│   Azevedo (Niterói/RJ, 17 de        │  <- Bio completa em texto claro
+│   outubro de 1990) é ator,          │
+│   dublador, diretor de dublagem...  │
+│                                     │
+│   Destaques: Donkey Kong,           │
+│   Hercules MCU, Dot Barrett...      │
+│                                     │
+│  ┌─────────────────────────────┐    │
+│  │  [Instagram] Conhecer mais  │    │  <- Botao rosa com icone
+│  └─────────────────────────────┘    │
+│                                     │
+└─────────────────────────────────────┘
 ```
 
-### Alterações Visuais
+---
 
-**Cores corrigidas:**
-- Background: `bg-gradient-to-br from-secondary/30 to-primary/20` (roxo para vermelho)
-- Borda: `border-primary` (vermelho) ao invés de amarelo
-- Badge "CONFIRMADO": `bg-primary` (vermelho)
-- Textos de destaque: `text-white` e `text-primary`
+## Mudancas de Cor (Paleta do Site)
 
-**Imagem completa:**
-- Remover altura fixa `h-48`
-- Usar `object-contain` para mostrar imagem inteira
-- Ou usar altura maior `h-auto max-h-96`
+| Elemento | Atual (errado) | Novo (correto) |
+|----------|----------------|----------------|
+| Borda do card | `border-accent` (amarelo) | Gradiente `from-primary via-secondary to-cyan-400` |
+| Background | `from-accent/20` | `bg-secondary/50` ou transparente |
+| Nome | `text-accent` (amarelo) | `text-white` |
+| Botao Instagram | Link amarelo | Botao `bg-primary` rosa/vermelho |
+| Imagem | `h-48 object-cover` (cortada) | `aspect-[4/3]` ou maior, sem corte |
 
-**Efeitos de hover elaborados:**
-- Card: `hover:shadow-[0_0_40px_rgba(139,92,246,0.4)]` (glow roxo)
-- Card: `hover:border-primary` com transição suave
-- Imagem: `group-hover:scale-105` (zoom na imagem)
-- Badge: Animação de pulso suave
-- Textos/links: Efeitos de underline animado
+---
+
+## Tecnica da Borda Gradiente
+
+Para criar a borda gradiente como na referencia:
+
+```tsx
+{/* Container externo com gradiente */}
+<div className="p-[3px] rounded-2xl bg-gradient-to-br from-primary via-secondary to-cyan-400">
+  {/* Card interno com background solido */}
+  <div className="bg-secondary rounded-2xl p-0 overflow-hidden">
+    {/* Conteudo */}
+  </div>
+</div>
+```
 
 ---
 
 ## Arquivo a Modificar
 
-### `src/pages/LineUp.tsx`
+### `src/pages/LineUp.tsx` (linhas 40-88)
 
-**Estrutura do novo card:**
+**Substituir o card atual por:**
 
-1. **Card container** (linhas 42-71)
-   - Layout horizontal em desktop: `grid md:grid-cols-2`
-   - Cores da marca: `from-secondary/20 to-primary/10`
-   - Borda vermelha: `border-primary`
-   - Glow hover roxo
+1. **Container com borda gradiente** (rosa -> roxo -> ciano)
+2. **Imagem maior** sem altura fixa, usando `aspect-[4/3]` para proporcao
+3. **Nome em branco** (`text-white`) grande e bold
+4. **Bio completa** com o release que voce forneceu
+5. **Botao "Conhecer mais"** estilo pill rosa com icone do Instagram
+6. **Cards "Em breve"** tambem com borda gradiente para manter consistencia
 
-2. **Lado esquerdo - Imagem**
-   - Remover `h-48 object-cover`
-   - Usar `aspect-auto` para mostrar imagem completa
-   - Adicionar `group-hover:scale-105` para zoom suave
-
-3. **Lado direito - Conteúdo**
-   - Nome grande: `text-3xl font-black text-white`
-   - Subtítulo: `text-primary` (vermelho)
-   - Biografia completa em parágrafo
-   - Lista de trabalhos principais
-   - Link Instagram com hover animado
-
-4. **Badge CONFIRMADO**
-   - Trocar `bg-accent` por `bg-primary`
-   - Adicionar `animate-pulse` suave
+**Conteudo da Bio:**
+> Pedro Henrique Barros de Azevedo (Niterói/RJ, 17 de outubro de 1990) é ator, dublador, diretor de dublagem e professor de língua estrangeira. Entre os destaques, estão Hércules no Universo Cinematográfico Marvel, Donkey Kong em Super Mario Bros. – O Filme, Dot Barrett (Mashle), Prowl (Transformers) e Harold (Bunnicula).
 
 ---
 
-## Resumo das Mudanças de Cor
+## Efeitos de Hover
 
-| Elemento | Antes (amarelo) | Depois (vermelho/roxo) |
-|----------|-----------------|------------------------|
-| Background card | `from-accent/20` | `from-secondary/20 to-primary/10` |
-| Borda card | `border-accent` | `border-primary` |
-| Badge | `bg-accent text-secondary` | `bg-primary text-white` |
-| Nome | `text-accent` | `text-white` |
-| Link Instagram | `text-accent` | `text-primary` |
-| Hover glow | - | `shadow-[0_0_40px_rgba(139,92,246,0.4)]` |
+- **Card**: `hover:scale-[1.02]` (escala sutil)
+- **Card**: `hover:shadow-[0_0_30px_rgba(139,92,246,0.4)]` (glow roxo)
+- **Botao**: `hover:bg-primary/80` (escurecer levemente)
+- **Imagem**: `group-hover:scale-105` (zoom suave na imagem)
+
+---
+
+## Grid Atualizado
+
+Manter 4 colunas em desktop (`lg:grid-cols-4`), mas considerar 3 colunas se ficar melhor:
+
+```text
+[ Pedro Azevedo ] [ Em breve ] [ Em breve ] [ Em breve ]
+```
+
+---
+
+## Resumo Visual
+
+**ANTES:**
+- Card amarelo, imagem cortada, nome amarelo, link simples
+
+**DEPOIS:**
+- Borda gradiente colorida (rosa/roxo/ciano)
+- Imagem completa visivel
+- Nome branco grande
+- Bio completa
+- Botao "Conhecer mais" rosa estilizado
 
