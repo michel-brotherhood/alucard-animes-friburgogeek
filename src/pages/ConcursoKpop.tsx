@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Music, Users, Clock, Calendar, CheckCircle, AlertTriangle, FileAudio } from "lucide-react";
+import { Star, Users, Calendar, Heart, Zap, FileText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -101,80 +101,86 @@ const ConcursoKpop = () => {
 
           {/* Informações Principais */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <Card className="bg-white/10 backdrop-blur-sm border-2 border-accent/30">
+            <Card className="bg-primary/60 backdrop-blur-sm border-0 rounded-2xl">
               <CardContent className="pt-6 text-center">
-                <Users className="w-12 h-12 text-accent mx-auto mb-3" />
-                <h3 className="text-white font-bold text-lg mb-2">Vagas Limitadas</h3>
-                <p className="text-white/80 text-sm">Por ordem de inscrição</p>
+                <Star className="w-12 h-12 text-accent mx-auto mb-3" />
+                <h3 className="text-white font-bold text-lg mb-2">Sem Competição</h3>
+                <p className="text-white/80 text-sm">Performance livre - é só subir e arrasar!</p>
               </CardContent>
             </Card>
             
-            <Card className="bg-white/10 backdrop-blur-sm border-2 border-accent/30">
+            <Card className="bg-primary/60 backdrop-blur-sm border-0 rounded-2xl">
               <CardContent className="pt-6 text-center">
-                <Clock className="w-12 h-12 text-accent mx-auto mb-3" />
-                <h3 className="text-white font-bold text-lg mb-2">Tempo Máximo</h3>
-                <p className="text-white/80 text-sm">5 minutos por apresentação</p>
+                <Users className="w-12 h-12 text-accent mx-auto mb-3" />
+                <h3 className="text-white font-bold text-lg mb-2">Vagas Limitadas</h3>
+                <p className="text-white/80 text-sm">3 solos + 3 grupos</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/10 backdrop-blur-sm border-2 border-accent/30">
+            <Card className="bg-primary/60 backdrop-blur-sm border-0 rounded-2xl">
               <CardContent className="pt-6 text-center">
                 <Calendar className="w-12 h-12 text-accent mx-auto mb-3" />
                 <h3 className="text-white font-bold text-lg mb-2">Data do Evento</h3>
-                <p className="text-white/80 text-sm">15 de Março de 2026</p>
+                <p className="text-white/80 text-sm">Domingo, 18 de Janeiro de 2026</p>
               </CardContent>
             </Card>
           </div>
 
-          {/* Informações Importantes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {/* Como Funciona */}
-            <Card className="bg-white/10 backdrop-blur-sm border-2 border-accent/50">
-              <CardHeader>
-                <CardTitle className="text-accent text-xl font-black flex items-center gap-2">
-                  <CheckCircle className="w-6 h-6" />
-                  Como Funciona
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-white/90 space-y-3">
+          {/* Seção Motivacional */}
+          <div className="bg-primary/80 backdrop-blur-sm rounded-3xl p-8 mb-12 text-center">
+            <Heart className="w-16 h-16 text-accent mx-auto mb-4" />
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Se você ama dançar e quer brilhar diante do público, essa é a sua chance! 💜
+            </h2>
+            <p className="text-accent font-semibold flex items-center justify-center gap-2">
+              <Zap className="w-5 h-5" />
+              Fique atento: as vagas são limitadas!
+            </p>
+          </div>
+
+          {/* Informações Importantes - Card Único */}
+          <Card className="bg-primary/80 backdrop-blur-sm border-0 rounded-3xl mb-12">
+            <CardHeader>
+              <CardTitle className="text-white text-xl font-black flex items-center gap-2">
+                <FileText className="w-6 h-6 text-accent" />
+                INFORMAÇÕES IMPORTANTES
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-white/90 space-y-6">
+              {/* Como Funciona */}
+              <div>
+                <h3 className="text-accent font-bold mb-3 text-lg">Como Funciona</h3>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
-                    Inscrições somente pelo formulário desta página
+                    As inscrições são realizadas somente pelo formulário desta página
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
-                    Vagas preenchidas por ordem de inscrição
+                    As vagas serão preenchidas por ordem de inscrição
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
-                    Inscrição inclui entrada no evento para até 5 integrantes
+                    A inscrição inclui a entrada no evento para até 5 integrantes
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
-                    Apresentação livre, sem júri ou competição
+                    É uma apresentação livre, sem júri ou competição
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
-                    Tempo máximo: 5 minutos
+                    Tempo máximo de apresentação: 5 minutos
                   </li>
                 </ul>
-              </CardContent>
-            </Card>
-
-            {/* Sobre a Música */}
-            <Card className="bg-white/10 backdrop-blur-sm border-2 border-accent/50">
-              <CardHeader>
-                <CardTitle className="text-accent text-xl font-black flex items-center gap-2">
-                  <FileAudio className="w-6 h-6" />
-                  Sobre a Música
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-white/90 space-y-3">
+              </div>
+              
+              {/* Sobre a Música */}
+              <div>
+                <h3 className="text-accent font-bold mb-3 text-lg">Sobre a Música</h3>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
-                    Música em formato MP3 em pen-drive
+                    A música deve estar no formato MP3 em um pen-drive
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
@@ -182,21 +188,14 @@ const ConcursoKpop = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
-                    Ordem de apresentação definida pela organização
+                    A ordem de apresentação será definida pela organização
                   </li>
                 </ul>
-              </CardContent>
-            </Card>
-
-            {/* Regras Básicas */}
-            <Card className="bg-white/10 backdrop-blur-sm border-2 border-accent/50">
-              <CardHeader>
-                <CardTitle className="text-accent text-xl font-black flex items-center gap-2">
-                  <AlertTriangle className="w-6 h-6" />
-                  Regras Básicas
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-white/90 space-y-3">
+              </div>
+              
+              {/* Regras Básicas */}
+              <div>
+                <h3 className="text-accent font-bold mb-3 text-lg">Regras Básicas</h3>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
@@ -212,12 +211,12 @@ const ConcursoKpop = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
-                    Não permitido nada que suje o palco ou prejudique outras apresentações
+                    Não é permitido nada que suje o palco ou prejudique outras apresentações
                   </li>
                 </ul>
-              </CardContent>
-            </Card>
-          </div>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Formulário de Inscrição */}
           <Card className="bg-white/10 backdrop-blur-sm border-2 border-accent">
