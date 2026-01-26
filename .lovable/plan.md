@@ -1,151 +1,153 @@
 
 
-# Plano: Redesign K-Stage Live (Espaco K-pop)
+# Plano: Atualizar K-Stage Live e Redesign do Cronograma
 
-## Alteracoes Baseadas na Imagem de Referencia
+## Resumo das Alteracoes
 
-### Estrutura Atual vs Nova
+1. **Renomear "Espaco K-Pop" para "K-Stage Live"** em toda a pagina ConcursoKpop.tsx
+2. **Redesenhar completamente a pagina de Cronograma** seguindo o layout da imagem de referencia (duas colunas)
+3. **Manter apenas Pedro Azevedo** como atracao confirmada (14:30 - 15:00)
+
+---
+
+## 1. Atualizar Titulo K-Stage Live
+
+### Arquivo: `src/pages/ConcursoKpop.tsx`
+
+**Alteracoes necessarias:**
+
+| Local | Atual | Novo |
+|-------|-------|------|
+| Titulo H1 (linha 96) | "ESPACO K-POP" | "K-STAGE LIVE" |
+| SEO Title (linha 74) | "Espaco K-pop 2026..." | "K-Stage Live 2026..." |
+| SEO Description (linha 75) | "Espaco K-pop no Friburgo Geek..." | "K-Stage Live no Friburgo Geek..." |
+| SEO Keywords (linha 77) | "espaco k-pop..." | "k-stage live, danca k-pop..." |
+| Email subject (linhas 48-50) | "Espaco K-Pop" | "K-Stage Live" |
+| Link email duvidas (linha 353) | "Espaco%20K-Pop" | "K-Stage%20Live" |
+
+---
+
+## 2. Redesign Completo do Cronograma
+
+### Arquivo: `src/pages/Cronograma.tsx`
+
+**Novo Layout (conforme imagem de referencia):**
 
 ```text
-ATUAL:                           NOVA (conforme imagem):
-┌─────────────────────────┐     ┌─────────────────────────┐
-│ 3 cards topo            │     │ 3 cards topo DIFERENTES │
-│ (Vagas/Tempo/Data)      │     │ (Sem Competicao/Vagas/  │
-│                         │     │  Data)                  │
-├─────────────────────────┤     ├─────────────────────────┤
-│ 3 cards separados       │     │ Secao motivacional      │
-│ (Como Funciona/         │     │ (coracao + texto)       │
-│  Musica/Regras)         │     ├─────────────────────────┤
-│                         │     │ 1 UNICO card grande     │
-│                         │     │ com 3 secoes dentro     │
-└─────────────────────────┘     └─────────────────────────┘
+┌─────────────────────────────────────────────────────┐
+│                    DOMINGO                          │
+│              18 de Janeiro de 2026                  │
+├──────────────────────┬──────────────────────────────┤
+│  ATIVIDADES          │     STAGE PRINCIPAL          │
+│  CONTINUAS           │     Horarios especificos     │
+│  Durante o evento    │                              │
+├──────────────────────┼──────────────────────────────┤
+│ • Arena Gamer        │ 11:00 - Entrada VIPs/Cosplay │
+│ • Campeonatos        │ 12:00 - Entrada Antecipados  │
+│ • Mario Kart         │ 12:00 - Cine Anime           │
+│ • Wood Games         │ 13:00 - Gincanas             │
+│ • Stands de Vendas   │ 14:30 - Pedro Azevedo        │
+│ • Yume Geek Store    │ 15:00 - K-Stage Live         │
+│ • Praca Alimentacao  │ 15:30 - Encerr. Inscr. Cosp. │
+│                      │ 16:00 - Cosplay              │
+│                      │ 17:00 - Animeke              │
+│                      │ 17:30 - Resultados           │
+│                      │ 17:40 - Sorteios             │
+│                      │ 17:50 - Last Quizz           │
+│                      │ 18:00 - Encerramento         │
+└──────────────────────┴──────────────────────────────┘
 ```
+
+### Dados Estruturados
+
+**Atividades Continuas (coluna esquerda):**
+```tsx
+const atividadesContinuas = [
+  { icon: "Gamepad2", name: "Arena Gamer & Retro Games", location: "Arena Games" },
+  { icon: "Trophy", name: "Campeonatos de Videogames", location: "Arena Games" },
+  { icon: "Car", name: "Mario Kart Live Home Circuit", location: "Arena Games" },
+  { icon: "Puzzle", name: "Wood Games - Jogos de Madeira", location: "Area de Jogos" },
+  { icon: "Store", name: "Stands de Vendas", location: "Area de Exposicao" },
+  { icon: "ShoppingBag", name: "Yume Geek Store", location: "Stand Especial" },
+  { icon: "UtensilsCrossed", name: "Praca de Alimentacao", location: "Area Gastronomica" },
+];
+```
+
+**Stage Principal (coluna direita) - conforme referencia mas SEM outras atracoes:**
+```tsx
+const stagePrincipal = [
+  { time: "11:00", icon: "Ticket", event: "Entrada VIPs/Cosplay" },
+  { time: "12:00", icon: "Ticket", event: "Entrada Antecipados" },
+  { time: "12:00", icon: "Film", event: "Cine Anime" },
+  { time: "13:00", icon: "Flag", event: "Gincanas" },
+  { time: "14:30", icon: "Mic", event: "Pedro Azevedo" },  // UNICA ATRACAO CONFIRMADA
+  { time: "15:00", icon: "Music", event: "K-Stage Live" },
+  { time: "15:30", icon: "Edit", event: "Encerramento Inscricoes Cosplay" },
+  { time: "16:00", icon: "Star", event: "Cosplay" },
+  { time: "17:00", icon: "Mic2", event: "Animeke" },
+  { time: "17:30", icon: "Trophy", event: "Resultados/Campeonatos" },
+  { time: "17:40", icon: "Gift", event: "Sorteios" },
+  { time: "17:50", icon: "HelpCircle", event: "Last Quizz" },
+  { time: "18:00", icon: "Flag", event: "Encerramento" },
+];
+```
+
+### Novos Icones Necessarios
+
+Adicionar imports do lucide-react:
+```tsx
+import { 
+  RefreshCw, Mic, Clock, Film, Flag, Ticket, Music, 
+  Star, Trophy, Gift, HelpCircle, Edit, Gamepad2, 
+  Car, Puzzle, Store, ShoppingBag, UtensilsCrossed, Mic2 
+} from "lucide-react";
+```
+
+### Estrutura Visual
+
+**Cabecalho "DOMINGO":**
+- Fundo cyan/accent arredondado
+- Texto escuro (secondary)
+- Data: "18 de Janeiro de 2026"
+
+**Colunas:**
+- Layout responsivo: 1 coluna em mobile, 2 colunas em desktop
+- Fundo semi-transparente azul
+- Cards com icones cyan
+
+**Estilo dos Cards:**
+- Fundo: `bg-primary/60` ou `bg-[#1a4a6e]`
+- Bordas arredondadas
+- Icone + texto
+- Horario em badge cyan para Stage Principal
 
 ---
 
-## Arquivo: `src/pages/ConcursoKpop.tsx`
+## Arquivos a Modificar
 
-### 1. Atualizar os 3 Cards do Topo (linhas 102-127)
+1. **`src/pages/ConcursoKpop.tsx`**
+   - Renomear "Espaco K-Pop" → "K-Stage Live"
+   - Atualizar SEO e textos de email
 
-| Card | Atual | Novo (conforme imagem) |
-|------|-------|------------------------|
-| 1 | Vagas Limitadas + Users icon | **Sem Competicao** + Star icon + "Performance livre - e so subir e arrasar!" |
-| 2 | Tempo Maximo + Clock icon | **Vagas Limitadas** + Users icon + "3 solos + 3 grupos" |
-| 3 | Data do Evento + Calendar | **Data do Evento** + Calendar + "Domingo, 18 de Janeiro de 2026" |
-
-**Icones a usar:**
-- Card 1: `Star` (estrela) para "Sem Competicao"
-- Card 2: `Users` para "Vagas Limitadas"
-- Card 3: `Calendar` para "Data do Evento"
-
-### 2. Adicionar Secao Motivacional (apos os cards do topo)
-
-Nova secao entre os cards do topo e as informacoes:
-
-```tsx
-<div className="bg-primary/80 backdrop-blur-sm rounded-3xl p-8 mb-12 text-center">
-  <Heart className="w-16 h-16 text-accent mx-auto mb-4" />
-  <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-    Se voce ama dancar e quer brilhar diante do publico, essa e a sua chance!
-  </h2>
-  <p className="text-accent font-semibold flex items-center justify-center gap-2">
-    <Zap className="w-5 h-5" />
-    Fique atento: as vagas sao limitadas!
-  </p>
-</div>
-```
-
-### 3. Consolidar Informacoes em UM UNICO Card (linhas 129-220)
-
-**Substituir os 3 cards separados por 1 card unico** com as 3 secoes dentro:
-
-```tsx
-<Card className="bg-primary/80 backdrop-blur-sm border-0 rounded-3xl mb-12">
-  <CardHeader>
-    <CardTitle className="text-white text-xl font-black flex items-center gap-2">
-      <FileText className="w-6 h-6" />
-      INFORMACOES IMPORTANTES
-    </CardTitle>
-  </CardHeader>
-  <CardContent className="text-white/90 space-y-6">
-    {/* Como Funciona */}
-    <div>
-      <h3 className="text-accent font-bold mb-3">Como Funciona</h3>
-      <ul>...</ul>
-    </div>
-    
-    {/* Sobre a Musica */}
-    <div>
-      <h3 className="text-accent font-bold mb-3">Sobre a Musica</h3>
-      <ul>...</ul>
-    </div>
-    
-    {/* Regras Basicas */}
-    <div>
-      <h3 className="text-accent font-bold mb-3">Regras Basicas</h3>
-      <ul>...</ul>
-    </div>
-  </CardContent>
-</Card>
-```
-
-### 4. Atualizar Estilos Visuais
-
-**Cards do topo:**
-- Fundo: `bg-primary/60` (azul escuro semi-transparente)
-- Bordas: remover borda accent, usar `border-0`
-- Cantos: `rounded-2xl`
-
-**Card de informacoes:**
-- Fundo: `bg-primary/80` (azul escuro)
-- Sem bordas visíveis
-- Cantos arredondados: `rounded-3xl`
-
-### 5. Atualizar Imports
-
-Adicionar/atualizar imports:
-```tsx
-import { Star, Users, Calendar, Heart, Zap, FileText } from "lucide-react";
-```
-
-Remover imports nao utilizados:
-- `Clock`
-- `CheckCircle`
-- `AlertTriangle`
-- `FileAudio`
+2. **`src/pages/Cronograma.tsx`**
+   - Redesign completo com layout de duas colunas
+   - Adicionar novos icones
+   - Atualizar data para 18 de Janeiro de 2026
+   - Atualizar horario Pedro Azevedo para 14:30-15:00
+   - Adicionar K-Stage Live as 15:00
 
 ---
 
-## Conteudo Atualizado (conforme imagem)
+## Detalhes Visuais (baseado na imagem)
 
-### Cards do Topo:
-1. **Sem Competicao** - "Performance livre - e so subir e arrasar!"
-2. **Vagas Limitadas** - "3 solos + 3 grupos"
-3. **Data do Evento** - "Domingo, 18 de Janeiro de 2026"
+**Cores:**
+- Fundo geral: gradiente azul escuro para claro
+- Cards: azul semi-transparente `bg-[#1a5f7a]/80`
+- Badges horario: cyan/accent `bg-accent`
+- Textos: branco e cyan
 
-### Informacoes Importantes:
-
-**Como Funciona:**
-- As inscricoes sao realizadas somente pelo formulario desta pagina
-- As vagas serao preenchidas por ordem de inscricao
-- A inscricao inclui a entrada no evento para ate 5 integrantes
-- E uma apresentacao livre, sem juri ou competicao
-- Tempo maximo de apresentacao: 5 minutos
-
-**Sobre a Musica:**
-- A musica deve estar no formato MP3 em um pen-drive
-- Check-in ate as 13h no dia do evento
-- A ordem de apresentacao sera definida pela organizacao
-
-**Regras Basicas:**
-- Proibido palavroes, apelo sexual desnecessario ou ofensas
-- Proibido uso de armas ou acessorios que coloquem em risco os presentes
-- Menores de idade precisam de autorizacao dos responsaveis
-- Nao e permitido nada que suje o palco ou prejudique outras apresentacoes
-
----
-
-## Arquivo a Modificar
-
-- `src/pages/ConcursoKpop.tsx` - Redesign completo da secao de informacoes
+**Tipografia:**
+- Titulos de secao: bold, caixa alta, cyan
+- Subtitulos: cinza claro/branco opaco
+- Horarios: bold, dentro de badge cyan
 
