@@ -39,51 +39,51 @@ const LineUp = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Pedro Azevedo - Confirmado */}
-                <Card className="bg-gradient-to-br from-accent/20 to-primary/20 backdrop-blur-sm border-2 border-accent hover:border-accent/80 transition-all hover:scale-105">
-                  <CardContent className="p-4 text-center">
-                    <div className="relative mb-4">
-                      <div className="absolute -top-2 -right-2 bg-accent text-secondary text-xs font-black px-2 py-1 rounded-full z-10">
+                <div className="group p-[3px] rounded-2xl bg-gradient-to-br from-primary via-secondary to-cyan-400 hover:shadow-[0_0_30px_rgba(139,92,246,0.4)] transition-all duration-300 hover:scale-[1.02]">
+                  <div className="bg-secondary rounded-2xl overflow-hidden h-full">
+                    <div className="relative overflow-hidden">
+                      <div className="absolute top-3 right-3 bg-primary text-white text-xs font-black px-3 py-1.5 rounded-full z-10 animate-pulse">
                         CONFIRMADO
                       </div>
                       <img 
                         src={pedroAzevedoImg} 
                         alt="Pedro Azevedo - Dublador"
-                        className="w-full h-48 object-cover rounded-lg"
+                        className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <h3 className="text-xl font-black text-accent mb-1">PEDRO AZEVEDO</h3>
-                    <p className="text-white/90 text-sm font-bold mb-3">Dublador</p>
-                    <div className="text-white/70 text-xs mb-4 space-y-1">
-                      <p>🦍 Donkey Kong (Super Mario Bros.)</p>
-                      <p>💪 Hercules (Marvel/MCU)</p>
-                      <p>✨ Dot Barrett (Mashle)</p>
+                    <div className="p-5">
+                      <h3 className="text-xl font-black text-white mb-1">Pedro Azevedo</h3>
+                      <p className="text-primary text-sm font-bold mb-3">Dublador • Ator • Diretor</p>
+                      <p className="text-white/80 text-xs leading-relaxed mb-4">
+                        Pedro Henrique Barros de Azevedo (Niterói/RJ, 17 de outubro de 1990) é ator, dublador, diretor de dublagem e professor. Entre os destaques, estão Hércules (MCU), Donkey Kong (Super Mario Bros.), Dot Barrett (Mashle), Prowl (Transformers) e Harold (Bunnicula).
+                      </p>
+                      <a 
+                        href="https://www.instagram.com/pedroazevedodub/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-primary hover:bg-primary/80 text-white text-sm font-bold px-4 py-2 rounded-full transition-colors w-full justify-center"
+                      >
+                        <Instagram className="w-4 h-4" />
+                        Conhecer mais
+                      </a>
                     </div>
-                    <a 
-                      href="https://www.instagram.com/pedroazevedodub/" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors text-sm font-bold"
-                    >
-                      <Instagram className="w-4 h-4" />
-                      @pedroazevedodub
-                    </a>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
 
                 {/* Cards "Em breve" */}
                 {[1, 2, 3].map((_, index) => (
-                  <Card key={index} className="bg-white/10 backdrop-blur-sm border-accent/30 hover:border-accent transition-all">
-                    <CardContent className="p-6 text-center">
-                      <div className="w-32 h-32 mx-auto mb-4 flex items-center justify-center">
+                  <div key={index} className="p-[3px] rounded-2xl bg-gradient-to-br from-primary/30 via-secondary/30 to-cyan-400/30 hover:from-primary/50 hover:via-secondary/50 hover:to-cyan-400/50 transition-all duration-300">
+                    <div className="bg-secondary rounded-2xl overflow-hidden h-full flex flex-col items-center justify-center py-12 px-6">
+                      <div className="w-24 h-24 mb-4 flex items-center justify-center">
                         <img 
                           src={eventLogo} 
                           alt="Friburgo Geek"
-                          className="w-full h-full object-contain opacity-50"
+                          className="w-full h-full object-contain opacity-40"
                         />
                       </div>
-                      <p className="text-white/70 text-sm">Em breve...</p>
-                    </CardContent>
-                  </Card>
+                      <p className="text-white/50 text-sm font-medium">Em breve...</p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
