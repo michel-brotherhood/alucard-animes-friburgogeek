@@ -62,6 +62,12 @@ const Header = () => {
             </Link>
             
             <Link 
+              to="/concursos" 
+              className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full"
+            >
+              Concursos
+            </Link>
+            <Link 
               to="/line-up" 
               className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full"
             >
@@ -154,6 +160,13 @@ const Header = () => {
                   className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
                 >
                   Cronograma
+                </Link>
+                <Link 
+                  to="/concursos" 
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
+                >
+                  Concursos
                 </Link>
                 <Link 
                   to="/line-up" 
