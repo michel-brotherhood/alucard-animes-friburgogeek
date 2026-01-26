@@ -5,6 +5,7 @@ import FAQ from "@/components/FAQ";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Instagram } from "lucide-react";
+import { motion } from "framer-motion";
 import eventLogo from "@/assets/friburgo-geek-icon.png";
 import pedroAzevedoImg from "@/assets/pedro-azevedo.jpg";
 
@@ -39,7 +40,12 @@ const LineUp = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Pedro Azevedo - Confirmado */}
-                <div className="group p-[3px] rounded-2xl bg-gradient-to-br from-primary via-secondary to-cyan-400 hover:shadow-[0_0_30px_rgba(139,92,246,0.4)] transition-all duration-300 hover:scale-[1.02]">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0 }}
+                  className="group p-[3px] rounded-2xl bg-gradient-to-br from-primary via-secondary to-cyan-400 hover:shadow-[0_0_30px_rgba(139,92,246,0.4)] transition-all duration-300 hover:scale-[1.02]"
+                >
                   <div className="bg-secondary rounded-2xl overflow-hidden h-full">
                     <div className="relative overflow-hidden">
                       <div className="absolute top-3 right-3 bg-primary text-white text-xs font-black px-3 py-1.5 rounded-full z-10 animate-pulse">
@@ -53,7 +59,7 @@ const LineUp = () => {
                     </div>
                     <div className="p-5">
                       <h3 className="text-xl font-black text-white mb-1">Pedro Azevedo</h3>
-                      <p className="text-primary text-sm font-bold mb-3">Dublador • Ator • Diretor</p>
+                      <p className="text-accent text-sm font-bold mb-3">Dublador • Ator • Diretor</p>
                       <p className="text-white/80 text-xs leading-relaxed mb-4">
                         Pedro Henrique Barros de Azevedo (Niterói/RJ, 17 de outubro de 1990) é ator, dublador, diretor de dublagem e professor. Entre os destaques, estão Hércules (MCU), Donkey Kong (Super Mario Bros.), Dot Barrett (Mashle), Prowl (Transformers) e Harold (Bunnicula).
                       </p>
@@ -68,11 +74,17 @@ const LineUp = () => {
                       </a>
                     </div>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Cards "Em breve" */}
                 {[1, 2, 3].map((_, index) => (
-                  <div key={index} className="p-[3px] rounded-2xl bg-gradient-to-br from-primary/30 via-secondary/30 to-cyan-400/30 hover:from-primary/50 hover:via-secondary/50 hover:to-cyan-400/50 transition-all duration-300">
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
+                    className="p-[3px] rounded-2xl bg-gradient-to-br from-primary/30 via-secondary/30 to-cyan-400/30 hover:from-primary/50 hover:via-secondary/50 hover:to-cyan-400/50 transition-all duration-300"
+                  >
                     <div className="bg-secondary rounded-2xl overflow-hidden h-full flex flex-col items-center justify-center py-12 px-6">
                       <div className="w-24 h-24 mb-4 flex items-center justify-center">
                         <img 
@@ -83,7 +95,7 @@ const LineUp = () => {
                       </div>
                       <p className="text-white/50 text-sm font-medium">Em breve...</p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>

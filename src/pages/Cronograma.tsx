@@ -14,7 +14,7 @@ const schedule = [
   { time: "13:30", event: "Campeonatos de Videogames", location: "Arena Games" },
   { time: "14:00", event: "Dublador: Pedro Azevedo", location: "STAGE Principal" },
   { time: "15:00", event: "Concurso de Cosplay", location: "STAGE Principal" },
-  { time: "16:00", event: "Campeonato K-POP Generations", location: "STAGE Principal" },
+  { time: "16:00", event: "Espaço K-pop", location: "STAGE Principal" },
   { time: "16:30", event: "Beat Saber VR", location: "Arena VR" },
   { time: "17:00", event: "Animeke Livre", location: "STAGE Principal" },
   { time: "17:30", event: "Finais dos Campeonatos e Premiações", location: "STAGE Principal" },
