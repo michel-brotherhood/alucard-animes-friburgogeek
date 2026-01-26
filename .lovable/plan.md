@@ -1,49 +1,97 @@
 
+# Plano: Adicionar Pedro Azevedo como Primeira Atração
 
-# Plano: Trocar Logo do Botão Flutuante
+## Resumo
 
-## Objetivo
-
-Substituir as logos de balão SVG pela logo principal colorida do Friburgo Geek no botão flutuante.
+Adicionar o dublador Pedro Azevedo como primeira atração confirmada no Line-Up, incluir no cronograma às 14h e atualizar o SEO da página.
 
 ---
 
-## Alteração
+## 1. Copiar Imagem para o Projeto
 
-### Arquivo: `src/components/FloatingMenu.tsx`
+A imagem enviada será copiada para `src/assets/pedro-azevedo.jpg` e importada no componente LineUp.
 
-**Mudança nos imports (linhas 4-5):**
+---
+
+## 2. Atualizar Página Line-Up
+
+### Arquivo: `src/pages/LineUp.tsx`
+
+**Alterações:**
+
+1. Importar a imagem do Pedro Azevedo
+2. Criar card destacado para ele como primeira atração
+3. Manter 3 cards "Em breve..." para futuras atrações
+4. Adicionar link para Instagram
+
+**Novo layout do grid:**
+
+| Card 1 (CONFIRMADO) | Card 2 | Card 3 | Card 4 |
+|---------------------|--------|--------|--------|
+| Pedro Azevedo | Em breve... | Em breve... | Em breve... |
+| Dublador | Logo FG | Logo FG | Logo FG |
+| @pedroazevedodub | | | |
+
+**Informacoes do card:**
+- Nome: **Pedro Azevedo**
+- Categoria: **Dublador**
+- Destaques: Donkey Kong (Super Mario Bros.), Hercules (Marvel), Dot Barrett (Mashle)
+- Instagram: `https://www.instagram.com/pedroazevedodub/`
+
+---
+
+## 3. Atualizar Cronograma
+
+### Arquivo: `src/pages/Cronograma.tsx`
+
+**Linha 15 - Trocar evento das 14h:**
 
 | Antes | Depois |
 |-------|--------|
-| `import logoFrente from "@/assets/nova_logo_balao_frente.svg"` | `import logoFrente from "@/assets/friburgo-geek-logo.png"` |
-| `import logoVerso from "@/assets/verso_novo.svg"` | `import logoVerso from "@/assets/friburgo-geek-logo.png"` |
+| `"Show com o Guitarrista Raphael Freitas"` | `"Dublador: Pedro Azevedo"` |
 
-Como a logo principal é uma única imagem (não tem versão "verso"), vou usar a mesma logo para ambos os estados (aberto e fechado), com uma rotação/animação quando aberto para indicar que pode fechar.
-
-**Ajuste no botão (linhas 135-147):**
-
-Quando o menu estiver aberto, aplicar uma leve rotação ou opacidade reduzida para indicar estado "fechar", mantendo a mesma logo.
+**Linha 29 - Atualizar SEO description:**
+- Substituir "show do guitarrista Raphael Freitas" por "dublador Pedro Azevedo"
 
 ---
 
-## Resultado Visual
+## 4. Atualizar SEO do Line-Up
+
+### Arquivo: `src/pages/LineUp.tsx`
+
+**Linha 15 (description):**
+
+| Antes | Depois |
+|-------|--------|
+| `"Line-up em breve!"` | `"Pedro Azevedo (dublador de Donkey Kong, Hercules MCU) confirmado! Confira as atrações do Friburgo Geek 2026."` |
+
+---
+
+## Resumo Visual do Card
 
 ```text
-ANTES:
-┌─────────────────┐
-│ 🎈 Balão SVG    │ ← Logo de balão com frente/verso
-└─────────────────┘
-
-DEPOIS:
-┌─────────────────┐
-│ 🎮 Logo FG      │ ← Logo principal do Friburgo Geek
-└─────────────────┘
+┌─────────────────────────────────┐
+│  [Imagem Pedro Azevedo]         │
+│  ┌─────────────────────────┐    │
+│  │   Foto com personagens  │    │
+│  │   dublados por ele      │    │
+│  └─────────────────────────┘    │
+│                                 │
+│  PEDRO AZEVEDO                  │
+│  Dublador                       │
+│                                 │
+│  Donkey Kong | Hercules (MCU)   │
+│  Dot Barrett (Mashle)           │
+│                                 │
+│  [Instagram]                    │
+│  @pedroazevedodub               │
+└─────────────────────────────────┘
 ```
 
 ---
 
-## Arquivo a Modificar
+## Arquivos a Modificar
 
-- `src/components/FloatingMenu.tsx` - Trocar imports e ajustar animação do estado aberto/fechado
-
+1. **Copiar imagem**: `user-uploads://Fq4jl9_aQAAhRk8.jpg` -> `src/assets/pedro-azevedo.jpg`
+2. **`src/pages/LineUp.tsx`**: Adicionar card do Pedro Azevedo com destaque
+3. **`src/pages/Cronograma.tsx`**: Atualizar evento das 14h e SEO
