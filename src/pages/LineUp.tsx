@@ -48,7 +48,7 @@ const LineUp = () => {
                       <img 
                         src={pedroAzevedoImg} 
                         alt="Pedro Azevedo - Dublador"
-                        className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                     <div className="p-5">
