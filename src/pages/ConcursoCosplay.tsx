@@ -63,6 +63,13 @@ const ConcursoCosplay = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
+      // Save to database
+      await (supabase.from('form_submissions') as any).insert({
+        form_type: 'cosplay',
+        form_data: values,
+        email: values.email,
+      });
+
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
         body: {
           to: 'friburgogeek@alucardanimes.com.br',
