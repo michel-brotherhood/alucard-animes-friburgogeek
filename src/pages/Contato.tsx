@@ -87,9 +87,9 @@ const Contato = () => {
   const onSubmit = async (data: FormData) => {
     try {
       // Save to database
-      await supabase.from('form_submissions').insert({
+      await (supabase.from('form_submissions') as any).insert({
         form_type: 'contato',
-        form_data: data as unknown as Record<string, unknown>,
+        form_data: data,
         email: data.email,
       });
 

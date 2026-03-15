@@ -43,9 +43,9 @@ const ConcursoKpop = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       // Save to database
-      await supabase.from('form_submissions').insert({
+      await (supabase.from('form_submissions') as any).insert({
         form_type: 'kpop',
-        form_data: values as unknown as Record<string, unknown>,
+        form_data: values,
         email: values.email,
       });
 
