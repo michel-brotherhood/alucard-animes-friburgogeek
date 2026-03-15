@@ -86,6 +86,13 @@ const Contato = () => {
 
   const onSubmit = async (data: FormData) => {
     try {
+      // Save to database
+      await supabase.from('form_submissions').insert({
+        form_type: 'contato',
+        form_data: data as unknown as Record<string, unknown>,
+        email: data.email,
+      });
+
       const { data: result, error } = await supabase.functions.invoke('send-contact-email', {
         body: {
           to: 'friburgogeek@alucardanimes.com.br',
