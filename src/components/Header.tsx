@@ -62,16 +62,10 @@ const Header = () => {
             </Link>
             
             <Link 
-              to="/concursos" 
+              to="/resultados" 
               className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full"
             >
-              Concursos
-            </Link>
-            <Link 
-              to="/line-up" 
-              className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full"
-            >
-              Line-up
+              Resultados
             </Link>
             
             <Link 
