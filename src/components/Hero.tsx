@@ -12,7 +12,7 @@ const Hero = () => {
             {/* Left Content */}
             <div className="space-y-8 md:space-y-10 order-2 lg:order-1">
               <p className="text-muted-foreground text-sm md:text-base font-semibold uppercase tracking-wider">
-                Próximo Evento
+                O evento aconteceu!
               </p>
               
               <h1 className="text-3xl md:text-4xl xl:text-5xl font-black text-foreground leading-[1.3] tracking-tight max-w-lg">
@@ -22,7 +22,7 @@ const Hero = () => {
               <div className="h-1 w-20 md:w-32 bg-foreground"></div>
               
               <p className="text-muted-foreground text-base md:text-lg max-w-md leading-relaxed">
-                O maior evento geek de Nova Friburgo está chegando! Cosplay, k-pop, animekê, torneios de videogames, retro games, estandes e muito mais. Garanta seu ingresso!
+                O Friburgo Geek 2026 foi um sucesso! Confira os resultados e fique ligado no próximo evento: Gonça Geek!
               </p>
               
               {/* Event Info Card */}
@@ -31,37 +31,33 @@ const Hero = () => {
                 
                 <div className="relative">
                   <p className="text-xs font-bold text-accent uppercase tracking-wider mb-2">
-                    Informações do Evento
+                    Próximo Evento
                   </p>
                   
                   <h3 className="text-xl md:text-2xl font-black text-background mb-4">
-                    Friburgo Geek 2026
+                    Gonça Geek
                   </h3>
                   
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center gap-3 text-background/80">
                       <Calendar className="w-4 h-4 text-accent" />
-                      <span className="text-sm">15 de Março de 2026</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-background/80">
-                      <Clock className="w-4 h-4 text-accent" />
-                      <span className="text-sm">12h às 18h</span>
+                      <span className="text-sm">Em breve</span>
                     </div>
                     <div className="flex items-center gap-3 text-background/80">
                       <MapPin className="w-4 h-4 text-accent" />
-                      <span className="text-sm">Sindicato Dos Têxteis, Nova Friburgo - RJ</span>
+                      <span className="text-sm">Gonçalves - MG</span>
                     </div>
                   </div>
                   
                   <a 
-                    href="https://www.uticket.com.br/event/01LQBL1W152TA5" 
+                    href="https://goncageek.alucardanimes.com.br/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
                     <Button 
                       className="bg-accent text-foreground hover:bg-accent/90 font-bold rounded-full px-6 py-2 flex items-center gap-2"
                     >
-                      Comprar Ingressos
+                      Próximo Evento
                       <ArrowRight className="w-4 h-4" />
                     </Button>
                   </a>
@@ -72,7 +68,6 @@ const Hero = () => {
             {/* Right Video */}
             <div className="relative order-1 lg:order-2">
               <div className="relative">
-                {/* Main Video */}
                 <div className="relative rounded-3xl md:rounded-[2.5rem] overflow-hidden border-8 md:border-[12px] border-foreground/80 shadow-2xl">
                   <video 
                     src={heroVideo}

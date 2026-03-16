@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { MessageSquare, Sparkles, TicketCheck } from "lucide-react";
+import { MessageSquare, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoFriburgoGeek from "@/assets/friburgo-geek-logo.png";
 
@@ -7,7 +7,6 @@ const FloatingMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Esconder quando menu mobile do header estiver aberto
   useEffect(() => {
     const observer = new MutationObserver(() => {
       setIsMobileMenuOpen(document.body.classList.contains('mobile-menu-open'));
@@ -32,26 +31,20 @@ const FloatingMenu = () => {
       external: true,
     },
     {
-      icon: TicketCheck,
-      label: "Ingressos",
+      icon: Sparkles,
+      label: "Próximo Evento",
       color: "bg-gradient-to-br from-pink-400 to-pink-600",
-      href: "https://www.uticket.com.br/event/01LQBL1W152TA5",
+      href: "https://goncageek.alucardanimes.com.br/",
       external: true,
     },
   ];
 
-  const handleClick = () => {
-    setIsOpen(false);
-  };
-
-  // Esconder quando menu mobile está aberto
   if (isMobileMenuOpen) {
     return null;
   }
 
   return (
     <>
-      {/* Backdrop */}
       <div 
         className={`fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 z-40 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -60,13 +53,12 @@ const FloatingMenu = () => {
       />
       
       <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50">
-        {/* Menu Items */}
         <div className="relative w-14 h-14 md:w-16 md:h-16">
         {menuItems.map((item, index) => {
           const positions = [
-            { x: 0, y: -90 },   // Contato
-            { x: 0, y: -160 },  // WhatsApp
-            { x: 0, y: -230 },  // Ingressos
+            { x: 0, y: -90 },
+            { x: 0, y: -160 },
+            { x: 0, y: -230 },
           ];
           
           const pos = positions[index] || { x: 0, y: -90 };
@@ -87,7 +79,6 @@ const FloatingMenu = () => {
                 pointerEvents: isOpen ? 'auto' : 'none',
               }}
             >
-              {/* Tooltip on hover */}
               <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200 bg-background/95 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-bold text-foreground shadow-2xl whitespace-nowrap border border-primary/30">
                 {item.label}
               </span>
@@ -125,7 +116,6 @@ const FloatingMenu = () => {
           );
         })}
 
-        {/* Main Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 md:w-16 md:h-16 hover:scale-110 active:scale-95 transition-all duration-300 group z-10"
