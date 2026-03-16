@@ -156,18 +156,11 @@ const Header = () => {
                   Cronograma
                 </Link>
                 <Link 
-                  to="/concursos" 
+                  to="/resultados" 
                   onClick={() => setIsMenuOpen(false)}
                   className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
                 >
-                  Concursos
-                </Link>
-                <Link 
-                  to="/line-up" 
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
-                >
-                  Line-up
+                  Resultados
                 </Link>
                 <Link 
                   to="/contato" 
