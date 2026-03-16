@@ -173,14 +173,14 @@ const Header = () => {
 
               {/* CTA Button - fixo no final */}
               <a 
-                href="https://www.uticket.com.br/event/01LQBL1W152TA5"
+                href="https://goncageek.alucardanimes.com.br/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
                 className="mt-auto pt-6"
               >
                 <Button className="w-full bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-primary font-bold py-5 rounded-full transition-colors">
-                  QUERO PARTICIPAR
+                  PRÓXIMO EVENTO
                 </Button>
               </a>
             </div>
