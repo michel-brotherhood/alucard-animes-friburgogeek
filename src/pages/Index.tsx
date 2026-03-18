@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import CosplayResults from "@/components/CosplayResults";
+import Countdown from "@/components/Countdown";
 import EventInfo from "@/components/EventInfo";
 import VendorsSection from "@/components/VendorsSection";
 import AlucardSection from "@/components/AlucardSection";
