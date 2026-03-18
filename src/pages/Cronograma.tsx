@@ -60,7 +60,7 @@ const Cronograma = () => {
             {/* Header DOMINGO */}
             <div className="bg-accent rounded-t-2xl p-4 text-center">
               <h2 className="text-3xl font-black text-secondary">DOMINGO</h2>
-              <p className="text-secondary/80 font-bold">15 de Março de 2026</p>
+              <p className="text-secondary/80 font-bold">7 de Junho de 2026</p>
             </div>
             
             {/* Duas colunas */}

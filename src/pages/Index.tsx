@@ -22,6 +22,7 @@ const Index = () => {
       <Header />
       <Hero />
       <CosplayResults />
+      <Countdown />
       <EventInfo />
       <VendorsSection />
       <AlucardSection />

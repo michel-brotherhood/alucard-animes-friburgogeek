@@ -45,6 +45,12 @@ const App = () => (
           <Route path="/contato" element={<Contato />} />
           <Route path="/quem-somos" element={<QuemSomos />} />
           <Route path="/resultados" element={<Resultados />} />
+          <Route path="/line-up" element={<LineUp />} />
+          <Route path="/concursos" element={<Concursos />} />
+          <Route path="/concursos/cosplay" element={<ConcursoCosplay />} />
+          <Route path="/concursos/kpop" element={<ConcursoKpop />} />
+          <Route path="/concursos/animeke" element={<ConcursoAnimeke />} />
+          <Route path="/concursos/videogames" element={<ConcursoVideogames />} />
           <Route path="/politica-privacidade" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
