@@ -25,7 +25,7 @@ const stagePrincipal = [
   { time: "12:00", Icon: Ticket, event: "Entrada Antecipados" },
   { time: "12:00", Icon: Film, event: "Cine Anime" },
   { time: "13:00", Icon: Flag, event: "Gincanas" },
-  { time: "14:00", Icon: Mic, event: "Dublador Convidado" },
+  { time: "14:00", Icon: Mic, event: "Convidado Especial" },
   { time: "15:00", Icon: Star, event: "Cosplay" },
   { time: "15:30", Icon: Edit, event: "Encerramento Inscrições Cosplay" },
   { time: "16:00", Icon: Music, event: "K-Stage Live" },
