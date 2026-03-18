@@ -32,9 +32,9 @@ const FloatingMenu = () => {
     },
     {
       icon: Sparkles,
-      label: "Próximo Evento",
+      label: "Ingressos",
       color: "bg-gradient-to-br from-pink-400 to-pink-600",
-      href: "https://goncageek.alucardanimes.com.br/",
+      href: "https://www.uticket.com.br/evento/friburgo-geek/01LVOBX8IGFLC8",
       external: true,
     },
   ];

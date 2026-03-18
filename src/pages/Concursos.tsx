@@ -97,7 +97,7 @@ const Concursos = () => {
               <div>
                 <h3 className="font-bold text-accent mb-2">Inscrições:</h3>
                 <ul className="list-disc list-inside space-y-1 text-sm">
-                  <li>Cosplay: Até 15 de Março de 2026</li>
+                  <li>Cosplay: Até 7 de Junho de 2026</li>
                   <li>K-pop: Por ordem de inscrição (vagas limitadas)</li>
                   <li>Animekê: Mínimo 3 e máximo 10 por dia</li>
                   <li>Videogames: Por ordem de chegada (8 a 16 vagas)</li>

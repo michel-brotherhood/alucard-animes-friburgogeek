@@ -4,10 +4,11 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import friburgoGeekLogo from "@/assets/friburgo-geek-logo.png";
 
+const TICKET_URL = "https://www.uticket.com.br/evento/friburgo-geek/01LVOBX8IGFLC8";
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Bloquear scroll do body e esconder floating menu quando menu abrir
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -36,53 +37,37 @@ const Header = () => {
             </Link>
           
           <div className="hidden lg:flex items-center gap-2">
-            <Link 
-              to="/" 
-              className="px-4 py-2 text-white text-sm font-bold hover:bg-white/10 transition-colors rounded-full"
-            >
+            <Link to="/" className="px-4 py-2 text-white text-sm font-bold hover:bg-white/10 transition-colors rounded-full">
               Home
             </Link>
-            <Link 
-              to="/o-evento" 
-              className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full"
-            >
+            <Link to="/o-evento" className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full">
               O evento
             </Link>
-            <Link 
-              to="/quem-somos" 
-              className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full"
-            >
+            <Link to="/quem-somos" className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full">
               Quem somos
             </Link>
-            <Link 
-              to="/cronograma" 
-              className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full"
-            >
+            <Link to="/line-up" className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full">
+              Line-up
+            </Link>
+            <Link to="/concursos" className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full">
+              Concursos
+            </Link>
+            <Link to="/cronograma" className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full">
               Cronograma
             </Link>
-            
-            <Link 
-              to="/resultados" 
-              className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full"
-            >
+            <Link to="/resultados" className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full">
               Resultados
             </Link>
-            
-            <Link 
-              to="/contato" 
-              className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full"
-            >
+            <Link to="/contato" className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full">
               Contato
             </Link>
           </div>
         </div>
 
         <div className="flex items-center gap-2 md:gap-3">
-          <a href="https://goncageek.alucardanimes.com.br/" target="_blank" rel="noopener noreferrer" className="hidden md:block">
-            <Button 
-              className="bg-accent text-primary hover:bg-accent/90 font-bold text-xs md:text-sm px-4 md:px-8 py-2 md:py-2.5 rounded-full shadow-lg"
-            >
-              Próximo Evento
+          <a href={TICKET_URL} target="_blank" rel="noopener noreferrer" className="hidden md:block">
+            <Button className="bg-accent text-primary hover:bg-accent/90 font-bold text-xs md:text-sm px-4 md:px-8 py-2 md:py-2.5 rounded-full shadow-lg">
+              Comprar Ingressos
             </Button>
           </a>
           
@@ -96,91 +81,38 @@ const Header = () => {
         </nav>
       </div>
 
-      {/* Overlay Mobile Menu */}
       {isMenuOpen && (
         <>
-          {/* Backdrop */}
           <div 
             className="lg:hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-40 animate-fade-in"
             onClick={() => setIsMenuOpen(false)}
           />
           
-          {/* Menu Drawer */}
           <div className="lg:hidden fixed inset-0 w-full bg-primary shadow-2xl z-50 animate-slide-in-right overflow-hidden flex flex-col">
             <div className="p-6 flex flex-col h-full">
-              {/* Header com Logo e Close */}
               <div className="flex items-start justify-between mb-8">
-                <img 
-                  src={friburgoGeekLogo} 
-                  alt="Friburgo Geek" 
-                  className="h-12 w-auto"
-                />
-                <button 
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-white/80 hover:text-white transition-colors p-1"
-                >
+                <img src={friburgoGeekLogo} alt="Friburgo Geek" className="h-12 w-auto" />
+                <button onClick={() => setIsMenuOpen(false)} className="text-white/80 hover:text-white transition-colors p-1">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
 
-              {/* Menu Items */}
               <nav className="flex flex-col gap-2 flex-1">
-                <Link 
-                  to="/" 
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-white font-bold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
-                >
-                  Home
-                </Link>
-                <Link 
-                  to="/o-evento" 
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
-                >
-                  O evento
-                </Link>
-                <Link 
-                  to="/quem-somos" 
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
-                >
-                  Quem somos
-                </Link>
-                <Link 
-                  to="/cronograma" 
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
-                >
-                  Cronograma
-                </Link>
-                <Link 
-                  to="/resultados" 
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
-                >
-                  Resultados
-                </Link>
-                <Link 
-                  to="/contato" 
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors"
-                >
-                  Contato
-                </Link>
+                <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-white font-bold py-3 px-3 rounded-full hover:bg-white/10 transition-colors">Home</Link>
+                <Link to="/o-evento" onClick={() => setIsMenuOpen(false)} className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors">O evento</Link>
+                <Link to="/quem-somos" onClick={() => setIsMenuOpen(false)} className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors">Quem somos</Link>
+                <Link to="/line-up" onClick={() => setIsMenuOpen(false)} className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors">Line-up</Link>
+                <Link to="/concursos" onClick={() => setIsMenuOpen(false)} className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors">Concursos</Link>
+                <Link to="/cronograma" onClick={() => setIsMenuOpen(false)} className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors">Cronograma</Link>
+                <Link to="/resultados" onClick={() => setIsMenuOpen(false)} className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors">Resultados</Link>
+                <Link to="/contato" onClick={() => setIsMenuOpen(false)} className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors">Contato</Link>
               </nav>
 
-              {/* CTA Button - fixo no final */}
-              <a 
-                href="https://goncageek.alucardanimes.com.br/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsMenuOpen(false)}
-                className="mt-auto pt-6"
-              >
+              <a href={TICKET_URL} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="mt-auto pt-6">
                 <Button className="w-full bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-primary font-bold py-5 rounded-full transition-colors">
-                  PRÓXIMO EVENTO
+                  COMPRAR INGRESSOS
                 </Button>
               </a>
             </div>

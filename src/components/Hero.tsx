@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, MapPin, ArrowRight } from "lucide-react";
+import { Calendar, Clock, MapPin, ArrowRight, Ticket } from "lucide-react";
 import heroVideo from "@/assets/hero-video.mp4";
 
 const Hero = () => {
@@ -12,7 +12,7 @@ const Hero = () => {
             {/* Left Content */}
             <div className="space-y-8 md:space-y-10 order-2 lg:order-1">
               <p className="text-muted-foreground text-sm md:text-base font-semibold uppercase tracking-wider">
-                O evento aconteceu!
+                Nova edição confirmada!
               </p>
               
               <h1 className="text-3xl md:text-4xl xl:text-5xl font-black text-foreground leading-[1.3] tracking-tight max-w-lg">
@@ -22,7 +22,7 @@ const Hero = () => {
               <div className="h-1 w-20 md:w-32 bg-foreground"></div>
               
               <p className="text-muted-foreground text-base md:text-lg max-w-md leading-relaxed">
-                O Friburgo Geek 2026 foi um sucesso! Confira os resultados e fique ligado no próximo evento: Gonça Geek!
+                O maior evento geek de Nova Friburgo está de volta! Prepare-se para um dia épico de cultura pop, cosplay, games e muito mais.
               </p>
               
               {/* Event Info Card */}
@@ -31,34 +31,34 @@ const Hero = () => {
                 
                 <div className="relative">
                   <p className="text-xs font-bold text-accent uppercase tracking-wider mb-2">
-                    Próximo Evento
+                    Salve a data
                   </p>
                   
                   <h3 className="text-xl md:text-2xl font-black text-background mb-4">
-                    Gonça Geek
+                    7 de Junho de 2026
                   </h3>
                   
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center gap-3 text-background/80">
-                      <Calendar className="w-4 h-4 text-accent" />
-                      <span className="text-sm">Em breve</span>
+                      <Clock className="w-4 h-4 text-accent" />
+                      <span className="text-sm">12h às 18h</span>
                     </div>
                     <div className="flex items-center gap-3 text-background/80">
                       <MapPin className="w-4 h-4 text-accent" />
-                      <span className="text-sm">São Gonçalo - RJ</span>
+                      <span className="text-sm">Sindicato Dos Têxteis, Nova Friburgo - RJ</span>
                     </div>
                   </div>
                   
                   <a 
-                    href="https://goncageek.alucardanimes.com.br/" 
+                    href="https://www.uticket.com.br/evento/friburgo-geek/01LVOBX8IGFLC8" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
                     <Button 
                       className="bg-accent text-foreground hover:bg-accent/90 font-bold rounded-full px-6 py-2 flex items-center gap-2"
                     >
-                      Próximo Evento
-                      <ArrowRight className="w-4 h-4" />
+                      Comprar Ingressos
+                      <Ticket className="w-4 h-4" />
                     </Button>
                   </a>
                 </div>
