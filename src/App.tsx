@@ -17,6 +17,12 @@ import Contato from "./pages/Contato";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import QuemSomos from "./pages/QuemSomos";
 import Resultados from "./pages/Resultados";
+import LineUp from "./pages/LineUp";
+import Concursos from "./pages/Concursos";
+import ConcursoCosplay from "./pages/ConcursoCosplay";
+import ConcursoKpop from "./pages/ConcursoKpop";
+import ConcursoAnimeke from "./pages/ConcursoAnimeke";
+import ConcursoVideogames from "./pages/ConcursoVideogames";
 
 const queryClient = new QueryClient();
 
