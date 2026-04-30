@@ -5,44 +5,34 @@ import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, Users, Gamepad2 } from "lucide-react";
-import mortalKombat from "@/assets/mortal-kombat-11-banner.webp";
-import streetFighter from "@/assets/street-fighter-6-banner.webp";
-import kof2002 from "@/assets/kof-2002-banner.webp";
-import fifa26 from "@/assets/fifa-26-banner.webp";
 import gamesBackground from "@/assets/games-background.jpg";
+import { useSelectedGames } from "@/hooks/useSelectedGames";
 
 const ConcursoVideogames = () => {
-  const jogos = [
-    {
-      title: "Mortal Kombat 11",
-      categoria: "Luta",
-      image: mortalKombat,
-    },
-    {
-      title: "Street Fighter 6",
-      categoria: "Luta",
-      image: streetFighter,
-    },
-    {
-      title: "KoF 2002",
-      categoria: "Luta",
-      image: kof2002,
-    },
-    {
-      title: "FIFA 26",
-      categoria: "Futebol",
-      image: fifa26,
-    },
-  ];
+  const { games } = useSelectedGames();
+
+  const titulosLista = games.map((g) => g.title).join(", ");
+  const seoTitle = games.length
+    ? `Campeonato de Videogames - ${titulosLista}`
+    : "Campeonato de Videogames";
+  const seoDescription = games.length
+    ? `Torneios de videogames no Friburgo Geek: ${titulosLista}. Formato mata-mata, premiação R$ 100. Inscrições abertas!`
+    : "Torneios de videogames no Friburgo Geek. Formato mata-mata, premiação R$ 100.";
+  const seoKeywords = [
+    ...games.map((g) => `torneio ${g.title}`),
+    "videogames Nova Friburgo",
+    "Friburgo Geek",
+  ].join(", ");
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <SEO 
-        title="Campeonato de Videogames 2026 - KoF 2002, Street Fighter 6, MK11 e FIFA 26"
-        description="Torneios de videogames no Friburgo Geek: KoF 2002, Street Fighter 6, Mortal Kombat 11 e FIFA 26. Formato mata-mata, premiação R$ 100. Inscrições abertas!"
+      <SEO
+        title={seoTitle}
+        description={seoDescription}
         canonical="/concursos/videogames"
-        keywords="torneio KoF 2002, campeonato Street Fighter 6, Mortal Kombat 11, FIFA 26, videogames Nova Friburgo"
+        keywords={seoKeywords}
       />
+
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
