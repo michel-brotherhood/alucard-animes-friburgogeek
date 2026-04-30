@@ -1,48 +1,16 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Gamepad2, Swords, Trophy } from "lucide-react";
+import { Gamepad2 } from "lucide-react";
 import { Link } from "react-router-dom";
-import mortalKombat from "@/assets/mortal-kombat-11-banner.webp";
-import streetFighter from "@/assets/street-fighter-6-banner.webp";
-import kof2002 from "@/assets/kof-2002-banner.webp";
-import fifa26 from "@/assets/fifa-26-banner.webp";
+import { useSelectedGames } from "@/hooks/useSelectedGames";
 
 const GamesSection = () => {
-  const games = [
-    {
-      title: "Mortal Kombat 11",
-      category: "Luta",
-      image: mortalKombat,
-      icon: Swords,
-      gradient: "from-yellow-600 to-orange-500",
-    },
-    {
-      title: "Street Fighter 6",
-      category: "Luta",
-      image: streetFighter,
-      icon: Gamepad2,
-      gradient: "from-blue-600 to-purple-500",
-    },
-    {
-      title: "KoF 2002",
-      category: "Luta",
-      image: kof2002,
-      icon: Swords,
-      gradient: "from-red-600 to-orange-500",
-    },
-    {
-      title: "FIFA 26",
-      category: "Futebol",
-      image: fifa26,
-      icon: Trophy,
-      gradient: "from-green-600 to-emerald-500",
-    },
-  ];
+  const { games } = useSelectedGames();
 
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-background via-muted to-background relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
-      
+
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
@@ -54,17 +22,20 @@ const GamesSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-4xl mx-auto">
-          {games.map((game, index) => {
+          {games.map((game) => {
             const Icon = game.icon;
             return (
-              <Card 
-                key={index}
+              <Card
+                key={game.id}
                 className="relative overflow-hidden group hover:scale-105 transition-all duration-300 hover:shadow-2xl"
               >
                 <div className="relative h-64 overflow-hidden">
                   <img
                     src={game.image}
                     alt={game.title}
+                    loading="lazy"
+                    width={1024}
+                    height={576}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className={`absolute inset-0 bg-gradient-to-t ${game.gradient} opacity-40 group-hover:opacity-30 transition-opacity`} />
@@ -72,7 +43,7 @@ const GamesSection = () => {
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                 </div>
-                
+
                 <div className="p-4 bg-card">
                   <h3 className="text-xl font-bold text-center mb-1">{game.title}</h3>
                   <p className="text-muted-foreground text-center text-sm">{game.category}</p>
@@ -84,8 +55,8 @@ const GamesSection = () => {
 
         <div className="text-center px-4">
           <Link to="/concursos/videogames">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="text-sm md:text-lg px-4 md:px-8 py-5 md:py-6 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full sm:w-auto"
             >
               <Gamepad2 className="mr-2 h-4 w-4 md:h-5 md:w-5" />
