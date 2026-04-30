@@ -23,6 +23,7 @@ import ConcursoCosplay from "./pages/ConcursoCosplay";
 import ConcursoKpop from "./pages/ConcursoKpop";
 import ConcursoAnimeke from "./pages/ConcursoAnimeke";
 import ConcursoVideogames from "./pages/ConcursoVideogames";
+import AdminJogos from "./pages/AdminJogos";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +52,7 @@ const App = () => (
           <Route path="/concursos/kpop" element={<ConcursoKpop />} />
           <Route path="/concursos/animeke" element={<ConcursoAnimeke />} />
           <Route path="/concursos/videogames" element={<ConcursoVideogames />} />
+          <Route path="/admin/jogos" element={<AdminJogos />} />
           <Route path="/politica-privacidade" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
