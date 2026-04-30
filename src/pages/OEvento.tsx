@@ -164,7 +164,7 @@ const OEvento = () => {
                   <li>Arena Gamer com mais de 10 videogames free play</li>
                   <li>Beat Saber no Playstation VR</li>
                   <li>Retrô Games para relembrar clássicos inesquecíveis</li>
-                  <li>Campeonatos de FIFA 25, Mortal Kombat 1, Street Fighter 6 e Tekken 8</li>
+                  <li>Campeonatos de FIFA 26, Mortal Kombat 11, Street Fighter 6 e KoF 2002</li>
                 </ul>
               </CardContent>
             </Card>
