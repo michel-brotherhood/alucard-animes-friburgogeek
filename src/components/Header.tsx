@@ -55,9 +55,6 @@ const Header = () => {
             <Link to="/cronograma" className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full">
               Cronograma
             </Link>
-            <Link to="/resultados" className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full">
-              Resultados
-            </Link>
             <Link to="/contato" className="px-4 py-2 text-white text-sm font-semibold hover:bg-white/10 transition-colors rounded-full">
               Contato
             </Link>
@@ -106,7 +103,7 @@ const Header = () => {
                 <Link to="/line-up" onClick={() => setIsMenuOpen(false)} className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors">Line-up</Link>
                 <Link to="/concursos" onClick={() => setIsMenuOpen(false)} className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors">Concursos</Link>
                 <Link to="/cronograma" onClick={() => setIsMenuOpen(false)} className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors">Cronograma</Link>
-                <Link to="/resultados" onClick={() => setIsMenuOpen(false)} className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors">Resultados</Link>
+                
                 <Link to="/contato" onClick={() => setIsMenuOpen(false)} className="text-white font-semibold py-3 px-3 rounded-full hover:bg-white/10 transition-colors">Contato</Link>
               </nav>
 
