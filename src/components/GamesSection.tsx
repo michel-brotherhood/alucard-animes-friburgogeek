@@ -2,15 +2,15 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Gamepad2, Swords, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
-import mortalKombat from "@/assets/mortal-kombat-1-banner.webp";
+import mortalKombat from "@/assets/mortal-kombat-11-banner.webp";
 import streetFighter from "@/assets/street-fighter-6-banner.webp";
-import tekken8 from "@/assets/tekken-8-banner.webp";
-import fifa2025 from "@/assets/fifa-2025-banner.webp";
+import kof2002 from "@/assets/kof-2002-banner.webp";
+import fifa26 from "@/assets/fifa-26-banner.webp";
 
 const GamesSection = () => {
   const games = [
     {
-      title: "Mortal Kombat 1",
+      title: "Mortal Kombat 11",
       category: "Luta",
       image: mortalKombat,
       icon: Swords,
@@ -24,16 +24,16 @@ const GamesSection = () => {
       gradient: "from-blue-600 to-purple-500",
     },
     {
-      title: "Tekken 8",
+      title: "KoF 2002",
       category: "Luta",
-      image: tekken8,
+      image: kof2002,
       icon: Swords,
       gradient: "from-red-600 to-orange-500",
     },
     {
-      title: "FIFA 2025",
+      title: "FIFA 26",
       category: "Futebol",
-      image: fifa2025,
+      image: fifa26,
       icon: Trophy,
       gradient: "from-green-600 to-emerald-500",
     },

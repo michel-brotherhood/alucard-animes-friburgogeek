@@ -5,16 +5,16 @@ import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, Users, Gamepad2 } from "lucide-react";
-import mortalKombat from "@/assets/mortal-kombat-1-banner.webp";
+import mortalKombat from "@/assets/mortal-kombat-11-banner.webp";
 import streetFighter from "@/assets/street-fighter-6-banner.webp";
-import tekken8 from "@/assets/tekken-8-banner.webp";
-import fifa2025 from "@/assets/fifa-2025-banner.webp";
+import kof2002 from "@/assets/kof-2002-banner.webp";
+import fifa26 from "@/assets/fifa-26-banner.webp";
 import gamesBackground from "@/assets/games-background.jpg";
 
 const ConcursoVideogames = () => {
   const jogos = [
     {
-      title: "Mortal Kombat 1",
+      title: "Mortal Kombat 11",
       categoria: "Luta",
       image: mortalKombat,
     },
@@ -24,24 +24,24 @@ const ConcursoVideogames = () => {
       image: streetFighter,
     },
     {
-      title: "Tekken 8",
+      title: "KoF 2002",
       categoria: "Luta",
-      image: tekken8,
+      image: kof2002,
     },
     {
-      title: "FIFA 2025",
+      title: "FIFA 26",
       categoria: "Futebol",
-      image: fifa2025,
+      image: fifa26,
     },
   ];
 
   return (
     <div className="min-h-screen relative overflow-hidden">
       <SEO 
-        title="Campeonato de Videogames 2025 - Tekken 8, Street Fighter 6, MK1 e FIFA"
-        description="Torneios de videogames no Friburgo Geek: Tekken 8, Street Fighter 6, Mortal Kombat 1 e FIFA 2025. Formato mata-mata, premiação R$ 100. Inscrições abertas!"
+        title="Campeonato de Videogames 2026 - KoF 2002, Street Fighter 6, MK11 e FIFA 26"
+        description="Torneios de videogames no Friburgo Geek: KoF 2002, Street Fighter 6, Mortal Kombat 11 e FIFA 26. Formato mata-mata, premiação R$ 100. Inscrições abertas!"
         canonical="/concursos/videogames"
-        keywords="torneio Tekken 8, campeonato Street Fighter 6, Mortal Kombat 1, FIFA 2025, videogames Nova Friburgo"
+        keywords="torneio KoF 2002, campeonato Street Fighter 6, Mortal Kombat 11, FIFA 26, videogames Nova Friburgo"
       />
       {/* Background Image with Overlay */}
       <div 

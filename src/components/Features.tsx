@@ -12,7 +12,7 @@ const features = [
   "Passa ou repassa com Misheru",
   "Gincanas com brindes incríveis",
   "Guitarrista Gamer Retrô Rafael",
-  "Campeonatos de Cosplay, K-POP, FIFA 25, Mortal Kombat 1, Street Fighter 6 e Tekken 8",
+  "Campeonatos de Cosplay, K-POP, FIFA 26, Mortal Kombat 11, Street Fighter 6 e KoF 2002",
 ];
 
 const Features = () => {
