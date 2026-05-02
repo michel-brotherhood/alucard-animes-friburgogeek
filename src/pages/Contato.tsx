@@ -111,7 +111,7 @@ const Contato = () => {
       
       form.reset();
     } catch (error) {
-      console.error(error);
+      if (import.meta.env.DEV) console.error('Form submission failed', error);
       toast({
         title: "Erro ao enviar mensagem",
         description: "Por favor, tente novamente ou entre em contato via WhatsApp.",
