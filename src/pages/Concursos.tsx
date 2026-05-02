@@ -36,7 +36,7 @@ const concursos = [
   {
     title: "Videogames",
     icon: Gamepad2,
-    description: "Campeonatos em formato Mata-Mata! FIFA, Tekken, Street Fighter, Mortal Kombat e Naruto.",
+    description: "Campeonatos em formato Mata-Mata! FIFA 26, Street Fighter 6, Mortal Kombat 11 e KoF 2002.",
     image: "🎮",
     link: "/concursos/videogames",
     color: "from-cyan-500 to-green-500"
