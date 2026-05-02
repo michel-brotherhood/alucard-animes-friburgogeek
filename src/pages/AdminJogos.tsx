@@ -108,14 +108,14 @@ const AdminJogos = () => {
                   }`}
                   onClick={() => toggle(game.id)}
                 >
-                  <div className="relative h-40 overflow-hidden">
+                  <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${game.gradient}`}>
                     <img
                       src={game.image}
                       alt={game.title}
                       loading="lazy"
                       width={1024}
                       height={576}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                     <div className="absolute top-3 left-3">

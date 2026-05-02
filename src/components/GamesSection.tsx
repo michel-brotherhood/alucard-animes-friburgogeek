@@ -29,16 +29,16 @@ const GamesSection = () => {
                 key={game.id}
                 className="relative overflow-hidden group hover:scale-105 transition-all duration-300 hover:shadow-2xl"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className={`relative h-64 overflow-hidden bg-gradient-to-br ${game.gradient}`}>
                   <img
                     src={game.image}
                     alt={game.title}
                     loading="lazy"
                     width={1024}
                     height={576}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-t ${game.gradient} opacity-40 group-hover:opacity-30 transition-opacity`} />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${game.gradient} opacity-20 group-hover:opacity-10 transition-opacity pointer-events-none`} />
                   <div className={`absolute top-4 right-4 w-12 h-12 rounded-full bg-gradient-to-br ${game.gradient} flex items-center justify-center shadow-lg`}>
                     <Icon className="w-6 h-6 text-white" />
                   </div>
