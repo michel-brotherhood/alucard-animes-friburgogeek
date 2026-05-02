@@ -66,7 +66,7 @@ const ConcursoKpop = () => {
       });
       form.reset();
     } catch (error) {
-      console.error(error);
+      if (import.meta.env.DEV) console.error('Form submission failed', error);
       toast({
         title: "Erro ao enviar inscrição",
         description: "Por favor, tente novamente ou entre em contato conosco.",

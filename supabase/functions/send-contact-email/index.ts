@@ -37,6 +37,15 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { to, subject, formData, formType }: EmailRequest = await req.json();
 
+    // HTML-escape user input to prevent XSS in email clients
+    const escapeHtml = (text: string): string =>
+      text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+
     // Format form data as HTML with better organization
     const formatFormData = (data: Record<string, any>) => {
       const fieldLabels: Record<string, string> = {
@@ -66,14 +75,17 @@ const handler = async (req: Request): Promise<Response> => {
       return Object.entries(data)
         .filter(([_, value]) => value !== undefined && value !== '')
         .map(([key, value]) => {
-          const label = fieldLabels[key] || key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1');
-          const formattedValue = typeof value === 'string' && value.length > 100 
-            ? `<div style="white-space: pre-wrap; margin-top: 5px;">${value}</div>`
-            : value;
+          const rawLabel = fieldLabels[key] || key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1');
+          const label = escapeHtml(rawLabel);
+          const safeValue = escapeHtml(String(value));
+          const formattedValue = typeof value === 'string' && value.length > 100
+            ? `<div style="white-space: pre-wrap; margin-top: 5px;">${safeValue}</div>`
+            : safeValue;
           return `<p style="margin: 10px 0;"><strong style="color: #4A5568;">${label}:</strong> ${formattedValue}</p>`;
         })
         .join('');
     };
+
 
     const emailResponse = await resend.emails.send({
       from: "Contato <no-reply@alucardanimes.com.br>",
@@ -95,8 +107,8 @@ const handler = async (req: Request): Promise<Response> => {
             <p style="margin: 0; color: #718096; font-size: 14px;">
               📧 Esta é uma mensagem automática do sistema de inscrições Friburgo Geek - Alucard Animes
             </p>
-            <p style="margin: 10px 0 0 0; color: #a0aec0; font-size: 12px;">
-              Data e Hora: ${new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })}
+              <p style="margin: 10px 0 0 0; color: #a0aec0; font-size: 12px;">
+              Data e Hora: ${escapeHtml(new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }))}
             </p>
           </div>
         </div>
