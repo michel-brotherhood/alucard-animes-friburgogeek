@@ -87,16 +87,19 @@ const handler = async (req: Request): Promise<Response> => {
     };
 
 
+    const safeFormType = escapeHtml(String(formType ?? ''));
+    const safeSubject = escapeHtml(String(subject ?? ''));
+
     const emailResponse = await resend.emails.send({
       from: "Contato <no-reply@alucardanimes.com.br>",
       to: ["contato@alucardanimes.com.br"],
       reply_to: formData.email || undefined,
-      subject: subject,
+      subject: safeSubject,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
             <h1 style="color: white; margin: 0; font-size: 28px;">Nova Inscrição Recebida</h1>
-            <p style="color: white; margin: 10px 0 0 0; font-size: 16px;">${formType}</p>
+            <p style="color: white; margin: 10px 0 0 0; font-size: 16px;">${safeFormType}</p>
           </div>
           <div style="background: #ffffff; padding: 30px; border: 1px solid #e2e8f0; border-top: none;">
             <div style="background: #f7fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #667eea;">
