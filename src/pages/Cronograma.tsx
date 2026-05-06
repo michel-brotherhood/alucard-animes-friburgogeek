@@ -44,7 +44,7 @@ const Cronograma = () => {
         title="Cronograma 7 de Junho de 2026 - Programação Completa do Evento"
         description="Veja a programação completa do Friburgo Geek em 7 de Junho de 2026: concurso de cosplay, k-pop, animekê, torneios de games, retro games e muito mais! Das 11h às 18h."
         canonical="/cronograma"
-        keywords="cronograma Friburgo Geek 2026, programação evento geek março 2026, horários concursos, Nova Friburgo"
+        keywords="cronograma Friburgo Geek 2026, programação evento geek junho 2026, horários concursos, Nova Friburgo"
       />
       <Header />
       

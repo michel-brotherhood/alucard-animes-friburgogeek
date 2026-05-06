@@ -36,7 +36,7 @@ const OEvento = () => {
     <div className="min-h-screen overflow-x-hidden">
       <SEO 
         title="O Evento - Friburgo Geek 2026"
-        description="O maior evento geek de Nova Friburgo! Cosplay, k-pop, games, animekê, retro games, stands de vendas e muito mais. 15 de março de 2026, das 12h às 18h. Venha participar!"
+        description="O maior evento geek de Nova Friburgo! Cosplay, k-pop, games, animekê, retro games, stands de vendas e muito mais. 7 de junho de 2026, das 12h às 18h. Venha participar!"
         canonical="/o-evento"
         keywords="Friburgo Geek, evento geek Nova Friburgo, convenção anime, cultura pop, Alucard Animes"
       />

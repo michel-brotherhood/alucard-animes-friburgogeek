@@ -31,7 +31,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-white/80">
                 <Calendar className="w-4 h-4 text-accent" />
-                <span>15 de Março de 2026</span>
+                <span>7 de Junho de 2026</span>
               </li>
               <li className="flex items-center gap-2 text-white/80">
                 <Clock className="w-4 h-4 text-accent" />

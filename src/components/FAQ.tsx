@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const faqs = [
   {
     question: "Quando será realizado o evento?",
-    answer: "15 de março de 2026."
+    answer: "7 de junho de 2026."
   },
   {
     question: "Onde será realizado?",
