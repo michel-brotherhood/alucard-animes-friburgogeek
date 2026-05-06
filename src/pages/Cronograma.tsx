@@ -13,7 +13,7 @@ import {
 const atividadesContinuas = [
   { Icon: Gamepad2, name: "Arena Gamer & Retrô Games" },
   { Icon: Trophy, name: "Campeonatos de Videogames" },
-  { Icon: Gamepad2, name: "Mario Kart Live Home Circuit" },
+  
   { Icon: Puzzle, name: "Wood Games - Jogos de Madeira" },
   { Icon: Store, name: "Stands de Vendas" },
   { Icon: ShoppingBag, name: "Yume Geek Store" },
@@ -23,11 +23,12 @@ const atividadesContinuas = [
 const stagePrincipal = [
   { time: "11:00", Icon: Ticket, event: "Entrada VIPs/Cosplay" },
   { time: "12:00", Icon: Ticket, event: "Entrada Antecipados" },
+  { time: "12:00", Icon: Edit, event: "Abertura Inscrições Cosplay" },
   { time: "12:00", Icon: Film, event: "Cine Anime" },
   { time: "13:00", Icon: HelpCircle, event: "Geek Quizz" },
   { time: "14:00", Icon: Music, event: "Show Negrayscow" },
+  { time: "14:30", Icon: Edit, event: "Encerramento Inscrições Cosplay" },
   { time: "15:00", Icon: Star, event: "Cosplay" },
-  { time: "15:30", Icon: Edit, event: "Encerramento Inscrições Cosplay" },
   { time: "16:00", Icon: Music, event: "K-Stage Live" },
   { time: "17:00", Icon: Mic2, event: "Animekê" },
   { time: "17:30", Icon: Trophy, event: "Resultados/Campeonatos" },
